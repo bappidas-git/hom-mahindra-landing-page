@@ -1,0 +1,529 @@
+/* ============================================
+   HeroSection Styles - Nambiar District 25 Phase 2
+   Premium real estate hero section styling
+   ============================================ */
+
+/* ========== Main Section ========== */
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 80px;
+  padding-bottom: 2rem;
+}
+
+/* ========== Background ========== */
+.heroBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 22, 40, 0.95) 0%,
+    rgba(10, 22, 40, 0.85) 50%,
+    rgba(10, 22, 40, 0.75) 100%
+  );
+}
+
+/* Pattern Overlay */
+.patternOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at 2px 2px,
+    rgba(201, 162, 39, 0.08) 1px,
+    transparent 0
+  );
+  background-size: 40px 40px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ========== Container ========== */
+.heroContainer {
+  position: relative;
+  z-index: 2;
+}
+
+/* ========== Content ========== */
+.heroContent {
+  padding: 1rem 0;
+}
+
+/* ========== Gold Text ========== */
+.goldText {
+  color: #C9A227;
+  display: block;
+}
+
+/* ========== Launch Badge ========== */
+.launchBadge {
+  position: relative;
+}
+
+.pulseDot {
+  width: 8px;
+  height: 8px;
+  background-color: #0A1628;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.pulseDot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: #0A1628;
+  border-radius: 50%;
+  animation: pulseDotAnimation 2s ease-in-out infinite;
+}
+
+@keyframes pulseDotAnimation {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+/* ========== Trust Badges ========== */
+.trustBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.trustBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  border-radius: 25px;
+  color: #FFFFFF;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.trustBadge:hover {
+  background: rgba(201, 162, 39, 0.2);
+  border-color: #C9A227;
+}
+
+.badgeIcon {
+  font-size: 1.125rem;
+  color: #C9A227;
+}
+
+/* ========== Info Cards ========== */
+.infoCardsWrapper {
+  margin-top: 2rem;
+}
+
+.infoCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.infoCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(13, 30, 54, 0.9);
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.infoCard:hover {
+  border-color: rgba(201, 162, 39, 0.5);
+  background: rgba(13, 30, 54, 0.95);
+}
+
+.infoCardIcon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.infoCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.infoCardValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.infoCardLabel {
+  font-size: 0.8125rem;
+  color: #FFFFFFD9 !important;
+  font-weight: 400;
+}
+
+/* ========== Quick Features ========== */
+.quickFeatures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.quickFeature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FFFFFFE6 !important;
+  font-size: 0.875rem;
+}
+
+.featureIcon {
+  font-size: 1rem;
+  color: #C9A227;
+}
+
+/* ========== Form Section ========== */
+.formWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formCard {
+  width: 100%;
+  max-width: 400px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.25),
+    0 10px 30px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(201, 162, 39, 0.15);
+  position: relative;
+}
+
+.formCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #C9A227 0%, #E5C96E 50%, #C9A227 100%);
+}
+
+.formHeader {
+  padding: 1.25rem 1.5rem;
+  background: linear-gradient(135deg, #0A1628 0%, #152238 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.formHeader::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.formBody {
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: #FFFFFF;
+}
+
+/* ========== Lottie Animation ========== */
+.lottieWrapper {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 250px;
+  height: 250px;
+  opacity: 0.8;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.lottieAnimation {
+  width: 100%;
+  height: 100%;
+}
+
+/* ========== Scroll Indicator ========== */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.scrollIcon {
+  font-size: 2rem;
+  color: #C9A227;
+  opacity: 0.8;
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Large Desktop */
+@media (min-width: 1440px) {
+  .heroContent {
+    padding-right: 2rem;
+  }
+
+  .infoCardsGrid {
+    gap: 1.25rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .heroSection {
+    padding-top: 100px;
+  }
+
+  .formCard {
+    max-width: 380px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .heroSection {
+    padding-top: 90px;
+    min-height: auto;
+    padding-bottom: 3rem;
+  }
+
+  .heroContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trustBadges {
+    justify-content: center;
+  }
+
+  .infoCardsGrid {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .quickFeatures {
+    justify-content: center;
+  }
+
+  .formWrapper {
+    margin-top: 2rem;
+  }
+
+  .formCard {
+    max-width: 100%;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .heroSection {
+    padding-top: 80px;
+    min-height: auto;
+    padding-bottom: 100px; /* Space for bottom nav */
+  }
+
+  .heroContent {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .goldText {
+    display: inline;
+  }
+
+  .trustBadges {
+    justify-content: center;
+  }
+
+  .trustBadge {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+  }
+
+  .badgeIcon {
+    font-size: 1rem;
+  }
+
+  .infoCardsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .infoCard {
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .infoCardIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .infoCardValue {
+    font-size: 1rem;
+  }
+
+  .infoCardLabel {
+    font-size: 0.75rem;
+  }
+
+  .quickFeatures {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .quickFeature {
+    font-size: 0.8125rem;
+  }
+
+  .formCard {
+    border-radius: 16px;
+    max-width: 100%;
+  }
+
+  .formHeader {
+    padding: 1rem 1.25rem;
+  }
+
+  .formBody {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 374px) {
+  .infoCardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .infoCard {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .trustBadge {
+    padding: 0.25rem 0.625rem;
+    font-size: 0.6875rem;
+  }
+}
+
+/* ========== Animations ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ========== Dark Mode Adjustments (if needed) ========== */
+@media (prefers-color-scheme: dark) {
+  .heroOverlay {
+    background: linear-gradient(
+      135deg,
+      rgba(10, 22, 40, 0.98) 0%,
+      rgba(10, 22, 40, 0.9) 50%,
+      rgba(10, 22, 40, 0.8) 100%
+    );
+  }
+}
+
+/* ========== Reduced Motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  .pulseDot::before {
+    animation: none;
+  }
+
+  .trustBadge,
+  .infoCard {
+    transition: none;
+  }
+}

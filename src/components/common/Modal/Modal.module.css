@@ -1,0 +1,370 @@
+/* ============================================
+   Modal Component Styles - Nambiar District 25 Phase 2
+   ============================================ */
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-modal-backdrop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: rgba(10, 22, 40, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Modal */
+.modal {
+  position: relative;
+  z-index: var(--z-modal);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: calc(100vh - var(--space-8));
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+/* Max Width Variants */
+.maxWidthSm {
+  max-width: 400px;
+}
+
+.maxWidthMd {
+  max-width: 560px;
+}
+
+.maxWidthLg {
+  max-width: 800px;
+}
+
+.maxWidthXl {
+  max-width: 1140px;
+}
+
+.maxWidthFull {
+  max-width: 100%;
+}
+
+/* Full Screen */
+.fullScreen {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-6);
+  border-bottom: 1px solid var(--border-gray);
+}
+
+/* Title */
+.title {
+  flex: 1;
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--primary-dark);
+  margin: 0;
+}
+
+/* Close Button */
+.closeButton {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  color: var(--text-gray);
+  transition: all var(--transition-fast);
+}
+
+.closeButton:hover {
+  color: var(--primary-dark);
+  background: var(--light-gray);
+}
+
+/* Variant Icons */
+.variantIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.iconSuccess {
+  background: var(--card-green);
+  color: var(--icon-green);
+}
+
+.iconError {
+  background: rgba(244, 67, 54, 0.1);
+  color: var(--icon-red);
+}
+
+.iconWarning {
+  background: var(--card-orange);
+  color: var(--icon-orange);
+}
+
+.iconInfo {
+  background: var(--card-blue);
+  color: var(--icon-blue);
+}
+
+/* Content */
+.content {
+  flex: 1;
+  padding: var(--space-6);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--border-gray);
+  background: var(--light-gray);
+}
+
+/* Variant Styles */
+.success .header {
+  background: linear-gradient(90deg, rgba(76, 175, 80, 0.05) 0%, transparent 100%);
+}
+
+.error .header {
+  background: linear-gradient(90deg, rgba(244, 67, 54, 0.05) 0%, transparent 100%);
+}
+
+.warning .header {
+  background: linear-gradient(90deg, rgba(255, 152, 0, 0.05) 0%, transparent 100%);
+}
+
+.info .header {
+  background: linear-gradient(90deg, rgba(33, 150, 243, 0.05) 0%, transparent 100%);
+}
+
+/* SweetAlert Custom Styles */
+.swalPopup {
+  border-radius: var(--radius-2xl) !important;
+  padding: var(--space-6) !important;
+}
+
+.swalFormPopup {
+  border-radius: var(--radius-2xl) !important;
+  padding: 0 !important;
+  width: auto !important;
+  max-width: 480px !important;
+}
+
+.swalTitle {
+  font-family: var(--font-heading) !important;
+  font-size: var(--fs-xl) !important;
+  font-weight: var(--fw-bold) !important;
+  color: var(--primary-dark) !important;
+}
+
+.swalContent {
+  font-family: var(--font-primary) !important;
+  font-size: var(--fs-base) !important;
+  color: var(--text-gray) !important;
+  line-height: var(--lh-relaxed) !important;
+}
+
+.swalFormContent {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: visible !important;
+}
+
+.swalButton {
+  font-family: var(--font-primary) !important;
+  font-weight: var(--fw-semibold) !important;
+  font-size: var(--fs-base) !important;
+  padding: var(--space-3) var(--space-6) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-button) !important;
+}
+
+.swalButton:hover {
+  box-shadow: var(--shadow-button-hover) !important;
+}
+
+.swalCancelButton {
+  font-family: var(--font-primary) !important;
+  font-weight: var(--fw-semibold) !important;
+  font-size: var(--fs-base) !important;
+  padding: var(--space-3) var(--space-6) !important;
+  border-radius: var(--radius-xl) !important;
+}
+
+.swalCloseButton {
+  color: var(--text-gray) !important;
+  font-size: 28px !important;
+}
+
+.swalCloseButton:hover {
+  color: var(--primary-dark) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .backdrop {
+    padding: var(--space-3);
+    align-items: flex-end;
+  }
+
+  .modal {
+    max-height: 90vh;
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  }
+
+  .fullScreen {
+    border-radius: 0;
+    max-height: 100%;
+  }
+
+  .header {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .title {
+    font-size: var(--fs-lg);
+  }
+
+  .content {
+    padding: var(--space-5);
+  }
+
+  .footer {
+    padding: var(--space-4) var(--space-5);
+    flex-direction: column;
+  }
+
+  .footer > * {
+    width: 100%;
+  }
+
+  .variantIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+
+  .swalFormPopup {
+    max-width: 95% !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .backdrop {
+    padding: 0;
+  }
+
+  .modal {
+    max-height: 95vh;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .header {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .content {
+    padding: var(--space-4);
+  }
+
+  .footer {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+/* Animation keyframes */
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modalSlideDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@keyframes backdropFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Scrollbar in modal content */
+.content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb {
+  background: var(--border-gray);
+  border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+  background: var(--text-gray);
+}
+
+/* Print */
+@media print {
+  .backdrop {
+    display: none;
+  }
+}
+
+/* Focus trap */
+.modal:focus {
+  outline: none;
+}
+
+/* Accessibility - focus ring for keyboard navigation */
+.closeButton:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}

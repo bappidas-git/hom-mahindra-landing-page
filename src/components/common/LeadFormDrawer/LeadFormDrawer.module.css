@@ -1,0 +1,245 @@
+/* ============================================
+   LeadFormDrawer Styles
+   Full-width side drawer from left
+   ============================================ */
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: stretch;
+}
+
+/* Drawer */
+.drawer {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 100%;
+  background: linear-gradient(180deg, #0A1628 0%, #0F2139 100%);
+  box-shadow: 8px 0 40px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Close Button */
+.closeButton {
+  position: absolute !important;
+  top: 16px;
+  right: 16px;
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+  border-radius: 50% !important;
+  z-index: 10;
+  transition: all 0.3s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.closeButton:hover {
+  background: rgba(201, 162, 39, 0.3) !important;
+  border-color: rgba(201, 162, 39, 0.5) !important;
+  transform: rotate(90deg) scale(1.05);
+}
+
+.closeButton svg {
+  font-size: 26px;
+}
+
+/* Drawer Content */
+.drawerContent {
+  padding: 24px 28px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerIcon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 16px;
+  background: linear-gradient(135deg, #C9A227 0%, #E5C96E 100%);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 28px rgba(201, 162, 39, 0.35);
+  position: relative;
+}
+
+.headerIcon::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 21px;
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.3) 0%, transparent 100%);
+  z-index: -1;
+}
+
+.headerIcon svg {
+  font-size: 32px;
+  color: #0A1628;
+}
+
+.title {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(1.375rem, 1.15rem + 1vw, 1.75rem) !important;
+  color: #FFFFFF !important;
+  margin-bottom: 8px !important;
+  line-height: 1.2 !important;
+  text-align: center !important;
+}
+
+.subtitle {
+  font-size: 0.875rem !important;
+  color: #FFFFFFB3 !important;
+  line-height: 1.5 !important;
+  max-width: 300px;
+  margin: 0 auto;
+  text-align: center !important;
+}
+
+/* Decorative Elements */
+.decorativeCircle1 {
+  position: absolute;
+  bottom: -100px;
+  left: -100px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.decorativeCircle2 {
+  position: absolute;
+  top: -50px;
+  right: -80px;
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .drawer {
+    max-width: 100%;
+  }
+
+  .drawerContent {
+    padding: 20px;
+  }
+
+  .header {
+    margin-bottom: 16px;
+    padding-top: 40px;
+  }
+
+  .headerIcon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    margin-bottom: 14px;
+  }
+
+  .headerIcon svg {
+    font-size: 28px;
+  }
+
+  .title {
+    font-size: 1.375rem !important;
+  }
+
+  .subtitle {
+    font-size: 0.8125rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .drawerContent {
+    padding: 16px;
+  }
+
+  .header {
+    padding-top: 44px;
+    margin-bottom: 14px;
+  }
+
+  .headerIcon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+  }
+
+  .headerIcon svg {
+    font-size: 26px;
+  }
+
+  .title {
+    font-size: 1.25rem !important;
+  }
+
+  .subtitle {
+    font-size: 0.75rem !important;
+    max-width: 260px;
+  }
+
+  .closeButton {
+    width: 40px;
+    height: 40px;
+    top: 12px;
+    right: 12px;
+  }
+
+  .closeButton svg {
+    font-size: 22px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .closeButton:hover {
+    transform: none;
+  }
+}
+
+/* Scrollbar Styling */
+.drawer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.drawer::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.drawer::-webkit-scrollbar-thumb {
+  background: rgba(201, 162, 39, 0.3);
+  border-radius: 3px;
+}
+
+.drawer::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 162, 39, 0.5);
+}

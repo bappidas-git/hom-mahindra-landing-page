@@ -1,0 +1,202 @@
+/* ============================================
+   AnimatedCounter Component Styles - Nambiar District 25 Phase 2
+   ============================================ */
+
+/* Counter Container */
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Value Wrapper */
+.valueWrapper {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-1);
+}
+
+/* Value */
+.value {
+  font-family: 'Inter', var(--font-primary), sans-serif;
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  line-height: 1;
+  color: var(--accent-gold);
+  transition: color var(--transition-base);
+}
+
+/* Prefix & Suffix */
+.prefix,
+.suffix {
+  font-family: 'Inter', var(--font-primary), sans-serif;
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: inherit;
+}
+
+/* Label */
+.label {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-gray);
+  margin-top: var(--space-2);
+  text-transform: capitalize;
+}
+
+/* Icon */
+.icon {
+  margin-bottom: var(--space-3);
+  font-size: 32px;
+  color: var(--accent-gold);
+}
+
+/* Variants */
+.default .value {
+  font-size: var(--fs-4xl);
+}
+
+.large .value {
+  font-size: var(--fs-5xl);
+}
+
+.large .prefix,
+.large .suffix {
+  font-size: var(--fs-3xl);
+}
+
+.gradient .value {
+  background: var(--accent-gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.outline {
+  padding: var(--space-4) var(--space-6);
+  border: 2px solid var(--accent-gold);
+  border-radius: var(--radius-xl);
+}
+
+/* Color Variants */
+.colorGold .value,
+.colorGold .prefix,
+.colorGold .suffix {
+  color: var(--accent-gold);
+}
+
+.colorDark .value,
+.colorDark .prefix,
+.colorDark .suffix {
+  color: var(--primary-dark);
+}
+
+.colorWhite .value,
+.colorWhite .prefix,
+.colorWhite .suffix {
+  color: var(--white);
+}
+
+.colorWhite .label {
+  color: #FFFFFFCC !important;
+}
+
+/* Animation */
+@keyframes countUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.counter.animate .value {
+  animation: countUp 0.5s ease forwards;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .value {
+    font-size: var(--fs-3xl);
+  }
+
+  .prefix,
+  .suffix {
+    font-size: var(--fs-xl);
+  }
+
+  .large .value {
+    font-size: var(--fs-4xl);
+  }
+
+  .large .prefix,
+  .large .suffix {
+    font-size: var(--fs-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .value {
+    font-size: var(--fs-2xl);
+  }
+
+  .prefix,
+  .suffix {
+    font-size: var(--fs-lg);
+  }
+
+  .large .value {
+    font-size: var(--fs-3xl);
+  }
+
+  .large .prefix,
+  .large .suffix {
+    font-size: var(--fs-xl);
+  }
+
+  .label {
+    font-size: var(--fs-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .value {
+    font-size: var(--fs-xl);
+  }
+
+  .prefix,
+  .suffix {
+    font-size: var(--fs-base);
+  }
+
+  .large .value {
+    font-size: var(--fs-2xl);
+  }
+
+  .icon {
+    font-size: 24px;
+    margin-bottom: var(--space-2);
+  }
+
+  .outline {
+    padding: var(--space-3) var(--space-4);
+  }
+}
+
+/* Print */
+@media print {
+  .counter {
+    color: #000;
+  }
+
+  .value,
+  .prefix,
+  .suffix {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+}

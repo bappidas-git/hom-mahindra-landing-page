@@ -1,0 +1,615 @@
+/* ============================================
+   ProjectHighlights Styles - Nambiar District 25 Phase 2
+   Project highlights section with expand/collapse
+   ============================================ */
+
+/* ========== Main Section ========== */
+.highlightsSection {
+  position: relative;
+  padding: 5rem 0;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+/* ========== Background Pattern ========== */
+.patternBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(201, 162, 39, 0.06) 1px, transparent 0);
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ========== Image Section ========== */
+.imageWrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.towerImageContainer {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.towerImage {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  filter: grayscale(100%) contrast(1.1);
+  object-fit: cover;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s ease;
+}
+
+.towerImage:hover {
+  filter: grayscale(80%) contrast(1.1);
+  transform: scale(1.02);
+}
+
+/* Acres Badge */
+.acresBadge {
+  position: absolute;
+  bottom: 30px;
+  right: -20px;
+  background: linear-gradient(135deg, #C9A227 0%, #B8941F 100%);
+  padding: 16px 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(201, 162, 39, 0.4);
+  min-width: 90px;
+}
+
+.acresValue {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+}
+
+.acresLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FFFFFFE6 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 4px;
+}
+
+/* ========== Content Section ========== */
+.contentWrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.sectionTitle {
+  position: relative;
+}
+
+.goldText {
+  color: #C9A227;
+  font-style: italic;
+}
+
+/* ========== Highlights Grid ========== */
+.highlightsGrid {
+  margin-bottom: 1.5rem;
+}
+
+/* ========== Highlight Card ========== */
+.highlightCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  height: 100%;
+  cursor: pointer;
+}
+
+.highlightCard:hover {
+  border-color: rgba(201, 162, 39, 0.3);
+}
+
+.highlightIconWrapper {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.highlightCard:hover .highlightIconWrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.highlightIcon {
+  font-size: 28px;
+}
+
+.highlightTitle {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.4;
+  max-width: 180px;
+}
+
+/* ========== Expand Button ========== */
+.expandButtonWrapper {
+  margin-bottom: 1rem;
+}
+
+.expandButton {
+  position: relative;
+  overflow: hidden;
+}
+
+.expandButton::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.expandButton:hover::before {
+  left: 100%;
+}
+
+.expandIcon {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* ========== Expanded Content ========== */
+.expandedContent {
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+
+/* ========== Site Visit Button ========== */
+.siteVisitButtonWrapper {
+  margin-top: 0.5rem;
+}
+
+.siteVisitButton {
+  transition: all 0.3s ease;
+}
+
+/* ========== Key Numbers Section ========== */
+.keyNumbersWrapper {
+  position: relative;
+  z-index: 1;
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.keyNumberCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+}
+
+.keyNumberCard:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+.keyNumberValue {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.keyNumberLabel {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0A1628;
+  margin-bottom: 0.25rem;
+}
+
+.keyNumberSublabel {
+  font-size: 0.8125rem;
+  color: #6B7280;
+  font-weight: 400;
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .highlightsSection {
+    padding: 6rem 0;
+  }
+
+  .towerImage {
+    max-width: 450px;
+  }
+
+  .acresBadge {
+    padding: 20px 28px;
+    right: -30px;
+    bottom: 40px;
+  }
+
+  .acresValue {
+    font-size: 2.25rem;
+  }
+
+  .highlightCard {
+    padding: 2rem 1.5rem;
+  }
+
+  .highlightIconWrapper {
+    width: 64px;
+    height: 64px;
+  }
+
+  .highlightIcon {
+    font-size: 32px;
+  }
+
+  .highlightTitle {
+    font-size: 0.875rem;
+  }
+
+  .keyNumberValue {
+    font-size: 3rem;
+  }
+
+  .keyNumberLabel {
+    font-size: 1.0625rem;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .highlightsSection {
+    padding: 5rem 0;
+  }
+
+  .towerImage {
+    max-width: 380px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .highlightsSection {
+    padding: 4rem 0;
+  }
+
+  .imageWrapper {
+    margin-bottom: 2rem;
+  }
+
+  .towerImage {
+    max-width: 350px;
+  }
+
+  .acresBadge {
+    right: 10px;
+    bottom: 20px;
+    padding: 14px 20px;
+  }
+
+  .acresValue {
+    font-size: 1.75rem;
+  }
+
+  .highlightCard {
+    padding: 1.25rem 1rem;
+  }
+
+  .highlightIconWrapper {
+    width: 52px;
+    height: 52px;
+  }
+
+  .highlightIcon {
+    font-size: 26px;
+  }
+
+  .highlightTitle {
+    font-size: 0.75rem;
+  }
+
+  .keyNumbersWrapper {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+  }
+
+  .keyNumberCard {
+    padding: 1.5rem 1rem;
+  }
+
+  .keyNumberValue {
+    font-size: 2rem;
+  }
+
+  .keyNumberLabel {
+    font-size: 0.9375rem;
+  }
+
+  .keyNumberSublabel {
+    font-size: 0.75rem;
+  }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .highlightsSection {
+    padding: 3rem 0;
+  }
+
+  .patternBg {
+    background-size: 25px 25px;
+  }
+
+  .imageWrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .towerImageContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .towerImage {
+    max-width: 280px;
+    border-radius: 16px;
+  }
+
+  .acresBadge {
+    right: 0;
+    bottom: 15px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    min-width: 75px;
+  }
+
+  .acresValue {
+    font-size: 1.5rem;
+  }
+
+  .acresLabel {
+    font-size: 0.75rem;
+    margin-top: 2px;
+  }
+
+  .highlightCard {
+    padding: 1rem 0.75rem;
+    border-radius: 14px;
+  }
+
+  .highlightIconWrapper {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+  }
+
+  .highlightIcon {
+    font-size: 24px;
+  }
+
+  .highlightTitle {
+    font-size: 0.6875rem;
+    max-width: 150px;
+  }
+
+  .expandButtonWrapper {
+    margin-bottom: 0.75rem;
+  }
+
+  .keyNumbersWrapper {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+  }
+
+  .keyNumberCard {
+    padding: 1.25rem 0.75rem;
+    border-radius: 16px;
+  }
+
+  .keyNumberValue {
+    font-size: 1.75rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .keyNumberLabel {
+    font-size: 0.8125rem;
+  }
+
+  .keyNumberSublabel {
+    font-size: 0.6875rem;
+  }
+}
+
+/* Small Mobile (max-width: 374px) */
+@media (max-width: 374px) {
+  .highlightsSection {
+    padding: 2.5rem 0;
+  }
+
+  .towerImage {
+    max-width: 240px;
+  }
+
+  .acresBadge {
+    padding: 10px 14px;
+    bottom: 10px;
+  }
+
+  .acresValue {
+    font-size: 1.25rem;
+  }
+
+  .acresLabel {
+    font-size: 0.6875rem;
+  }
+
+  .highlightCard {
+    padding: 0.875rem 0.5rem;
+  }
+
+  .highlightIconWrapper {
+    width: 44px;
+    height: 44px;
+  }
+
+  .highlightIcon {
+    font-size: 22px;
+  }
+
+  .highlightTitle {
+    font-size: 0.625rem;
+    max-width: 130px;
+  }
+
+  .keyNumberCard {
+    padding: 1rem 0.5rem;
+  }
+
+  .keyNumberValue {
+    font-size: 1.5rem;
+  }
+
+  .keyNumberLabel {
+    font-size: 0.75rem;
+  }
+
+  .keyNumberSublabel {
+    font-size: 0.625rem;
+  }
+}
+
+/* ========== Hover Effects (Pointer Devices) ========== */
+@media (hover: hover) {
+  .highlightCard:hover {
+    transform: translateY(-4px);
+  }
+
+  .keyNumberCard:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* ========== Animations ========== */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* ========== Reduced Motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  .highlightCard,
+  .keyNumberCard,
+  .towerImage,
+  .highlightIconWrapper,
+  .expandIcon {
+    transition: none;
+  }
+
+  .highlightCard:hover,
+  .keyNumberCard:hover,
+  .towerImage:hover {
+    transform: none;
+  }
+
+  .highlightCard:hover .highlightIconWrapper {
+    transform: none;
+  }
+
+  .expandButton::before {
+    display: none;
+  }
+}
+
+/* ========== Focus Styles for Accessibility ========== */
+.highlightCard:focus-visible,
+.keyNumberCard:focus-visible,
+.expandButton:focus-visible,
+.siteVisitButton:focus-visible {
+  outline: 2px solid #C9A227;
+  outline-offset: 2px;
+}
+
+/* ========== Print Styles ========== */
+@media print {
+  .highlightsSection {
+    padding: 2rem 0;
+    background: white;
+  }
+
+  .patternBg {
+    display: none;
+  }
+
+  .towerImage {
+    filter: none;
+    max-width: 300px;
+  }
+
+  .expandedContent {
+    display: block;
+    height: auto;
+    opacity: 1;
+  }
+
+  .expandButtonWrapper {
+    display: none;
+  }
+}

@@ -1,0 +1,761 @@
+/* ============================================
+   UnifiedLeadForm Styles
+   All form variants with professional design
+   ============================================ */
+
+/* Form Container */
+.formContainer {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ============================================
+   VARIANT: Default (Light Background)
+   ============================================ */
+.variantDefault {
+  background: var(--white);
+  padding: 32px;
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.variantDefault .formTitle {
+  color: var(--primary-dark) !important;
+}
+
+.variantDefault .formSubtitle {
+  color: var(--text-gray) !important;
+}
+
+.variantDefault .inputIcon {
+  color: var(--text-gray);
+}
+
+.variantDefault .textField :global(.MuiOutlinedInput-root.Mui-focused) .inputIcon {
+  color: var(--accent-gold);
+}
+
+.variantDefault .countryCode {
+  color: var(--text-dark-gray) !important;
+}
+
+.variantDefault .prefixDivider {
+  color: var(--border-gray);
+}
+
+.variantDefault .trustBadge {
+  color: var(--text-gray);
+}
+
+.variantDefault .trustIcon {
+  color: #4CAF50;
+}
+
+.variantDefault .consentText {
+  color: var(--text-gray) !important;
+}
+
+.variantDefault .privacyLink {
+  color: var(--accent-gold);
+}
+
+/* ============================================
+   VARIANT: Hero (Light card in dark section)
+   ============================================ */
+.variantHero {
+  background: var(--white);
+  padding: 0;
+  border-radius: 0;
+}
+
+.variantHero .form {
+  gap: 12px;
+}
+
+.variantHero .formTitle {
+  color: var(--primary-dark) !important;
+}
+
+.variantHero .formSubtitle {
+  color: var(--text-gray) !important;
+}
+
+.variantHero .textField :global(.MuiOutlinedInput-root) {
+  background: #F8F9FB;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+.variantHero .textField :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: #E8ECF0;
+  border-width: 1.5px;
+}
+
+.variantHero .textField :global(.MuiOutlinedInput-root:hover) {
+  background: #FFFFFF;
+}
+
+.variantHero .textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(201, 162, 39, 0.4);
+}
+
+.variantHero .textField :global(.MuiOutlinedInput-root.Mui-focused) {
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.12);
+}
+
+.variantHero .textField :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: #C9A227;
+  border-width: 2px;
+}
+
+.variantHero .textField :global(.MuiInputBase-input) {
+  padding: 12px 14px;
+  font-size: 0.9rem;
+}
+
+.variantHero .inputIcon {
+  color: #9CA3AF;
+  font-size: 18px;
+}
+
+.variantHero .textField :global(.MuiOutlinedInput-root.Mui-focused) .inputIcon {
+  color: var(--accent-gold);
+}
+
+.variantHero .countryCode {
+  color: var(--text-dark-gray) !important;
+  font-size: 0.9rem !important;
+}
+
+.variantHero .prefixDivider {
+  color: #D1D5DB;
+  margin: 0 6px;
+}
+
+.variantHero .submitWrapper {
+  margin-top: 4px;
+}
+
+.variantHero .submitButton {
+  padding: 12px 24px !important;
+  font-size: 0.9375rem !important;
+  border-radius: 10px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.3px;
+  box-shadow: 0 4px 16px rgba(201, 162, 39, 0.35) !important;
+}
+
+.variantHero .submitButton:hover {
+  box-shadow: 0 6px 24px rgba(201, 162, 39, 0.45) !important;
+}
+
+.variantHero .trustBadges {
+  margin-top: 12px;
+  padding-top: 12px;
+  gap: 8px;
+  border-top: 1px solid #F0F1F3;
+}
+
+.variantHero .trustBadge {
+  color: #6B7280;
+  font-size: 0.75rem;
+  gap: 4px;
+}
+
+.variantHero .trustIcon {
+  color: #10B981;
+  font-size: 14px;
+}
+
+.variantHero .consentText {
+  color: #9CA3AF !important;
+  font-size: 0.6875rem !important;
+  margin-top: 8px !important;
+  line-height: 1.4 !important;
+}
+
+.variantHero .privacyLink {
+  color: var(--accent-gold);
+}
+
+.variantHero .messageField :global(.MuiInputBase-input) {
+  min-height: 60px;
+}
+
+/* ============================================
+   VARIANT: Dark (Dark background)
+   ============================================ */
+.variantDark {
+  background: linear-gradient(180deg, #0A1628 0%, #0F2139 100%);
+  padding: 32px;
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.variantDark .formTitle {
+  color: #FFFFFF !important;
+}
+
+.variantDark .formSubtitle {
+  color: #FFFFFFB3 !important;
+}
+
+.variantDark .textField :global(.MuiOutlinedInput-root) {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.variantDark .textField :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.variantDark .textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(201, 162, 39, 0.5);
+}
+
+.variantDark .textField :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: #C9A227;
+}
+
+.variantDark .textField :global(.MuiInputBase-input) {
+  color: #FFFFFF;
+}
+
+.variantDark .textField :global(.MuiInputBase-input::placeholder) {
+  color: #FFFFFF80 !important;
+}
+
+.variantDark .inputIcon {
+  color: #FFFFFF80 !important;
+}
+
+.variantDark .textField :global(.MuiOutlinedInput-root.Mui-focused) .inputIcon {
+  color: #C9A227;
+}
+
+.variantDark .countryCode {
+  color: #FFFFFFCC !important;
+}
+
+.variantDark .prefixDivider {
+  color: #FFFFFF4D !important;
+}
+
+.variantDark .trustBadge {
+  color: #FFFFFF99 !important;
+}
+
+.variantDark .trustIcon {
+  color: #4CAF50;
+}
+
+.variantDark .consentText {
+  color: #FFFFFF99 !important;
+}
+
+.variantDark .privacyLink {
+  color: #C9A227;
+}
+
+/* ============================================
+   VARIANT: Drawer (Inside side drawer)
+   ============================================ */
+.variantDrawer {
+  background: transparent;
+  padding: 0;
+}
+
+.variantDrawer .form {
+  gap: 12px;
+}
+
+.variantDrawer .formTitle {
+  color: #FFFFFF !important;
+  text-align: center !important;
+}
+
+.variantDrawer .formSubtitle {
+  color: #FFFFFFB3 !important;
+  text-align: center !important;
+}
+
+.variantDrawer .textField :global(.MuiOutlinedInput-root) {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.variantDrawer .textField :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.variantDrawer .textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: rgba(201, 162, 39, 0.5);
+}
+
+.variantDrawer .textField :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: #C9A227;
+  border-width: 2px;
+}
+
+.variantDrawer .textField :global(.MuiInputBase-input) {
+  color: #FFFFFF;
+  padding: 14px 16px;
+  font-size: 0.9375rem;
+}
+
+.variantDrawer .textField :global(.MuiInputBase-input::placeholder) {
+  color: #FFFFFF80 !important;
+}
+
+.variantDrawer .inputIcon {
+  color: #FFFFFF80 !important;
+  font-size: 20px;
+}
+
+.variantDrawer .textField :global(.MuiOutlinedInput-root.Mui-focused) .inputIcon {
+  color: #C9A227;
+}
+
+.variantDrawer .countryCode {
+  color: #FFFFFFCC !important;
+  font-weight: 600 !important;
+  font-size: 0.9375rem !important;
+}
+
+.variantDrawer .prefixDivider {
+  color: #FFFFFF4D !important;
+}
+
+.variantDrawer .submitWrapper {
+  margin-top: 4px;
+}
+
+.variantDrawer .trustBadges {
+  margin-top: 10px;
+  padding-top: 10px;
+  gap: 10px;
+}
+
+.variantDrawer .trustBadge {
+  color: #FFFFFF99 !important;
+  font-size: 0.75rem;
+}
+
+.variantDrawer .trustIcon {
+  color: #4CAF50;
+  font-size: 14px;
+}
+
+.variantDrawer .consentText {
+  color: #FFFFFF99 !important;
+  font-size: 0.6875rem !important;
+  text-align: center !important;
+}
+
+.variantDrawer .privacyLink {
+  color: #C9A227;
+}
+
+.variantDrawer .submitButton {
+  padding: 14px 28px !important;
+  font-size: 1rem !important;
+  border-radius: 12px !important;
+  box-shadow: 0 6px 24px rgba(201, 162, 39, 0.4) !important;
+}
+
+.variantDrawer .messageField :global(.MuiInputBase-input) {
+  min-height: 50px;
+}
+
+/* ============================================
+   COMMON STYLES
+   ============================================ */
+
+/* Form Header */
+.formHeader {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.formTitle {
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  font-size: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem) !important;
+  margin-bottom: 8px !important;
+  line-height: 1.2 !important;
+}
+
+.formSubtitle {
+  font-size: 0.9rem !important;
+  line-height: 1.5 !important;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Text Fields */
+.textField {
+  width: 100%;
+}
+
+.textField :global(.MuiOutlinedInput-root) {
+  border-radius: 12px;
+  background: var(--white);
+  transition: all 0.2s ease;
+}
+
+.textField :global(.MuiOutlinedInput-notchedOutline) {
+  border-color: var(--border-gray);
+  transition: border-color 0.2s ease;
+}
+
+.textField :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: var(--accent-gold);
+}
+
+.textField :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: var(--accent-gold);
+  border-width: 2px;
+}
+
+.textField :global(.MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline) {
+  border-color: var(--error);
+}
+
+.textField :global(.MuiInputBase-input) {
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  color: var(--primary-dark);
+}
+
+.textField :global(.MuiInputBase-input::placeholder) {
+  color: var(--text-gray);
+  opacity: 1;
+}
+
+.textField :global(.MuiFormHelperText-root) {
+  margin-left: 4px;
+  margin-top: 6px;
+  font-size: 0.75rem;
+}
+
+.textField :global(.MuiFormHelperText-root.Mui-error) {
+  color: var(--error);
+}
+
+/* Input Icons */
+.inputIcon {
+  font-size: 20px;
+  transition: color 0.2s ease;
+}
+
+/* Mobile Prefix */
+.mobilePrefix {
+  margin-right: 0 !important;
+  padding-right: 0 !important;
+}
+
+.countryCode {
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+}
+
+.prefixDivider {
+  margin: 0 8px;
+  font-weight: 300;
+}
+
+/* Message Field */
+.messageField :global(.MuiInputAdornment-root) {
+  align-self: flex-start;
+  margin-top: 14px;
+}
+
+.messageAdornment {
+  margin-top: 14px;
+  align-self: flex-start;
+}
+
+/* Submit Button Wrapper */
+.submitWrapper {
+  margin-top: 8px;
+}
+
+/* Submit Button */
+.submitButton {
+  padding: 14px 32px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  border-radius: 12px !important;
+  text-transform: none !important;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%) !important;
+  color: var(--primary-dark) !important;
+  box-shadow: var(--shadow-button) !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+.submitIcon {
+  font-size: 18px;
+}
+
+.submitButton:hover {
+  background: linear-gradient(135deg, var(--accent-gold-light) 0%, var(--accent-gold) 100%) !important;
+  box-shadow: var(--shadow-button-hover) !important;
+  transform: translateY(-2px);
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  background: var(--medium-gray) !important;
+  box-shadow: none !important;
+  color: var(--text-gray) !important;
+  cursor: not-allowed;
+}
+
+/* Loading State */
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.loadingState :global(.MuiCircularProgress-root) {
+  color: var(--primary-dark);
+}
+
+/* Trust Badges */
+.trustBadges {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.trustBadge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.trustIcon {
+  font-size: 16px;
+}
+
+/* Consent Text */
+.consentText {
+  text-align: center;
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+  margin-top: 4px !important;
+}
+
+.privacyLink {
+  text-decoration: none;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.privacyLink:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* Phone Section */
+.phoneSection {
+  text-align: center;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.orText {
+  font-size: 0.75rem !important;
+  color: #FFFFFF80 !important;
+  margin-bottom: 8px !important;
+}
+
+.phoneLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #C9A227;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: rgba(201, 162, 39, 0.1);
+  border-radius: 10px;
+  transition: all 0.2s ease;
+}
+
+.phoneLink:hover {
+  background: rgba(201, 162, 39, 0.2);
+  transform: translateY(-2px);
+}
+
+.phoneLink svg {
+  font-size: 18px;
+}
+
+/* SweetAlert Custom Styles */
+.swalPopup {
+  border-radius: 20px !important;
+  padding: 24px !important;
+  z-index: 99999 !important;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 768px) {
+  .variantDefault,
+  .variantDark {
+    padding: 24px;
+    border-radius: var(--radius-xl);
+  }
+
+  .formHeader {
+    margin-bottom: 20px;
+  }
+
+  .formTitle {
+    font-size: 1.25rem !important;
+  }
+
+  .formSubtitle {
+    font-size: 0.875rem !important;
+  }
+
+  .form {
+    gap: 14px;
+  }
+
+  .textField :global(.MuiInputBase-input) {
+    padding: 12px 14px;
+    font-size: 16px; /* Prevent iOS zoom on focus - must be 16px or larger */
+  }
+
+  .countryCode {
+    font-size: 16px !important; /* Prevent iOS zoom on focus */
+  }
+
+  /* Hero variant mobile overrides */
+  .variantHero .textField :global(.MuiInputBase-input) {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+
+  .variantHero .countryCode {
+    font-size: 16px !important; /* Prevent iOS zoom on focus */
+  }
+
+  /* Drawer variant mobile overrides */
+  .variantDrawer .textField :global(.MuiInputBase-input) {
+    font-size: 16px; /* Prevent iOS zoom on focus */
+  }
+
+  .variantDrawer .countryCode {
+    font-size: 16px !important; /* Prevent iOS zoom on focus */
+  }
+
+  .submitButton {
+    padding: 12px 24px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .trustBadges {
+    gap: 12px;
+  }
+
+  .trustBadge {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .variantDefault,
+  .variantDark {
+    padding: 20px;
+  }
+
+  .formHeader {
+    margin-bottom: 16px;
+  }
+
+  .form {
+    gap: 12px;
+  }
+
+  .submitWrapper {
+    margin-top: 4px;
+  }
+
+  .trustBadges {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .phoneLink {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}
+
+/* Focus-visible for accessibility */
+.textField :global(.MuiOutlinedInput-root.Mui-focusVisible) {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.submitButton:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .textField :global(.MuiOutlinedInput-root),
+  .submitButton,
+  .inputIcon,
+  .phoneLink {
+    transition: none !important;
+  }
+
+  .submitButton:hover,
+  .phoneLink:hover {
+    transform: none;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .textField :global(.MuiOutlinedInput-notchedOutline) {
+    border-width: 2px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .formContainer {
+    display: none;
+  }
+}

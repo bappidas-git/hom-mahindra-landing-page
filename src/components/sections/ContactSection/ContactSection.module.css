@@ -1,0 +1,664 @@
+/* ============================================
+   ContactSection Styles - Nambiar District 25 Phase 2
+   "A Rare Opportunity to Own Your Dream Home" contact section
+   ============================================ */
+
+/* Section Container */
+.section {
+  position: relative;
+  padding: var(--space-20) 0;
+  background: var(--primary-dark);
+  overflow: hidden;
+}
+
+/* Content Wrapper */
+.contentWrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  padding: var(--space-2) var(--space-5);
+  background: rgba(201, 162, 39, 0.15);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--accent-gold);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wider);
+  margin-bottom: var(--space-6);
+}
+
+/* Title */
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-4);
+}
+
+.highlight {
+  color: var(--accent-gold);
+  background: linear-gradient(
+    135deg,
+    var(--accent-gold) 0%,
+    var(--accent-gold-light) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Description */
+.description {
+  font-size: var(--fs-md);
+  color: #cdd0d5 !important;
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 500px;
+}
+
+/* Mobile Animation */
+.mobileAnimation {
+  display: none;
+  justify-content: center;
+  margin-bottom: var(--space-6);
+}
+
+.lottiePlayer {
+  width: 200px;
+  height: 200px;
+}
+
+/* Contact Info */
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all var(--transition-base);
+}
+
+.contactItem:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(201, 162, 39, 0.2);
+  transform: translateX(5px);
+}
+
+.contactIcon {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(
+    135deg,
+    rgba(201, 162, 39, 0.2) 0%,
+    rgba(201, 162, 39, 0.1) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-gold);
+  font-size: 1.4rem;
+}
+
+.contactText {
+  flex: 1;
+  min-width: 0;
+}
+
+.contactTitle {
+  color: var(--white);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-1);
+}
+
+.contactContent {
+  color: #b8bcc2 !important;
+  font-size: var(--fs-sm);
+  line-height: 1.5;
+}
+
+.contactLink {
+  color: var(--accent-gold);
+  font-size: var(--fs-sm);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.contactLink:hover {
+  color: var(--accent-gold-light);
+  text-decoration: underline;
+}
+
+/* Social Links */
+.socialLinks {
+  padding-top: var(--space-6);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.socialTitle {
+  color: #a3a9b0 !important;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  margin-bottom: var(--space-3);
+}
+
+.socialIcons {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 1.25rem;
+  text-decoration: none;
+  transition: all var(--transition-base);
+}
+
+.socialIcon:hover {
+  background: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* Form Wrapper */
+.formWrapper {
+  position: relative;
+  z-index: 2;
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-8);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
+}
+
+.formHeader {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.formTitle {
+  font-family: var(--font-heading);
+  font-weight: var(--fw-bold);
+  color: var(--primary-dark);
+  margin-bottom: var(--space-2);
+}
+
+.formSubtitle {
+  color: var(--text-gray);
+  font-size: var(--fs-sm);
+}
+
+/* Form Content - override unified form container padding */
+.formContent {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Form Styles */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+/* Text Field Styles */
+.textField {
+  width: 100%;
+}
+
+.textField :global(.MuiOutlinedInput-root) {
+  background: var(--off-white);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.textField :global(.MuiOutlinedInput-root):hover {
+  background: var(--light-gray);
+}
+
+.textField :global(.MuiOutlinedInput-root.Mui-focused) {
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
+}
+
+.textField :global(.MuiOutlinedInput-notchedOutline) {
+  border: 2px solid transparent;
+}
+
+.textField
+  :global(.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline) {
+  border-color: var(--medium-gray);
+}
+
+.textField
+  :global(.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline) {
+  border-color: var(--accent-gold);
+}
+
+.textField
+  :global(.MuiOutlinedInput-root.Mui-error .MuiOutlinedInput-notchedOutline) {
+  border-color: #f44336;
+}
+
+.textField :global(.MuiInputBase-input) {
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--fs-base);
+  color: var(--primary-dark);
+}
+
+.textField :global(.MuiInputBase-input::placeholder) {
+  color: var(--text-gray);
+  opacity: 1;
+}
+
+.textField :global(.MuiFormHelperText-root) {
+  margin-left: 0;
+  margin-top: var(--space-1);
+  font-size: var(--fs-xs);
+}
+
+/* Input Icon */
+.inputIcon {
+  color: var(--text-gray);
+  font-size: 1.25rem;
+}
+
+/* Mobile Prefix */
+.mobilePrefix {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.countryCode {
+  color: var(--primary-dark);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-sm);
+}
+
+.prefixDivider {
+  color: var(--medium-gray);
+}
+
+/* Message Field */
+.messageField :global(.MuiInputAdornment-root) {
+  align-self: flex-start;
+  margin-top: var(--space-3);
+}
+
+.messageAdornment {
+  align-self: flex-start;
+  margin-top: 10px;
+}
+
+/* Schedule Toggle */
+.scheduleToggle {
+  margin: 0;
+}
+
+.scheduleToggle :global(.MuiFormControlLabel-label) {
+  font-size: var(--fs-sm);
+  color: var(--text-dark-gray);
+}
+
+.switch :global(.MuiSwitch-switchBase.Mui-checked) {
+  color: var(--accent-gold);
+}
+
+.switch :global(.MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track) {
+  background-color: var(--accent-gold);
+}
+
+/* Submit Button */
+.submitButton {
+  margin-top: var(--space-2);
+}
+
+.loadingState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+/* Privacy Note */
+.privacyNote {
+  display: block;
+  text-align: center;
+  color: var(--text-gray);
+  font-size: var(--fs-xs);
+  line-height: 1.5;
+}
+
+.privacyLink {
+  color: var(--accent-gold);
+  text-decoration: none;
+  font-weight: var(--fw-medium);
+}
+
+.privacyLink:hover {
+  text-decoration: underline;
+}
+
+/* Background Decorations */
+.bgDecoration1 {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(
+    circle,
+    rgba(201, 162, 39, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+.bgDecoration2 {
+  position: absolute;
+  bottom: -50px;
+  left: -100px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(
+    circle,
+    rgba(201, 162, 39, 0.08) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(50px);
+}
+
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(201, 162, 39, 0.03) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(201, 162, 39, 0.02) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .formWrapper {
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    text-align: center;
+  }
+
+  .description {
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobileAnimation {
+    display: flex;
+  }
+
+  .contactInfo {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contactItem {
+    text-align: left;
+  }
+
+  .socialLinks {
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  .badge {
+    padding: var(--space-1) var(--space-4);
+    font-size: 10px;
+    margin-bottom: var(--space-4);
+  }
+
+  .title {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-3);
+  }
+
+  .description {
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-6);
+  }
+
+  .lottiePlayer {
+    width: 150px;
+    height: 150px;
+  }
+
+  .contactInfo {
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .contactItem {
+    padding: var(--space-3);
+    gap: var(--space-3);
+  }
+
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    font-size: 1.2rem;
+  }
+
+  .contactTitle {
+    font-size: var(--fs-xs);
+  }
+
+  .contactContent,
+  .contactLink {
+    font-size: var(--fs-xs);
+  }
+
+  .socialIcon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+
+  .formWrapper {
+    padding: var(--space-5);
+    border-radius: var(--radius-xl);
+    margin-top: var(--space-6);
+  }
+
+  .formTitle {
+    font-size: var(--fs-lg);
+  }
+
+  .formSubtitle {
+    font-size: var(--fs-xs);
+  }
+
+  .form {
+    gap: var(--space-3);
+  }
+
+  .textField :global(.MuiInputBase-input) {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--fs-sm);
+  }
+
+  .inputIcon {
+    font-size: 1.1rem;
+  }
+
+  .countryCode {
+    font-size: var(--fs-xs);
+  }
+
+  .scheduleToggle :global(.MuiFormControlLabel-label) {
+    font-size: var(--fs-xs);
+  }
+
+  .privacyNote {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--space-10) 0;
+  }
+
+  .title {
+    font-size: var(--fs-xl);
+  }
+
+  .description {
+    font-size: var(--fs-xs);
+  }
+
+  .contactItem:hover {
+    transform: none;
+  }
+
+  .lottiePlayer {
+    width: 120px;
+    height: 120px;
+  }
+
+  .formWrapper {
+    padding: var(--space-4);
+  }
+
+  .formHeader {
+    margin-bottom: var(--space-4);
+  }
+
+  .formTitle {
+    font-size: var(--fs-base);
+  }
+
+  .socialIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+  }
+
+  .bgDecoration1,
+  .bgDecoration2 {
+    display: none;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .contactItem:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.05);
+  }
+
+  .socialIcon:hover {
+    transform: none;
+  }
+
+  .textField :global(.MuiOutlinedInput-root):hover {
+    background: var(--off-white);
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .contactItem,
+  .socialIcon {
+    transition: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .section {
+    background: var(--white);
+    padding: var(--space-8) 0;
+  }
+
+  .title,
+  .description {
+    color: var(--primary-dark);
+  }
+
+  .highlight {
+    color: var(--accent-gold);
+    -webkit-text-fill-color: var(--accent-gold);
+  }
+
+  .formWrapper {
+    box-shadow: none;
+    border: 1px solid var(--medium-gray);
+  }
+
+  .bgDecoration1,
+  .bgDecoration2,
+  .bgPattern,
+  .mobileAnimation {
+    display: none;
+  }
+
+  .socialLinks {
+    display: none;
+  }
+}

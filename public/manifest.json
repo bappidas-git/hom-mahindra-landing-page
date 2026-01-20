@@ -1,0 +1,34 @@
+{
+  "short_name": "District 25",
+  "name": "Nambiar District 25 Phase 2",
+  "description": "Premium 2, 3 & 4 BHK apartments in Bangalore's most promising location. 100 acres integrated township with world-class amenities.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "theme_color": "#0A1628",
+  "background_color": "#FFFFFF",
+  "categories": ["real estate", "property", "lifestyle"],
+  "lang": "en-IN",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

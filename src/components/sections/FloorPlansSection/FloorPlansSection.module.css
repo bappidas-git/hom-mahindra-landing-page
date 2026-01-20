@@ -1,0 +1,1507 @@
+/* ============================================
+   FloorPlansSection Styles - Nambiar District 25 Phase 2
+   Compact Showcase Layout
+   ============================================ */
+
+/* ========== Main Section ========== */
+.floorPlansSection {
+  position: relative;
+  padding: 3.5rem 0;
+  background-color: #FFFFFF;
+  overflow: hidden;
+}
+
+/* ========== Background Elements ========== */
+.bgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #F8F9FA 0%, #FFFFFF 50%, #F8F9FA 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(10, 22, 40, 0.02) 1px, transparent 0);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ========== Section Header - Compact ========== */
+.sectionHeader {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.headerTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.floorPlansBadge {
+  margin-bottom: 0.25rem;
+}
+
+.sectionTitle {
+  position: relative;
+}
+
+.goldText {
+  color: #C9A227;
+  font-style: italic;
+}
+
+/* Highlights Strip - Compact Inline */
+.highlightsStrip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+.highlightItem svg {
+  font-size: 14px;
+}
+
+/* ========== Filter Pills ========== */
+.filterWrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.filterPill {
+  padding: 0.5rem 1.25rem;
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 50px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #6B7280;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterPill:hover {
+  border-color: #C9A227;
+  color: #C9A227;
+}
+
+.filterPillActive {
+  background: linear-gradient(135deg, #0A1628 0%, #132742 100%);
+  border-color: #0A1628;
+  color: #FFFFFF;
+}
+
+.filterPillActive:hover {
+  color: #FFFFFF;
+  border-color: #0A1628;
+}
+
+/* ========== Showcase Container ========== */
+.showcaseContainer {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.25rem;
+}
+
+.showcaseCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  background: #FFFFFF;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid #E5E7EB;
+  overflow: hidden;
+}
+
+/* ========== Showcase Image Section ========== */
+.showcaseImageSection {
+  position: relative;
+  background: linear-gradient(135deg, #0A1628 0%, #132742 100%);
+  min-height: 380px;
+}
+
+.showcaseImageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.showcaseImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease, filter 0.3s ease;
+  filter: blur(6px);
+}
+
+.showcaseImageWrapper:hover .showcaseImage {
+  transform: scale(1.03);
+  filter: blur(8px);
+}
+
+/* Blur overlay - always visible to obscure floor plan details */
+.blurOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(10, 22, 40, 0.3) 0%,
+    rgba(10, 22, 40, 0.15) 50%,
+    rgba(10, 22, 40, 0.3) 100%
+  );
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* Hover overlay with CTA button */
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 22, 40, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.showcaseImageWrapper:hover .imageOverlay {
+  opacity: 1;
+}
+
+/* Preview label on blurred image */
+.previewLabel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #FFFFFFE6 !important;
+  text-align: center;
+  pointer-events: none;
+}
+
+.previewLabel svg {
+  font-size: 32px;
+  color: #C9A227;
+}
+
+.previewLabel span {
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.viewPlanBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 12px 24px;
+  background: #FFFFFF;
+  border-radius: 50px;
+  color: #0A1628;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.viewPlanBtn:hover {
+  background: #C9A227;
+  color: #FFFFFF;
+}
+
+.viewPlanBtn svg {
+  font-size: 20px;
+}
+
+/* Badges */
+.popularBadge,
+.limitedBadge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.popularBadge {
+  background: linear-gradient(135deg, #C9A227 0%, #E5C96E 100%);
+  color: #0A1628;
+}
+
+.limitedBadge {
+  background: linear-gradient(135deg, #F44336 0%, #E57373 100%);
+  color: #FFFFFF;
+}
+
+.popularBadge svg,
+.limitedBadge svg {
+  font-size: 14px;
+}
+
+/* Navigation Arrows */
+.navArrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  color: #0A1628;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.navArrow:hover {
+  background: #C9A227;
+  color: #FFFFFF;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.navArrow svg {
+  font-size: 24px;
+}
+
+.navArrowLeft {
+  left: 12px;
+}
+
+.navArrowRight {
+  right: 12px;
+}
+
+/* ========== Showcase Details ========== */
+.showcaseDetails {
+  padding: 1.75rem 1.75rem 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.detailsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
+}
+
+.planType {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0A1628;
+  line-height: 1.1;
+}
+
+.planName {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  margin-top: 0.25rem;
+}
+
+.priceTag {
+  text-align: right;
+}
+
+.priceLabel {
+  display: block;
+  font-size: 0.6875rem;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.priceValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #C9A227;
+}
+
+/* Quick Specs */
+.quickSpecs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.specItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.specItem svg {
+  font-size: 20px;
+  color: #C9A227;
+}
+
+.specContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.specValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0A1628;
+  line-height: 1.1;
+}
+
+.specLabel {
+  font-size: 0.6875rem;
+  color: #9CA3AF;
+  text-transform: uppercase;
+}
+
+/* Area Details */
+.areaDetails {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 0.875rem 1rem;
+  background: #F8F9FA;
+  border-radius: 10px;
+}
+
+.areaRow {
+  display: flex;
+  flex-direction: column;
+}
+
+.areaRow span:first-child {
+  font-size: 0.6875rem;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  margin-bottom: 0.125rem;
+}
+
+.areaRow span:last-child {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0A1628;
+}
+
+/* Features List */
+.featuresList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.8125rem;
+  color: #4B5563;
+}
+
+.featureItem svg {
+  font-size: 16px;
+  color: #4CAF50;
+  flex-shrink: 0;
+}
+
+/* CTA Buttons */
+.ctaButtons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: auto;
+}
+
+.primaryBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #C9A227 0%, #E5C96E 100%);
+  border: none;
+  border-radius: 10px;
+  color: #0A1628;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 162, 39, 0.35);
+}
+
+.primaryBtn svg {
+  font-size: 18px;
+}
+
+.secondaryBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #0A1628;
+  border-radius: 10px;
+  color: #0A1628;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.secondaryBtn:hover {
+  background: #0A1628;
+  color: #FFFFFF;
+}
+
+.secondaryBtn svg {
+  font-size: 18px;
+}
+
+/* ========== Thumbnail Strip ========== */
+.thumbnailStrip {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.25rem;
+}
+
+.thumbnailScroller {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 0.25rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.thumbnailScroller::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnailCard {
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.625rem 1rem;
+  background: #FFFFFF;
+  border: 2px solid #E5E7EB;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 135px;
+}
+
+.thumbnailCard:hover {
+  border-color: #C9A227;
+}
+
+.thumbnailActive {
+  border-color: #0A1628;
+  background: linear-gradient(135deg, #0A1628 0%, #132742 100%);
+}
+
+.thumbnailActive .thumbnailType,
+.thumbnailActive .thumbnailSqft,
+.thumbnailActive .thumbnailPrice {
+  color: #FFFFFF;
+}
+
+.thumbnailActive .thumbnailSqft {
+  color: #FFFFFFB3 !important;
+}
+
+.thumbnailInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnailType {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: #0A1628;
+}
+
+.thumbnailSqft {
+  font-size: 0.625rem;
+  color: #9CA3AF;
+}
+
+.thumbnailPrice {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #C9A227;
+}
+
+.thumbnailBadge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #C9A227;
+  border-radius: 50%;
+  color: #0A1628;
+  font-size: 10px;
+}
+
+/* ========== Compact CTA ========== */
+.compactCta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(135deg, #0A1628 0%, #132742 100%);
+  border-radius: 14px;
+}
+
+.ctaContent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ctaIcon {
+  font-size: 28px;
+  color: #C9A227;
+}
+
+.ctaText {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctaTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.ctaSubtitle {
+  font-size: 0.75rem;
+  color: #FFFFFF99 !important;
+}
+
+.ctaBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #C9A227 0%, #E5C96E 100%);
+  border: none;
+  border-radius: 10px;
+  color: #0A1628;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.ctaBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(201, 162, 39, 0.4);
+}
+
+.ctaBtn svg {
+  font-size: 18px;
+}
+
+/* ========== Modal Styles ========== */
+.planModal {
+  z-index: 1400;
+}
+
+.modalContent {
+  position: relative;
+  padding: 2rem !important;
+}
+
+.modalClose {
+  z-index: 10;
+}
+
+.modalImageWrapper {
+  position: relative;
+  background: linear-gradient(135deg, #0A1628 0%, #132742 100%);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.modalImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modalDetails {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.modalType {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0A1628;
+  margin-bottom: 0.25rem;
+}
+
+.modalName {
+  font-size: 1rem;
+  color: #C9A227;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.modalDesc {
+  font-size: 0.9375rem;
+  color: #6B7280;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Modal Specs */
+.modalSpecs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.modalSpecItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background: #F8F9FA;
+  border-radius: 12px;
+}
+
+.modalSpecItem svg {
+  font-size: 24px;
+  color: #C9A227;
+  margin-bottom: 0.5rem;
+}
+
+.modalSpecValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0A1628;
+}
+
+.modalSpecLabel {
+  font-size: 0.75rem;
+  color: #6B7280;
+}
+
+/* Modal Area Details */
+.modalAreaDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #F8F9FA;
+  border-radius: 12px;
+}
+
+.modalAreaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.modalAreaRow:last-child {
+  border-bottom: none;
+}
+
+.modalAreaRow span:first-child {
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.modalAreaRow span:last-child {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #0A1628;
+}
+
+/* Modal Price */
+.modalPrice {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.1) 0%, rgba(201, 162, 39, 0.05) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(201, 162, 39, 0.2);
+  margin-bottom: 1.5rem;
+}
+
+.modalPriceLabel {
+  font-size: 0.8125rem;
+  color: #6B7280;
+  margin-bottom: 0.25rem;
+}
+
+.modalPriceValue {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #C9A227;
+}
+
+/* Modal Features */
+.modalFeatures {
+  margin-bottom: 1.5rem;
+}
+
+.featuresTitle {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #0A1628;
+  margin-bottom: 0.75rem;
+}
+
+.modalFeaturesList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modalFeatureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #4B5563;
+}
+
+.modalFeatureItem svg {
+  font-size: 18px;
+  color: #4CAF50;
+  flex-shrink: 0;
+}
+
+/* Modal Actions */
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.modalPrimaryBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, #C9A227 0%, #E5C96E 100%);
+  border: none;
+  border-radius: 12px;
+  color: #0A1628;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modalPrimaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(201, 162, 39, 0.3);
+}
+
+.modalPrimaryBtn svg {
+  font-size: 20px;
+}
+
+.modalSecondaryBtn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 14px 24px;
+  background: transparent;
+  border: 2px solid #0A1628;
+  border-radius: 12px;
+  color: #0A1628;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modalSecondaryBtn:hover {
+  background: #0A1628;
+  color: #FFFFFF;
+}
+
+.modalSecondaryBtn svg {
+  font-size: 20px;
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .floorPlansSection {
+    padding: 4rem 0;
+  }
+
+  .showcaseCard {
+    gap: 2.5rem;
+  }
+
+  .showcaseImageSection {
+    min-height: 420px;
+  }
+
+  .showcaseDetails {
+    padding: 2rem 2rem 2rem 0;
+  }
+
+  .planType {
+    font-size: 2rem;
+  }
+
+  .priceValue {
+    font-size: 1.625rem;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .floorPlansSection {
+    padding: 3.5rem 0;
+  }
+
+  .showcaseImageSection {
+    min-height: 360px;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .floorPlansSection {
+    padding: 3rem 0;
+  }
+
+  .showcaseCard {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .showcaseImageSection {
+    min-height: 300px;
+  }
+
+  .showcaseDetails {
+    padding: 1.5rem;
+  }
+
+  .quickSpecs {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .featuresList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .compactCta {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .ctaContent {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .ctaBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Modal Tablet */
+  .modalSpecs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .floorPlansSection {
+    padding: 2.5rem 0;
+  }
+
+  .bgPattern {
+    background-size: 30px 30px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 1.25rem;
+  }
+
+  .highlightsStrip {
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .highlightItem {
+    font-size: 0.6875rem;
+  }
+
+  .highlightItem svg {
+    font-size: 12px;
+  }
+
+  .filterWrapper {
+    gap: 0.375rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .filterPill {
+    padding: 0.375rem 0.875rem;
+    font-size: 0.75rem;
+  }
+
+  .showcaseContainer {
+    margin-bottom: 1rem;
+  }
+
+  .showcaseCard {
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-radius: 16px;
+  }
+
+  .showcaseImageSection {
+    min-height: 240px;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .navArrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .navArrow svg {
+    font-size: 20px;
+  }
+
+  .navArrowLeft {
+    left: 8px;
+  }
+
+  .navArrowRight {
+    right: 8px;
+  }
+
+  .previewLabel svg {
+    font-size: 28px;
+  }
+
+  .previewLabel span {
+    font-size: 0.8125rem;
+  }
+
+  .showcaseDetails {
+    padding: 1.25rem;
+  }
+
+  .detailsHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .priceTag {
+    text-align: left;
+  }
+
+  .planType {
+    font-size: 1.375rem;
+  }
+
+  .priceValue {
+    font-size: 1.25rem;
+  }
+
+  .quickSpecs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .specValue {
+    font-size: 1rem;
+  }
+
+  .specLabel {
+    font-size: 0.625rem;
+  }
+
+  .areaDetails {
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .areaRow {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .featuresList {
+    grid-template-columns: 1fr;
+    gap: 0.375rem;
+    margin-bottom: 1rem;
+  }
+
+  .featureItem {
+    font-size: 0.75rem;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    padding: 10px 16px;
+    font-size: 0.8125rem;
+  }
+
+  .thumbnailStrip {
+    margin-bottom: 1rem;
+  }
+
+  .thumbnailCard {
+    min-width: 120px;
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .thumbnailType {
+    font-size: 0.75rem;
+  }
+
+  .thumbnailSqft {
+    font-size: 0.5625rem;
+  }
+
+  .thumbnailPrice {
+    font-size: 0.6875rem;
+  }
+
+  .compactCta {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.875rem;
+    padding: 1rem;
+    border-radius: 12px;
+  }
+
+  .ctaContent {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .ctaIcon {
+    font-size: 24px;
+  }
+
+  .ctaTitle {
+    font-size: 0.8125rem;
+  }
+
+  .ctaSubtitle {
+    font-size: 0.6875rem;
+  }
+
+  .ctaBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 16px;
+    font-size: 0.8125rem;
+  }
+
+  /* Modal Mobile */
+  .modalContent {
+    padding: 1rem !important;
+  }
+
+  .modalImageWrapper {
+    border-radius: 12px;
+    margin-bottom: 1rem;
+  }
+
+  .modalType {
+    font-size: 1.375rem;
+  }
+
+  .modalName {
+    font-size: 0.875rem;
+  }
+
+  .modalDesc {
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+  }
+
+  .modalSpecs {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .modalSpecItem {
+    padding: 0.75rem;
+    border-radius: 10px;
+  }
+
+  .modalSpecItem svg {
+    font-size: 20px;
+    margin-bottom: 0.375rem;
+  }
+
+  .modalSpecValue {
+    font-size: 1.0625rem;
+  }
+
+  .modalSpecLabel {
+    font-size: 0.6875rem;
+  }
+
+  .modalAreaDetails {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+
+  .modalAreaRow {
+    padding: 0.375rem 0;
+  }
+
+  .modalAreaRow span:first-child {
+    font-size: 0.8125rem;
+  }
+
+  .modalAreaRow span:last-child {
+    font-size: 0.875rem;
+  }
+
+  .modalPrice {
+    padding: 0.875rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+  }
+
+  .modalPriceLabel {
+    font-size: 0.75rem;
+  }
+
+  .modalPriceValue {
+    font-size: 1.5rem;
+  }
+
+  .modalFeatures {
+    margin-bottom: 1.25rem;
+  }
+
+  .featuresTitle {
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .modalFeatureItem {
+    font-size: 0.8125rem;
+  }
+
+  .modalFeatureItem svg {
+    font-size: 16px;
+  }
+
+  .modalActions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .modalPrimaryBtn,
+  .modalSecondaryBtn {
+    padding: 12px 20px;
+    font-size: 0.875rem;
+    border-radius: 10px;
+  }
+
+  .modalPrimaryBtn svg,
+  .modalSecondaryBtn svg {
+    font-size: 18px;
+  }
+}
+
+/* Small Mobile (max-width: 374px) */
+@media (max-width: 374px) {
+  .floorPlansSection {
+    padding: 2rem 0;
+  }
+
+  .highlightsStrip {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .highlightsStrip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .highlightItem {
+    flex-shrink: 0;
+    font-size: 0.625rem;
+  }
+
+  .filterPill {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.6875rem;
+  }
+
+  .showcaseImageSection {
+    min-height: 200px;
+  }
+
+  .previewLabel svg {
+    font-size: 24px;
+  }
+
+  .previewLabel span {
+    font-size: 0.75rem;
+  }
+
+  .showcaseDetails {
+    padding: 1rem;
+  }
+
+  .planType {
+    font-size: 1.25rem;
+  }
+
+  .priceValue {
+    font-size: 1.125rem;
+  }
+
+  .quickSpecs {
+    gap: 0.5rem;
+  }
+
+  .specItem svg {
+    font-size: 16px;
+  }
+
+  .specValue {
+    font-size: 0.9375rem;
+  }
+
+  .thumbnailCard {
+    min-width: 110px;
+    padding: 0.5rem 0.625rem;
+  }
+
+  .ctaTitle {
+    font-size: 0.75rem;
+  }
+
+  .modalType {
+    font-size: 1.25rem;
+  }
+
+  .modalSpecValue {
+    font-size: 1rem;
+  }
+
+  .modalPriceValue {
+    font-size: 1.375rem;
+  }
+}
+
+/* ========== Hover Effects (Pointer Devices) ========== */
+@media (hover: hover) {
+  .thumbnailCard:hover {
+    transform: translateY(-2px);
+  }
+
+  .navArrow:hover {
+    transform: translateY(-50%) scale(1.08);
+  }
+}
+
+/* ========== Reduced Motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  .showcaseCard,
+  .showcaseImage,
+  .imageOverlay,
+  .blurOverlay,
+  .viewPlanBtn,
+  .primaryBtn,
+  .secondaryBtn,
+  .ctaBtn,
+  .modalPrimaryBtn,
+  .modalSecondaryBtn,
+  .thumbnailCard,
+  .filterPill,
+  .navArrow {
+    transition: none;
+  }
+
+  .showcaseImageWrapper:hover .showcaseImage {
+    transform: none;
+    filter: blur(6px);
+  }
+
+  .primaryBtn:hover,
+  .secondaryBtn:hover,
+  .ctaBtn:hover,
+  .thumbnailCard:hover {
+    transform: none;
+  }
+}
+
+/* ========== Focus Styles for Accessibility ========== */
+.filterPill:focus-visible,
+.primaryBtn:focus-visible,
+.secondaryBtn:focus-visible,
+.ctaBtn:focus-visible,
+.viewPlanBtn:focus-visible,
+.modalPrimaryBtn:focus-visible,
+.modalSecondaryBtn:focus-visible,
+.thumbnailCard:focus-visible,
+.navArrow:focus-visible {
+  outline: 2px solid #C9A227;
+  outline-offset: 2px;
+}
+
+/* ========== Print Styles ========== */
+@media print {
+  .floorPlansSection {
+    padding: 2rem 0;
+    background: white;
+  }
+
+  .bgOverlay,
+  .bgPattern {
+    display: none;
+  }
+
+  .showcaseCard {
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .imageOverlay,
+  .blurOverlay {
+    display: none;
+  }
+
+  .showcaseImage {
+    filter: none;
+  }
+
+  .goldText,
+  .priceValue,
+  .modalPriceValue {
+    color: #0A1628 !important;
+  }
+
+  .compactCta {
+    display: none;
+  }
+
+  .thumbnailStrip {
+    display: none;
+  }
+
+  .navArrow {
+    display: none;
+  }
+
+  .primaryBtn,
+  .secondaryBtn,
+  .ctaBtn {
+    display: none;
+  }
+}

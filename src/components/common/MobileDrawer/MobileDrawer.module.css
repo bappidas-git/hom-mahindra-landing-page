@@ -1,0 +1,390 @@
+/* ============================================
+   MobileDrawer Styles
+   Slide-up menu drawer for mobile navigation
+   ============================================ */
+
+/* Drawer Paper */
+.drawerPaper {
+  border-radius: 24px 24px 0 0 !important;
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.15) !important;
+  overflow: visible !important;
+}
+
+/* Backdrop */
+.backdrop {
+  background-color: rgba(10, 22, 40, 0.6) !important;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Drawer Content Container */
+.drawerContent {
+  width: 100%;
+  max-height: 85vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 24px 24px 0 0;
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+/* Drawer Handle (Swipe indicator) */
+.drawerHandle {
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 8px;
+  cursor: grab;
+}
+
+.drawerHandle:active {
+  cursor: grabbing;
+}
+
+.handleBar {
+  width: 40px;
+  height: 4px;
+  background: var(--border-gray);
+  border-radius: 2px;
+  transition: background-color 0.2s ease;
+}
+
+.drawerHandle:hover .handleBar {
+  background: var(--accent-gold);
+}
+
+/* Drawer Header */
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px 16px;
+}
+
+/* Logo Section */
+.logoSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logoIcon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #C9A227 0%, #E5C96E 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+}
+
+.projectName {
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  color: var(--primary-dark) !important;
+  line-height: 1.2 !important;
+  font-family: var(--font-heading) !important;
+}
+
+.projectSubtitle {
+  font-size: 0.75rem !important;
+  color: var(--text-gray) !important;
+  font-weight: 400 !important;
+}
+
+/* Close Button */
+.closeButton {
+  width: 40px;
+  height: 40px;
+  background: var(--light-gray) !important;
+  transition: all 0.2s ease !important;
+}
+
+.closeButton:hover {
+  background: var(--medium-gray) !important;
+  transform: rotate(90deg);
+}
+
+.closeButton svg {
+  font-size: 20px;
+  color: var(--text-dark-gray);
+}
+
+/* Divider */
+.divider {
+  margin: 0 16px !important;
+  border-color: var(--border-gray) !important;
+}
+
+/* Menu List */
+.menuList {
+  padding: 12px 8px !important;
+  overflow-y: auto;
+  flex: 1;
+}
+
+/* Menu Item */
+.menuItem {
+  margin-bottom: 4px;
+}
+
+/* Menu Button */
+.menuButton {
+  position: relative;
+  border-radius: 12px !important;
+  margin: 0 8px;
+  padding: 12px 16px !important;
+  transition: all 0.2s ease !important;
+}
+
+.menuButton:hover {
+  background-color: rgba(201, 162, 39, 0.08) !important;
+}
+
+.menuButton:active {
+  background-color: rgba(201, 162, 39, 0.12) !important;
+  transform: scale(0.98);
+}
+
+/* Active Menu Item */
+.activeItem {
+  background-color: rgba(201, 162, 39, 0.1) !important;
+}
+
+.activeItem::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: linear-gradient(180deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Menu Icon */
+.menuIcon {
+  min-width: 44px !important;
+  transition: color 0.2s ease;
+}
+
+/* Menu Text */
+.menuText {
+  margin: 0 !important;
+}
+
+.menuText span {
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  transition: color 0.2s ease;
+}
+
+/* Active Indicator */
+.activeIndicator {
+  width: 6px;
+  height: 6px;
+  background: var(--accent-gold);
+  border-radius: 50%;
+  margin-left: auto;
+  box-shadow: 0 0 8px rgba(201, 162, 39, 0.6);
+}
+
+/* Drawer Footer */
+.drawerFooter {
+  padding: 0 8px 16px;
+  padding-bottom: 90px; /* Account for MobileNavigation bar height */
+  margin-top: auto;
+}
+
+/* Contact Info */
+.contactInfo {
+  padding: 16px 16px 8px;
+  text-align: center;
+}
+
+.contactLabel {
+  display: block;
+  color: var(--text-gray) !important;
+  font-size: 0.75rem !important;
+  margin-bottom: 12px !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Contact Actions */
+.contactActions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.contactLink,
+.contactLinkWhatsapp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contactLink {
+  background: var(--light-gray);
+  color: var(--primary-dark);
+  border: 1px solid var(--border-gray);
+}
+
+.contactLink:hover {
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  border-color: var(--accent-gold);
+  box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+}
+
+.contactLinkWhatsapp {
+  background: #25D366;
+  color: white;
+  border: 1px solid #25D366;
+}
+
+.contactLinkWhatsapp:hover {
+  background: #20BA5A;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+}
+
+.contactLink svg,
+.contactLinkWhatsapp svg {
+  font-size: 18px;
+}
+
+/* Animation for menu items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .drawerContent {
+    max-height: 90vh;
+  }
+
+  .drawerHeader {
+    padding: 8px 16px;
+  }
+
+  .menuList {
+    padding: 8px !important;
+  }
+
+  .menuButton {
+    padding: 8px 16px !important;
+  }
+
+  .contactInfo {
+    padding: 8px 16px;
+  }
+
+  .contactActions {
+    gap: 12px;
+  }
+
+  .contactLink,
+  .contactLinkWhatsapp {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablet Adjustments */
+@media (min-width: 768px) {
+  .drawerContent {
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .menuButton {
+    padding: 14px 20px !important;
+  }
+
+  .menuIcon {
+    min-width: 48px !important;
+  }
+
+  .menuText span {
+    font-size: 1rem !important;
+  }
+
+  .contactActions {
+    gap: 24px;
+  }
+
+  .contactLink,
+  .contactLinkWhatsapp {
+    padding: 12px 28px;
+  }
+}
+
+/* Touch feedback optimization */
+@media (hover: none) {
+  .menuButton:hover {
+    background-color: transparent !important;
+  }
+
+  .menuButton:active {
+    background-color: rgba(201, 162, 39, 0.12) !important;
+  }
+
+  .closeButton:hover {
+    transform: none;
+  }
+}
+
+/* Accessibility */
+.menuButton:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.closeButton:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+.contactLink:focus-visible,
+.contactLinkWhatsapp:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .menuButton,
+  .closeButton,
+  .contactLink,
+  .contactLinkWhatsapp {
+    transition: none !important;
+  }
+}
+
+/* Safe area for notched devices */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .drawerFooter {
+    padding-bottom: calc(90px + env(safe-area-inset-bottom));
+  }
+}

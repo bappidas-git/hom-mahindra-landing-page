@@ -1,0 +1,565 @@
+/* ============================================
+   Footer Component Styles - Nambiar District 25 Phase 2
+   Professional, compact footer with modals
+   ============================================ */
+
+/* Footer Base */
+.footer {
+  background: var(--primary-dark);
+  color: var(--white);
+  margin-top: auto;
+}
+
+/* Main Footer */
+.mainFooter {
+  padding: var(--space-6) 0 var(--space-5);
+}
+
+/* RERA Badge */
+.reraBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.15) 0%, rgba(201, 162, 39, 0.05) 100%);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  border-radius: var(--radius-xl);
+  margin-bottom: var(--space-5);
+  flex-wrap: wrap;
+}
+
+.reraIcon {
+  font-size: 22px;
+  color: var(--accent-gold);
+  flex-shrink: 0;
+}
+
+.reraLabel {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--accent-gold);
+}
+
+.reraNumber {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+
+/* Compact Disclaimer Bar */
+.compactDisclaimer {
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: var(--space-3) 0;
+  margin-bottom: var(--space-4);
+}
+
+.disclaimerLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.disclaimerInfoIcon {
+  font-size: 14px;
+  color: #FFFFFF66 !important;
+  flex-shrink: 0;
+}
+
+.disclaimerSummary {
+  font-size: 11px;
+  color: #FFFFFF80 !important;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.disclaimerSummary strong {
+  color: #C9A227CC !important;
+  font-weight: var(--fw-medium);
+}
+
+.disclaimerToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-family: var(--font-primary);
+  font-size: 10px;
+  font-weight: var(--fw-medium);
+  color: #C9A227B3 !important;
+  background: none;
+  border: none;
+  padding: 2px 6px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+.disclaimerToggle:hover {
+  color: var(--accent-gold);
+}
+
+.readMoreText {
+  font-size: 10px;
+}
+
+.toggleIcon {
+  font-size: 14px;
+}
+
+.disclaimerExpanded {
+  overflow: hidden;
+}
+
+.disclaimerFullText {
+  font-size: 10px;
+  color: #FFFFFF73 !important;
+  line-height: 1.6;
+  margin: var(--space-3) auto 0;
+  padding: var(--space-3);
+  max-width: 900px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: var(--radius-md);
+}
+
+.disclaimerFullText strong {
+  color: #C9A227BF !important;
+  font-weight: var(--fw-medium);
+}
+
+/* Footer Bottom */
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  font-size: var(--fs-sm);
+  color: #FFFFFF99 !important;
+  margin: 0;
+}
+
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.legalLink {
+  font-family: var(--font-primary);
+  font-size: var(--fs-sm);
+  color: #FFFFFFB3 !important;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
+
+.legalLink:hover {
+  color: var(--accent-gold);
+}
+
+.linkDivider {
+  color: #FFFFFF4D !important;
+  font-size: var(--fs-xs);
+}
+
+/* Developer Credit Bar */
+.developerBar {
+  background: #000000;
+  padding: var(--space-2) 0;
+}
+
+.developerText {
+  font-size: 11px;
+  color: #FFFFFF80 !important;
+  margin: 0;
+  text-align: center;
+}
+
+.developerLink {
+  background: linear-gradient(135deg, #C9A227 0%, #E5C96E 50%, #C9A227 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  transition: filter var(--transition-fast);
+}
+
+.developerLink:hover {
+  filter: brightness(1.2);
+}
+
+/* ============================================
+   Legal Modal Styles
+   ============================================ */
+
+.modalBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-modal-backdrop);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.legalModal {
+  position: relative;
+  z-index: var(--z-modal);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-dark-light) 100%);
+  border-bottom: 3px solid var(--accent-gold);
+}
+
+.modalTitle {
+  font-family: var(--font-heading);
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-bold);
+  color: var(--white);
+  margin: 0;
+}
+
+.modalCloseBtn {
+  color: var(--white) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  width: 40px !important;
+  height: 40px !important;
+  transition: all var(--transition-fast) !important;
+}
+
+.modalCloseBtn:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: rotate(90deg);
+}
+
+.modalBody {
+  flex: 1;
+  padding: var(--space-6);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Legal Content Styles */
+.legalContent {
+  color: var(--text-dark-gray);
+}
+
+.legalSection {
+  margin-bottom: var(--space-6);
+}
+
+.legalSection:last-of-type {
+  margin-bottom: var(--space-4);
+}
+
+.legalSection h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--primary-dark);
+  margin: 0 0 var(--space-3) 0;
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--accent-gold);
+  display: inline-block;
+}
+
+.legalSection p {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  margin: 0 0 var(--space-3) 0;
+  color: var(--text-gray);
+}
+
+.legalSection ul {
+  margin: var(--space-3) 0;
+  padding-left: var(--space-5);
+}
+
+.legalSection li {
+  font-size: var(--fs-sm);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-2);
+  color: var(--text-gray);
+}
+
+.legalSection li strong {
+  color: var(--primary-dark);
+}
+
+.legalSection li:last-child {
+  margin-bottom: 0;
+}
+
+.lastUpdated {
+  font-size: var(--fs-xs);
+  color: var(--text-gray);
+  font-style: italic;
+  text-align: right;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-gray);
+  margin-top: var(--space-4);
+}
+
+/* Modal Scrollbar */
+.modalBody::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modalBody::-webkit-scrollbar-track {
+  background: var(--light-gray);
+  border-radius: 3px;
+}
+
+.modalBody::-webkit-scrollbar-thumb {
+  background: var(--border-gray);
+  border-radius: 3px;
+}
+
+.modalBody::-webkit-scrollbar-thumb:hover {
+  background: var(--text-gray);
+}
+
+/* ============================================
+   Responsive Styles
+   ============================================ */
+
+@media (min-width: 768px) {
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainFooter {
+    padding: var(--space-5) 0 var(--space-4);
+  }
+
+  .reraBadge {
+    flex-direction: column;
+    gap: var(--space-1);
+    padding: var(--space-3);
+    text-align: center;
+  }
+
+  .reraLabel {
+    font-size: var(--fs-xs);
+  }
+
+  .reraNumber {
+    font-size: var(--fs-xs);
+    word-break: break-all;
+  }
+
+  .compactDisclaimer {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .disclaimerLine {
+    gap: var(--space-1);
+  }
+
+  .disclaimerSummary {
+    font-size: 10px;
+    line-height: 1.4;
+  }
+
+  .disclaimerFullText {
+    font-size: 9px;
+    padding: var(--space-2);
+  }
+
+  .modalBackdrop {
+    padding: 0;
+    align-items: flex-end;
+  }
+
+  .legalModal {
+    max-height: 95vh;
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+  }
+
+  .modalHeader {
+    padding: var(--space-4) var(--space-5);
+  }
+
+  .modalTitle {
+    font-size: var(--fs-xl);
+  }
+
+  .modalBody {
+    padding: var(--space-5);
+  }
+
+  .legalSection h3 {
+    font-size: var(--fs-base);
+  }
+
+  .legalSection p,
+  .legalSection li {
+    font-size: var(--fs-xs);
+  }
+}
+
+@media (max-width: 480px) {
+  .mainFooter {
+    padding: var(--space-4) 0;
+  }
+
+  .reraBadge {
+    padding: var(--space-2);
+    margin-bottom: var(--space-4);
+  }
+
+  .reraIcon {
+    font-size: 18px;
+  }
+
+  .compactDisclaimer {
+    margin-bottom: var(--space-3);
+  }
+
+  .disclaimerInfoIcon {
+    display: none;
+  }
+
+  .disclaimerSummary {
+    font-size: 9px;
+  }
+
+  .disclaimerToggle {
+    font-size: 9px;
+  }
+
+  .toggleIcon {
+    font-size: 12px;
+  }
+
+  .footerBottom {
+    gap: var(--space-2);
+    padding-top: var(--space-3);
+  }
+
+  .copyright {
+    font-size: var(--fs-xs);
+  }
+
+  .legalLink {
+    font-size: var(--fs-xs);
+  }
+
+  .developerBar {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .developerText {
+    font-size: 10px;
+  }
+
+  .modalHeader {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .modalBody {
+    padding: var(--space-4);
+  }
+
+  .legalSection {
+    margin-bottom: var(--space-5);
+  }
+
+}
+
+/* Print Styles */
+@media print {
+  .footer {
+    background: white;
+    color: black;
+    padding: var(--space-4) 0;
+  }
+
+  .reraBadge {
+    border-color: var(--border-gray);
+    background: transparent;
+  }
+
+  .reraLabel,
+  .reraIcon {
+    color: var(--primary-dark);
+  }
+
+  .reraNumber {
+    color: var(--primary-dark);
+  }
+
+  .disclaimerSummary,
+  .disclaimerFullText,
+  .copyright,
+  .legalLink {
+    color: var(--text-dark-gray);
+  }
+
+  .developerBar {
+    background: var(--light-gray);
+  }
+
+  .developerText,
+  .developerLink {
+    color: var(--text-dark-gray);
+    -webkit-text-fill-color: var(--text-dark-gray);
+  }
+
+  .modalBackdrop {
+    display: none;
+  }
+}
+
+/* Accessibility */
+.legalLink:focus-visible,
+.disclaimerToggle:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.modalCloseBtn:focus-visible {
+  outline: 2px solid var(--white) !important;
+  outline-offset: 2px;
+}

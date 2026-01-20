@@ -1,0 +1,491 @@
+/* ============================================
+   Responsive Styles - Nambiar District 25 Phase 2
+   Real Estate Landing Page
+   ============================================ */
+
+/* ========== Breakpoint Reference ========== */
+/*
+  xs: 480px  - Extra small devices (small phones)
+  sm: 640px  - Small devices (phones)
+  md: 768px  - Medium devices (tablets)
+  lg: 1024px - Large devices (laptops)
+  xl: 1280px - Extra large devices (desktops)
+  2xl: 1440px - Large desktops
+*/
+
+/* ========== Mobile First Base Styles ========== */
+/* These are the default mobile styles */
+
+/* ========== Extra Small Devices (480px and up) ========== */
+@media screen and (min-width: 480px) {
+  .container {
+    padding-left: var(--space-6);
+    padding-right: var(--space-6);
+  }
+
+  /* Grid adjustments */
+  .grid-xs-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========== Small Devices - Phones (640px and up) ========== */
+@media screen and (min-width: 640px) {
+  /* Typography */
+  h1 {
+    font-size: var(--fs-4xl);
+  }
+
+  h2 {
+    font-size: var(--fs-3xl);
+  }
+
+  /* Container */
+  .container {
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+  }
+
+  /* Section padding */
+  .section {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  /* Grid */
+  .grid-sm-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-sm-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Visibility */
+  .hide-sm {
+    display: none !important;
+  }
+
+  .show-sm {
+    display: block !important;
+  }
+
+  .show-sm-flex {
+    display: flex !important;
+  }
+
+  /* Text alignment */
+  .text-sm-left {
+    text-align: left;
+  }
+
+  .text-sm-center {
+    text-align: center;
+  }
+}
+
+/* ========== Medium Devices - Tablets (768px and up) ========== */
+@media screen and (min-width: 768px) {
+  /* Typography */
+  h1 {
+    font-size: var(--fs-5xl);
+  }
+
+  /* Container */
+  .container {
+    max-width: 720px;
+  }
+
+  /* Grid */
+  .grid-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-md-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-md-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Flex direction */
+  .flex-md-row {
+    flex-direction: row;
+  }
+
+  .flex-md-column {
+    flex-direction: column;
+  }
+
+  /* Visibility */
+  .hide-md {
+    display: none !important;
+  }
+
+  .show-md {
+    display: block !important;
+  }
+
+  .show-md-flex {
+    display: flex !important;
+  }
+
+  /* Text alignment */
+  .text-md-left {
+    text-align: left;
+  }
+
+  .text-md-center {
+    text-align: center;
+  }
+
+  /* Spacing */
+  .gap-md-4 {
+    gap: var(--space-4);
+  }
+
+  .gap-md-6 {
+    gap: var(--space-6);
+  }
+
+  .gap-md-8 {
+    gap: var(--space-8);
+  }
+}
+
+/* ========== Large Devices - Laptops (1024px and up) ========== */
+@media screen and (min-width: 1024px) {
+  /* Typography */
+  h1 {
+    font-size: var(--fs-hero);
+  }
+
+  /* Container */
+  .container {
+    max-width: 960px;
+  }
+
+  /* Section padding */
+  .section {
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-20);
+  }
+
+  /* Grid */
+  .grid-lg-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-lg-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-lg-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  /* Flex direction */
+  .flex-lg-row {
+    flex-direction: row;
+  }
+
+  /* Visibility */
+  .hide-lg {
+    display: none !important;
+  }
+
+  .show-lg {
+    display: block !important;
+  }
+
+  .show-lg-flex {
+    display: flex !important;
+  }
+
+  /* Text alignment */
+  .text-lg-left {
+    text-align: left;
+  }
+
+  .text-lg-center {
+    text-align: center;
+  }
+
+  /* Spacing */
+  .gap-lg-6 {
+    gap: var(--space-6);
+  }
+
+  .gap-lg-8 {
+    gap: var(--space-8);
+  }
+
+  .gap-lg-10 {
+    gap: var(--space-10);
+  }
+}
+
+/* ========== Extra Large Devices - Desktops (1280px and up) ========== */
+@media screen and (min-width: 1280px) {
+  /* Container */
+  .container {
+    max-width: var(--container-xl);
+  }
+
+  /* Grid */
+  .grid-xl-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid-xl-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-xl-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid-xl-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  /* Visibility */
+  .hide-xl {
+    display: none !important;
+  }
+
+  .show-xl {
+    display: block !important;
+  }
+
+  .show-xl-flex {
+    display: flex !important;
+  }
+
+  /* Section padding */
+  .section {
+    padding-top: var(--space-24);
+    padding-bottom: var(--space-24);
+  }
+}
+
+/* ========== 2XL Devices - Large Desktops (1440px and up) ========== */
+@media screen and (min-width: 1440px) {
+  /* Container */
+  .container {
+    max-width: var(--container-2xl);
+  }
+
+  /* Grid */
+  .grid-2xl-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-2xl-5 {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .grid-2xl-6 {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+/* ========== Mobile Navigation (Bottom Fixed Nav) ========== */
+@media screen and (max-width: 1023px) {
+  /* Mobile bottom navigation visible */
+  .mobile-nav {
+    display: flex;
+  }
+
+  /* Desktop header nav hidden */
+  .desktop-nav {
+    display: none;
+  }
+
+  /* Add padding to body for fixed bottom nav + safe area for notched devices */
+  body {
+    padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px));
+  }
+
+  /* Adjust scroll for mobile */
+  html {
+    scroll-padding-bottom: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom, 0px) + 20px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* Mobile nav hidden on desktop */
+  .mobile-nav {
+    display: none;
+  }
+
+  /* Desktop nav visible */
+  .desktop-nav {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+}
+
+/* ========== Touch Device Optimizations ========== */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap targets */
+  .btn,
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Remove hover effects on touch */
+  .hover-lift:hover,
+  .hover-scale:hover,
+  .hover-glow:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* Disable hover states */
+  .card:hover {
+    transform: none;
+    box-shadow: var(--shadow-card);
+  }
+}
+
+/* ========== Landscape Mobile ========== */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  /* Reduce hero height on landscape mobile */
+  .hero-section {
+    min-height: 100vh;
+    height: auto;
+  }
+
+  /* Reduce section padding */
+  .section {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+  }
+}
+
+/* ========== High Resolution Screens ========== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp images on retina */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* ========== Print Media ========== */
+@media print {
+  /* Hide non-essential elements */
+  .mobile-nav,
+  .desktop-nav,
+  .btn,
+  button,
+  .modal,
+  .drawer {
+    display: none !important;
+  }
+
+  /* Ensure text is visible */
+  body {
+    color: #000 !important;
+    background: #fff !important;
+  }
+
+  /* Full width containers */
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Remove shadows */
+  .card,
+  .section {
+    box-shadow: none !important;
+  }
+
+  /* Show full content */
+  .section {
+    page-break-inside: avoid;
+  }
+}
+
+/* ========== Safe Area Insets (Notched Devices) ========== */
+@supports (padding-top: env(safe-area-inset-top)) {
+  /* Header with safe area */
+  .header {
+    padding-top: env(safe-area-inset-top);
+  }
+
+  /* Mobile nav with safe area */
+  .mobile-nav {
+    padding-bottom: env(safe-area-inset-bottom);
+    height: calc(var(--mobile-nav-height) + env(safe-area-inset-bottom));
+  }
+
+  /* Full height sections account for safe areas */
+  .full-height {
+    min-height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+  }
+}
+
+/* ========== Dark Mode Media Query ========== */
+@media (prefers-color-scheme: dark) {
+  /* Auto dark mode styles could go here */
+  /* Currently disabled - using explicit theme toggle */
+}
+
+/* ========== Reduced Motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ========== High Contrast Mode ========== */
+@media (prefers-contrast: high) {
+  .btn {
+    border: 2px solid currentColor;
+  }
+
+  .card {
+    border: 2px solid var(--primary-dark);
+  }
+
+  a:focus,
+  button:focus {
+    outline: 3px solid currentColor;
+    outline-offset: 3px;
+  }
+}
+
+/* ========== Force GPU Acceleration for Smooth Animations ========== */
+@media screen {
+  .animate-fadeIn,
+  .animate-fadeInUp,
+  .animate-slideInUp,
+  .animate-scaleIn,
+  .hover-lift,
+  .hover-scale,
+  .card {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}

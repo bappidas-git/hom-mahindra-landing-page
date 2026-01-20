@@ -1,0 +1,282 @@
+/* ============================================
+   MobileNavigation Styles
+   Bottom sticky navigation bar for mobile devices
+   ============================================ */
+
+/* Main Navigation Container */
+.mobileNav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-fixed);
+  background: var(--white);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Only visible on mobile/tablet */
+  display: none;
+}
+
+@media (max-width: 1023px) {
+  .mobileNav {
+    display: block;
+  }
+}
+
+/* Safe area background for notched devices (iPhone X+) */
+.safeAreaBackground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-bottom, 0);
+  background: var(--white);
+}
+
+/* Navigation Items Container */
+.navContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 16px;
+  padding-bottom: calc(8px + env(safe-area-inset-bottom, 0));
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Individual Navigation Item */
+.navItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+  min-width: 64px;
+  transition: transform var(--transition-fast);
+}
+
+.navItem.active {
+  transform: scale(0.95);
+}
+
+/* Navigation Button */
+.navButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+
+.navButton:hover {
+  background: rgba(201, 162, 39, 0.08);
+}
+
+.navButton:active {
+  background: rgba(201, 162, 39, 0.15);
+}
+
+/* Navigation Icon */
+.navIcon {
+  font-size: 24px;
+  transition: transform var(--transition-base), color var(--transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+.navItem:hover .navIcon {
+  transform: scale(1.1);
+}
+
+/* Navigation Label */
+.navLabel {
+  font-size: 11px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  transition: color var(--transition-base);
+  white-space: nowrap;
+}
+
+/* Ripple Effect */
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Top Border Gradient */
+.topBorder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--accent-gold) 20%,
+    var(--accent-gold-light) 50%,
+    var(--accent-gold) 80%,
+    transparent 100%
+  );
+  opacity: 0.6;
+}
+
+/* WhatsApp Button Special Styling */
+.navItem:first-child .navButton:hover {
+  background: rgba(37, 211, 102, 0.1);
+}
+
+.navItem:first-child .navIcon {
+  color: #25D366;
+}
+
+/* Active State Visual Feedback */
+.navItem:active .navLabel {
+  transform: scale(0.95);
+}
+
+/* Badge Styling Adjustments */
+.navItem :global(.MuiBadge-root) {
+  position: relative;
+}
+
+.navItem :global(.MuiBadge-badge) {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .mobileNav {
+    background: rgba(10, 22, 40, 0.95);
+  }
+
+  .safeAreaBackground {
+    background: rgba(10, 22, 40, 0.95);
+  }
+
+  .navButton:hover {
+    background: rgba(201, 162, 39, 0.15);
+  }
+}
+
+/* Landscape Mode Adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .navContainer {
+    padding: 4px 24px;
+    padding-bottom: calc(4px + env(safe-area-inset-bottom, 0));
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navIcon {
+    font-size: 20px;
+  }
+
+  .navLabel {
+    font-size: 10px !important;
+  }
+}
+
+/* Animation for initial load */
+@keyframes slideUpNav {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Pulse animation for badge */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+}
+
+/* Hover glow effect for buttons */
+.navButton::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease;
+  pointer-events: none;
+}
+
+.navButton:hover::after {
+  width: 60px;
+  height: 60px;
+}
+
+/* Accessibility - Focus states */
+.navButton:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}
+
+/* Touch feedback optimization */
+@media (hover: none) {
+  .navButton:hover {
+    background: transparent;
+  }
+
+  .navButton:hover::after {
+    width: 0;
+    height: 0;
+  }
+
+  .navButton:active {
+    background: rgba(201, 162, 39, 0.15);
+  }
+}
+
+/* Tablet specific adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .navContainer {
+    max-width: 600px;
+    padding: 12px 32px;
+    padding-bottom: calc(12px + env(safe-area-inset-bottom, 0));
+  }
+
+  .navButton {
+    width: 56px;
+    height: 56px;
+  }
+
+  .navIcon {
+    font-size: 28px;
+  }
+
+  .navLabel {
+    font-size: 12px !important;
+  }
+}

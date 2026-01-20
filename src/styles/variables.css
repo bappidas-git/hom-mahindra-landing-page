@@ -1,0 +1,248 @@
+/* ============================================
+   CSS Variables - Nambiar District 25 Phase 2
+   Real Estate Landing Page
+   ============================================ */
+
+:root {
+  /* ========== Primary Colors ========== */
+  --primary-dark: #0A1628;
+  --primary-dark-alt: #0D1E36;
+  --primary-dark-light: #132742;
+  --primary-dark-lighter: #1A3352;
+
+  /* ========== Accent Colors - Gold ========== */
+  --accent-gold: #C9A227;
+  --accent-gold-light: #E5C96E;
+  --accent-gold-dark: #B8941F;
+  --accent-gold-hover: #D4B038;
+  --accent-gold-gradient: linear-gradient(135deg, #C9A227 0%, #E5C96E 100%);
+  --accent-gold-gradient-reverse: linear-gradient(135deg, #E5C96E 0%, #C9A227 100%);
+  --accent-gold-gradient-horizontal: linear-gradient(90deg, #C9A227 0%, #E5C96E 50%, #C9A227 100%);
+
+  /* ========== Neutral Colors ========== */
+  --white: #FFFFFF;
+  --off-white: #F8F9FA;
+  --light-gray: #F0F2F5;
+  --medium-gray: #E0E0E0;
+  --border-gray: #E0E0E0;
+  --text-gray: #6B7280;
+  --text-dark-gray: #374151;
+  --dark-gray: #4A5568;
+
+  /* ========== Icon Background Colors ========== */
+  --icon-gold: #C9A227;
+  --icon-gold-bg: rgba(201, 162, 39, 0.15);
+  --icon-green: #4CAF50;
+  --icon-green-bg: rgba(76, 175, 80, 0.15);
+  --icon-purple: #9C27B0;
+  --icon-purple-bg: rgba(156, 39, 176, 0.15);
+  --icon-orange: #FF9800;
+  --icon-orange-bg: rgba(255, 152, 0, 0.15);
+  --icon-pink: #E91E63;
+  --icon-pink-bg: rgba(233, 30, 99, 0.15);
+  --icon-red: #F44336;
+  --icon-red-bg: rgba(244, 67, 54, 0.15);
+  --icon-teal: #009688;
+  --icon-teal-bg: rgba(0, 150, 136, 0.15);
+  --icon-blue: #2196F3;
+  --icon-blue-bg: rgba(33, 150, 243, 0.15);
+
+  /* ========== Card Backgrounds ========== */
+  --card-yellow: #FEF9E7;
+  --card-green: #E8F5E9;
+  --card-pink: #FCE4EC;
+  --card-purple: #F3E5F5;
+  --card-orange: #FFF3E0;
+  --card-blue: #E3F2FD;
+  --card-gold-gradient: linear-gradient(135deg, #C9A227 0%, #B8941F 100%);
+  --card-dark-gradient: linear-gradient(135deg, #0A1628 0%, #132742 100%);
+
+  /* ========== Semantic Colors ========== */
+  --success: #4CAF50;
+  --success-light: #81C784;
+  --warning: #FF9800;
+  --warning-light: #FFB74D;
+  --error: #F44336;
+  --error-light: #E57373;
+  --info: #2196F3;
+  --info-light: #64B5F6;
+
+  /* ========== Shadow Colors ========== */
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-dark: rgba(0, 0, 0, 0.15);
+  --shadow-gold: rgba(201, 162, 39, 0.3);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-card-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-button: 0 4px 15px rgba(201, 162, 39, 0.4);
+  --shadow-button-hover: 0 6px 20px rgba(201, 162, 39, 0.5);
+
+  /* ========== Typography ========== */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Font Sizes - Fluid Typography */
+  --fs-xs: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+  --fs-sm: clamp(0.8rem, 0.74rem + 0.3vw, 0.9rem);
+  --fs-base: clamp(0.9rem, 0.85rem + 0.25vw, 1rem);
+  --fs-md: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+  --fs-lg: clamp(1.1rem, 1rem + 0.5vw, 1.25rem);
+  --fs-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+  --fs-2xl: clamp(1.5rem, 1.25rem + 1.25vw, 2rem);
+  --fs-3xl: clamp(1.75rem, 1.4rem + 1.75vw, 2.5rem);
+  --fs-4xl: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --fs-5xl: clamp(2.5rem, 1.75rem + 3.75vw, 4rem);
+  --fs-hero: clamp(2.5rem, 2rem + 2.5vw, 4.5rem);
+
+  /* Line Heights */
+  --lh-tight: 1.1;
+  --lh-snug: 1.25;
+  --lh-normal: 1.5;
+  --lh-relaxed: 1.625;
+  --lh-loose: 2;
+
+  /* Letter Spacing */
+  --ls-tight: -0.025em;
+  --ls-normal: 0;
+  --ls-wide: 0.025em;
+  --ls-wider: 0.05em;
+  --ls-widest: 0.1em;
+
+  /* ========== Spacing Scale ========== */
+  --space-0: 0;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+  --space-40: 10rem;
+  --space-48: 12rem;
+  --space-64: 16rem;
+
+  /* Section Padding */
+  --section-py: clamp(3rem, 5vw, 6rem);
+  --section-px: clamp(1rem, 3vw, 2rem);
+
+  /* ========== Border Radius ========== */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-3xl: 2rem;
+  --radius-full: 9999px;
+
+  /* ========== Borders ========== */
+  --border-thin: 1px solid var(--border-gray);
+  --border-medium: 2px solid var(--border-gray);
+  --border-gold: 2px solid var(--accent-gold);
+  --border-gold-thin: 1px solid var(--accent-gold);
+
+  /* ========== Transitions ========== */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 350ms ease;
+  --transition-slower: 500ms ease;
+  --transition-spring: 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition-bounce: 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  --transition-smooth: 400ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ========== Z-Index Scale ========== */
+  --z-below: -1;
+  --z-base: 0;
+  --z-above: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-drawer: 400;
+  --z-modal-backdrop: 500;
+  --z-modal: 600;
+  --z-popover: 700;
+  --z-tooltip: 800;
+  --z-toast: 900;
+  --z-max: 9999;
+
+  /* ========== Container Widths ========== */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1440px;
+  --container-max: 1600px;
+
+  /* ========== Breakpoints (for reference in JS) ========== */
+  --bp-xs: 480px;
+  --bp-sm: 640px;
+  --bp-md: 768px;
+  --bp-lg: 1024px;
+  --bp-xl: 1280px;
+  --bp-2xl: 1440px;
+
+  /* ========== Header/Navigation ========== */
+  --header-height: 80px;
+  --header-height-scrolled: 70px;
+  --mobile-nav-height: 64px;
+
+  /* ========== Overlays ========== */
+  --overlay-light: rgba(255, 255, 255, 0.8);
+  --overlay-dark: rgba(10, 22, 40, 0.7);
+  --overlay-darker: rgba(10, 22, 40, 0.85);
+  --overlay-gradient: linear-gradient(180deg, rgba(10, 22, 40, 0.9) 0%, rgba(10, 22, 40, 0.4) 100%);
+  --overlay-gradient-reverse: linear-gradient(0deg, rgba(10, 22, 40, 0.9) 0%, rgba(10, 22, 40, 0.2) 100%);
+
+  /* ========== Aspect Ratios ========== */
+  --aspect-square: 1 / 1;
+  --aspect-video: 16 / 9;
+  --aspect-portrait: 3 / 4;
+  --aspect-landscape: 4 / 3;
+  --aspect-wide: 21 / 9;
+
+  /* ========== Animation Durations ========== */
+  --duration-instant: 0ms;
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 500ms;
+  --duration-slower: 750ms;
+  --duration-slowest: 1000ms;
+
+  /* ========== Blur Values ========== */
+  --blur-sm: 4px;
+  --blur-md: 8px;
+  --blur-lg: 16px;
+  --blur-xl: 24px;
+}
+
+/* ========== Dark Mode Variables (for potential future use) ========== */
+[data-theme="dark"] {
+  --bg-primary: var(--primary-dark);
+  --bg-secondary: var(--primary-dark-alt);
+  --text-primary: var(--white);
+  --text-secondary: var(--off-white);
+}
+
+/* ========== Light Mode Variables ========== */
+[data-theme="light"] {
+  --bg-primary: var(--white);
+  --bg-secondary: var(--off-white);
+  --text-primary: var(--primary-dark);
+  --text-secondary: var(--text-dark-gray);
+}

@@ -1,0 +1,892 @@
+/* ============================================
+   CTASection Styles - Nambiar District 25 Phase 2
+   "Ready to Experience the SOHO Life?" call-to-action section
+   Desktop-optimized with innovative split layout
+   ============================================ */
+
+/* Section Container */
+.section {
+  position: relative;
+  padding: var(--space-16) 0;
+  background: linear-gradient(135deg, var(--accent-gold) 0%, #B8941F 50%, var(--accent-gold-light) 100%);
+  overflow: hidden;
+}
+
+/* Background Pattern */
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 60% 80%, rgba(255, 255, 255, 0.06) 0%, transparent 35%);
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Floating Elements */
+.floatingElement1,
+.floatingElement2,
+.floatingElement3,
+.floatingElement4 {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF26 !important;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.floatingElement1 {
+  top: 15%;
+  left: 8%;
+  font-size: 4rem;
+}
+
+.floatingElement2 {
+  top: 25%;
+  right: 10%;
+  font-size: 2.5rem;
+}
+
+.floatingElement3 {
+  bottom: 20%;
+  left: 15%;
+  font-size: 3rem;
+}
+
+.floatingElement4 {
+  bottom: 30%;
+  right: 8%;
+  font-size: 2rem;
+  display: none;
+}
+
+/* Content Container */
+.content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-12);
+}
+
+/* ============================================
+   Visual Showcase (Desktop Only)
+   ============================================ */
+.visualShowcase {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-6);
+  flex-shrink: 0;
+}
+
+/* Image Card with Glassmorphism */
+.imageCard {
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(10, 22, 40, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  overflow: hidden;
+}
+
+.imageCardGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
+  pointer-events: none;
+  animation: rotateGlow 10s linear infinite;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.heroImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-xl);
+  object-fit: cover;
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: var(--space-3);
+  left: var(--space-3);
+  right: var(--space-3);
+  display: flex;
+  justify-content: center;
+}
+
+.imageLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-full);
+  color: var(--primary-dark);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  box-shadow: 0 4px 12px rgba(10, 22, 40, 0.15);
+}
+
+.imageLabel svg {
+  font-size: 1.25rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.statCard {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: var(--radius-xl);
+  padding: var(--space-4);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.statCard:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.statIconWrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(10, 22, 40, 0.1);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-2);
+}
+
+.statIcon {
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+}
+
+.statValue {
+  font-family: var(--font-heading);
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--primary-dark);
+  line-height: 1.2;
+}
+
+.statLabel {
+  font-size: var(--fs-xs);
+  color: #0A1628B3 !important;
+  font-weight: var(--fw-medium);
+}
+
+/* ============================================
+   Text Content
+   ============================================ */
+.textContent {
+  text-align: center;
+  max-width: 700px;
+}
+
+/* Pre-title */
+.preTitle {
+  display: inline-block;
+  padding: var(--space-2) var(--space-5);
+  background: rgba(10, 22, 40, 0.15);
+  border-radius: var(--radius-full);
+  color: var(--primary-dark);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+  letter-spacing: var(--ls-wider);
+  margin-bottom: var(--space-4);
+  backdrop-filter: blur(4px);
+}
+
+/* Main Title */
+.title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: var(--fw-bold);
+  color: var(--primary-dark);
+  line-height: var(--lh-tight);
+  margin-bottom: var(--space-4);
+}
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--primary-dark);
+  border-radius: var(--radius-full);
+  opacity: 0.3;
+}
+
+/* Description */
+.description {
+  font-size: var(--fs-md);
+  color: #0A1628CC !important;
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-8);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA Buttons */
+.ctaButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  min-width: 220px;
+  box-shadow: 0 8px 25px rgba(10, 22, 40, 0.3);
+}
+
+.primaryBtn:hover {
+  box-shadow: 0 12px 35px rgba(10, 22, 40, 0.4);
+}
+
+.secondaryBtn {
+  min-width: 160px;
+  background: transparent;
+  border: 2px solid var(--primary-dark);
+  color: var(--primary-dark);
+}
+
+.secondaryBtn:hover {
+  background: var(--primary-dark);
+  color: var(--white);
+}
+
+/* ============================================
+   Trust Indicators - Desktop Cards (Hidden by default)
+   ============================================ */
+.trustIndicators {
+  display: none;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.trustCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 15px rgba(10, 22, 40, 0.08);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.trustCard:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.trustIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(10, 22, 40, 0.1);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.trustIcon {
+  font-size: 1.35rem;
+  color: var(--primary-dark);
+}
+
+.trustContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.trustLabel {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--primary-dark);
+  line-height: 1.2;
+}
+
+.trustSubtext {
+  font-size: var(--fs-xs);
+  color: #0A162899 !important;
+  font-weight: var(--fw-medium);
+}
+
+/* ============================================
+   Trust Indicators - Mobile/Tablet (Simple)
+   ============================================ */
+.trustIndicatorsMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.trustItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--primary-dark);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+}
+
+.trustItemIcon {
+  font-size: 1.25rem;
+  color: var(--primary-dark);
+  opacity: 0.9;
+}
+
+.trustDivider {
+  width: 1px;
+  height: 20px;
+  background: rgba(10, 22, 40, 0.3);
+}
+
+/* Corner Decorations */
+.cornerDecoration1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  pointer-events: none;
+}
+
+.cornerDecoration2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(315deg, rgba(10, 22, 40, 0.1) 0%, transparent 70%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
+
+/* ============================================
+   Desktop Styles (1024px and above)
+   ============================================ */
+@media (min-width: 1024px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  .content {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-10);
+    text-align: left;
+  }
+
+  /* Show Visual Showcase on Desktop */
+  .visualShowcase {
+    display: flex;
+    flex: 0 0 340px;
+    gap: var(--space-4);
+  }
+
+  .imageCard {
+    padding: var(--space-3);
+  }
+
+  .heroImage {
+    width: 320px;
+    height: 200px;
+  }
+
+  .textContent {
+    text-align: left;
+    flex: 1;
+    max-width: 580px;
+  }
+
+  .preTitle {
+    margin-bottom: var(--space-3);
+  }
+
+  .title {
+    font-size: clamp(1.75rem, 2.8vw, 2.25rem);
+    margin-bottom: var(--space-3);
+  }
+
+  .description {
+    font-size: var(--fs-base);
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    margin-bottom: var(--space-5);
+  }
+
+  .ctaButtons {
+    justify-content: flex-start;
+    gap: var(--space-4);
+    margin-bottom: var(--space-5);
+  }
+
+  .primaryBtn {
+    min-width: 200px;
+  }
+
+  .secondaryBtn {
+    min-width: 140px;
+  }
+
+  /* Show Desktop Trust Cards, Hide Mobile */
+  .trustIndicators {
+    display: flex;
+    justify-content: flex-start;
+    gap: var(--space-3);
+  }
+
+  .trustCard {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .trustIconWrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .trustIcon {
+    font-size: 1.1rem;
+  }
+
+  .trustLabel {
+    font-size: var(--fs-xs);
+  }
+
+  .trustSubtext {
+    font-size: 10px;
+  }
+
+  .trustIndicatorsMobile {
+    display: none;
+  }
+
+  /* Stats Grid Compact */
+  .statsGrid {
+    gap: var(--space-2);
+  }
+
+  .statCard {
+    padding: var(--space-3);
+  }
+
+  .statIconWrapper {
+    width: 32px;
+    height: 32px;
+    margin-bottom: var(--space-1);
+  }
+
+  .statIcon {
+    font-size: 1rem;
+  }
+
+  .statValue {
+    font-size: var(--fs-lg);
+  }
+
+  .statLabel {
+    font-size: 10px;
+  }
+
+  /* Enhanced Floating Elements for Desktop */
+  .floatingElement1 {
+    top: 10%;
+    left: 5%;
+    font-size: 4rem;
+    color: #FFFFFF1A !important;
+  }
+
+  .floatingElement2 {
+    top: 15%;
+    right: 8%;
+    font-size: 2.5rem;
+  }
+
+  .floatingElement3 {
+    bottom: 15%;
+    left: 3%;
+    font-size: 3rem;
+  }
+
+  .floatingElement4 {
+    display: flex;
+    bottom: 25%;
+    right: 5%;
+    font-size: 2rem;
+  }
+
+  .cornerDecoration1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .cornerDecoration2 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* Large Desktop (1280px and above) */
+@media (min-width: 1280px) {
+  .section {
+    padding: var(--space-14) 0;
+  }
+
+  .content {
+    gap: var(--space-12);
+  }
+
+  .visualShowcase {
+    flex: 0 0 380px;
+    gap: var(--space-4);
+  }
+
+  .imageCard {
+    padding: var(--space-4);
+  }
+
+  .heroImage {
+    width: 360px;
+    height: 220px;
+  }
+
+  .title {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+  }
+
+  .description {
+    font-size: var(--fs-md);
+  }
+
+  .statsGrid {
+    gap: var(--space-3);
+  }
+
+  .statCard {
+    padding: var(--space-3);
+  }
+
+  .statIconWrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .statIcon {
+    font-size: 1.1rem;
+  }
+
+  .statValue {
+    font-size: var(--fs-xl);
+  }
+
+  .statLabel {
+    font-size: var(--fs-xs);
+  }
+
+  .trustCard {
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .trustIconWrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .trustIcon {
+    font-size: 1.25rem;
+  }
+
+  .trustLabel {
+    font-size: var(--fs-sm);
+  }
+
+  .trustSubtext {
+    font-size: var(--fs-xs);
+  }
+}
+
+/* Extra Large Desktop (1440px and above) */
+@media (min-width: 1440px) {
+  .section {
+    padding: var(--space-16) 0;
+  }
+
+  .content {
+    gap: var(--space-16);
+  }
+
+  .visualShowcase {
+    flex: 0 0 420px;
+    gap: var(--space-5);
+  }
+
+  .heroImage {
+    width: 400px;
+    height: 240px;
+  }
+
+  .title {
+    font-size: 2.75rem;
+    margin-bottom: var(--space-4);
+  }
+
+  .description {
+    font-size: var(--fs-lg);
+    margin-bottom: var(--space-6);
+  }
+
+  .statValue {
+    font-size: var(--fs-2xl);
+  }
+
+  .trustCard {
+    padding: var(--space-3) var(--space-5);
+  }
+}
+
+/* ============================================
+   Tablet Styles (768px - 1023px)
+   ============================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .section {
+    padding: var(--space-14) 0;
+  }
+
+  .title {
+    font-size: var(--fs-3xl);
+  }
+
+  .ctaButtons {
+    gap: var(--space-4);
+  }
+}
+
+/* ============================================
+   Mobile Styles (below 768px)
+   ============================================ */
+@media (max-width: 767px) {
+  .section {
+    padding: var(--space-12) 0;
+  }
+
+  .floatingElement1,
+  .floatingElement2,
+  .floatingElement3,
+  .floatingElement4 {
+    display: none;
+  }
+
+  .preTitle {
+    padding: var(--space-1) var(--space-4);
+    font-size: 10px;
+  }
+
+  .title {
+    font-size: var(--fs-2xl);
+    margin-bottom: var(--space-3);
+  }
+
+  .highlight::after {
+    height: 3px;
+    bottom: 1px;
+  }
+
+  .description {
+    font-size: var(--fs-sm);
+    margin-bottom: var(--space-6);
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .trustIndicatorsMobile {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .trustDivider {
+    display: none;
+  }
+
+  .trustItem {
+    font-size: var(--fs-xs);
+  }
+
+  .cornerDecoration1,
+  .cornerDecoration2 {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Small Mobile (below 480px) */
+@media (max-width: 479px) {
+  .section {
+    padding: var(--space-10) 0;
+  }
+
+  .title {
+    font-size: var(--fs-xl);
+  }
+
+  .description {
+    font-size: var(--fs-xs);
+    line-height: 1.7;
+  }
+
+  .ctaButtons {
+    gap: var(--space-2);
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    min-width: unset;
+    max-width: 100%;
+  }
+
+  .trustItem {
+    font-size: 11px;
+  }
+
+  .trustItemIcon {
+    font-size: 1rem;
+  }
+}
+
+/* ============================================
+   Touch Device Optimizations
+   ============================================ */
+@media (hover: none) and (pointer: coarse) {
+  .primaryBtn:hover,
+  .secondaryBtn:hover {
+    transform: none;
+  }
+
+  .statCard:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  .trustCard:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .floatingElement1,
+  .floatingElement2,
+  .floatingElement3,
+  .floatingElement4 {
+    animation: none;
+  }
+
+  .animationCardGlow {
+    animation: none;
+  }
+
+  .statCard,
+  .trustCard {
+    transition: none;
+  }
+}
+
+/* ============================================
+   Print Styles
+   ============================================ */
+@media print {
+  .section {
+    background: var(--light-gray);
+    padding: var(--space-8) 0;
+  }
+
+  .bgPattern,
+  .floatingElement1,
+  .floatingElement2,
+  .floatingElement3,
+  .floatingElement4,
+  .cornerDecoration1,
+  .cornerDecoration2,
+  .visualShowcase,
+  .imageCardGlow {
+    display: none;
+  }
+
+  .ctaButtons {
+    display: none;
+  }
+
+  .trustIndicators {
+    display: none;
+  }
+
+  .trustIndicatorsMobile {
+    display: flex;
+  }
+}

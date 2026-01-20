@@ -1,0 +1,404 @@
+/* ============================================
+   Header Component Styles - Nambiar District 25 Phase 2
+   ============================================ */
+
+/* Header Base */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: var(--z-sticky);
+  padding: var(--space-3) 0;
+  background: transparent;
+  transition: all var(--transition-base);
+}
+
+/* Scrolled State */
+.header.scrolled {
+  background: var(--white);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  padding: var(--space-2) 0;
+}
+
+.header.scrolled .navLink {
+  color: var(--primary-dark);
+}
+
+.header.scrolled .navLink:hover,
+.header.scrolled .navLink.active {
+  color: var(--accent-gold);
+}
+
+.header.scrolled .mainLogo {
+  filter: brightness(1);
+}
+
+.header.scrolled .menuIcon {
+  color: var(--primary-dark);
+}
+
+/* Header Container */
+.headerContainer {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: nowrap;
+}
+
+/* Logo Section */
+.logoSection {
+  flex-shrink: 0;
+}
+
+.logoLink {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  text-decoration: none;
+}
+
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.mainLogo {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition-base);
+}
+
+.scrolled .mainLogo {
+  filter: none;
+}
+
+.logoDivider {
+  width: 1px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background var(--transition-base);
+}
+
+.scrolled .logoDivider {
+  background: var(--border-gray);
+}
+
+.projectLogo {
+  height: 28px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition-base);
+}
+
+.scrolled .projectLogo {
+  filter: none;
+}
+
+/* Desktop Navigation */
+.desktopNav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navLink {
+  position: relative;
+  padding: var(--space-2) var(--space-3);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--white);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.navLink::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--accent-gold);
+  transform: translateX(-50%);
+  transition: width var(--transition-fast);
+  border-radius: var(--radius-full);
+}
+
+.navLink:hover,
+.navLink.active {
+  color: var(--accent-gold);
+}
+
+.navLink:hover::after,
+.navLink.active::after {
+  width: 60%;
+}
+
+/* Right Section */
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+.ctaButton {
+  white-space: nowrap;
+}
+
+.callButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.callButton:hover {
+  background: var(--primary-dark);
+  color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 162, 39, 0.3);
+}
+
+.callButtonIcon {
+  font-size: 18px;
+}
+
+.mobileCallButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-semibold);
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+}
+
+.mobileCallButton:hover {
+  background: var(--primary-dark);
+  color: var(--accent-gold);
+}
+
+.iconLogo {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark) 0%,
+    var(--primary-dark-alt) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  padding: 4px;
+}
+
+.iconLogoImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+/* Menu Button */
+.menuButton {
+  display: none;
+  padding: var(--space-2);
+  color: var(--white);
+  transition: color var(--transition-fast);
+}
+
+.menuIcon {
+  font-size: 28px;
+  color: inherit;
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.mobileNavContent {
+  padding: var(--space-4);
+}
+
+.mobileNavList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.mobileNavLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  color: var(--primary-dark);
+  text-decoration: none;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  /* Button reset styles */
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink.active {
+  background: var(--light-gray);
+  color: var(--accent-gold);
+}
+
+.mobileNavIcon {
+  font-size: 22px;
+  color: var(--text-gray);
+  transition: color var(--transition-fast);
+}
+
+.mobileNavLink:hover .mobileNavIcon,
+.mobileNavLink.active .mobileNavIcon {
+  color: var(--accent-gold);
+}
+
+.mobileNavCTA {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-gray);
+}
+
+/* Responsive Styles */
+@media (max-width: 1280px) {
+  .navLink {
+    padding: var(--space-2);
+    font-size: 13px;
+  }
+
+  .iconLogo {
+    width: 52px;
+    height: 52px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .desktopNav {
+    display: none;
+  }
+
+  .menuButton {
+    display: flex;
+  }
+
+  .ctaButton {
+    display: none;
+  }
+
+  .headerContainer {
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: var(--space-2) 0;
+  }
+
+  .logoWrapper {
+    gap: var(--space-2);
+  }
+
+  .mainLogo {
+    height: 40px;
+  }
+
+  .projectLogo {
+    height: 22px;
+  }
+
+  .logoDivider {
+    height: 24px;
+  }
+
+  .iconLogo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logoDivider {
+    display: none;
+  }
+
+  .projectLogo {
+    display: none;
+  }
+
+  .mainLogo {
+    height: 36px;
+  }
+
+  .iconLogo {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Animation States */
+.header.scrolled .iconLogo {
+  transform: scale(0.9);
+}
+
+/* Focus States */
+.navLink:focus-visible,
+.mobileNavLink:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 2px;
+}

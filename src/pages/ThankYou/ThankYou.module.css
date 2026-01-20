@@ -1,0 +1,538 @@
+/* ============================================
+   ThankYou Page Styles
+   Post lead submission confirmation page
+   ============================================ */
+
+.thankYouPage {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0A1628 0%, #0F2139 50%, #0A1628 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0 80px;
+}
+
+/* Background Elements */
+.bgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(rgba(201, 162, 39, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+.bgGlow1 {
+  position: absolute;
+  top: -200px;
+  left: -200px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bgGlow2 {
+  position: absolute;
+  bottom: -150px;
+  right: -150px;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(201, 162, 39, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+/* Content Container */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+/* Success Icon */
+.successIcon {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 32px;
+}
+
+.iconWrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 40px rgba(76, 175, 80, 0.4);
+}
+
+.iconWrapper svg {
+  font-size: 64px;
+  color: #FFFFFF;
+}
+
+.iconRing {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  border: 3px solid rgba(76, 175, 80, 0.3);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.iconRing2 {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  border: 2px solid rgba(76, 175, 80, 0.15);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite 0.5s;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+/* Thank You Message */
+.thankYouMessage {
+  margin-bottom: 32px;
+}
+
+.title {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem) !important;
+  color: #FFFFFF !important;
+  margin-bottom: 12px !important;
+  line-height: 1.2 !important;
+}
+
+.subtitle {
+  font-size: 1.125rem !important;
+  color: #FFFFFFB3 !important;
+  font-weight: 400 !important;
+}
+
+/* Response Notice */
+.responseNotice {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: linear-gradient(135deg, rgba(201, 162, 39, 0.15) 0%, rgba(201, 162, 39, 0.08) 100%);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  border-radius: 20px;
+  padding: 24px 28px;
+  margin: 0 auto 40px;
+  max-width: 600px;
+  text-align: left;
+}
+
+.noticeIcon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #C9A227 0%, #E5C96E 100%);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.noticeIcon svg {
+  font-size: 26px;
+  color: #0A1628;
+}
+
+.noticeContent {
+  flex: 1;
+}
+
+.noticeTitle {
+  font-size: 1.0625rem !important;
+  font-weight: 600 !important;
+  color: #C9A227 !important;
+  margin-bottom: 6px !important;
+}
+
+.noticeDesc {
+  font-size: 0.9375rem !important;
+  color: #FFFFFFA6 !important;
+  line-height: 1.5 !important;
+}
+
+/* Highlights Section */
+.highlightsSection {
+  margin-bottom: 40px;
+}
+
+.sectionLabel {
+  font-size: 0.75rem !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  color: #FFFFFF80 !important;
+  margin-bottom: 20px !important;
+}
+
+.highlightsGrid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.highlightCard {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 14px 20px;
+  cursor: default;
+  transition: all 0.2s ease;
+}
+
+.highlightIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.highlightIcon svg {
+  font-size: 22px;
+}
+
+.highlightLabel {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+/* Contact Card */
+.contactCard {
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.companyBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201, 162, 39, 0.15);
+  border: 1px solid rgba(201, 162, 39, 0.3);
+  border-radius: 20px;
+  padding: 8px 16px;
+  margin-bottom: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #C9A227;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.companyBadge svg {
+  font-size: 16px;
+}
+
+.companyName {
+  font-family: 'Playfair Display', serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(1.5rem, 1.25rem + 1.25vw, 2rem) !important;
+  color: #FFFFFF !important;
+}
+
+.contactGrid {
+  text-align: left;
+}
+
+.contactItem {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.addressItem {
+  margin-top: 8px;
+}
+
+.contactIconWrapper {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(201, 162, 39, 0.12);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactIconWrapper svg {
+  font-size: 24px;
+  color: #C9A227;
+}
+
+.contactDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.contactLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #FFFFFF80 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.contactValue {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactValue:hover {
+  color: #C9A227;
+}
+
+.contactValueAlt {
+  font-size: 0.9375rem;
+  color: #FFFFFFB3 !important;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contactValueAlt:hover {
+  color: #C9A227;
+}
+
+/* Quick Links Section */
+.quickLinksSection {
+  margin-bottom: 40px;
+}
+
+.quickLinksGrid {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.quickLinkCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(201, 162, 39, 0.1);
+  border: 1px solid rgba(201, 162, 39, 0.25);
+  border-radius: 12px;
+  padding: 14px 24px;
+  color: #C9A227;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.quickLinkCard:hover {
+  background: rgba(201, 162, 39, 0.2);
+  border-color: rgba(201, 162, 39, 0.4);
+}
+
+.quickLinkIcon {
+  font-size: 20px;
+}
+
+/* Back Home Button */
+.backHomeWrapper {
+  margin-top: 20px;
+}
+
+.backHomeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 14px 28px;
+  color: #FFFFFFB3 !important;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.backHomeBtn:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.backHomeBtn svg {
+  font-size: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .thankYouPage {
+    padding: 40px 0 60px;
+  }
+
+  .successIcon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 24px;
+  }
+
+  .iconWrapper svg {
+    font-size: 52px;
+  }
+
+  .responseNotice {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .noticeContent {
+    text-align: center;
+  }
+
+  .highlightsGrid {
+    gap: 12px;
+  }
+
+  .highlightCard {
+    padding: 12px 16px;
+  }
+
+  .highlightIcon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .highlightLabel {
+    font-size: 0.8125rem;
+  }
+
+  .contactCard {
+    padding: 24px 20px;
+  }
+
+  .contactItem {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .contactDetails {
+    align-items: center;
+  }
+
+  .quickLinksGrid {
+    gap: 12px;
+  }
+
+  .quickLinkCard {
+    padding: 12px 20px;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .thankYouPage {
+    padding: 32px 0 48px;
+  }
+
+  .successIcon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .iconWrapper svg {
+    font-size: 44px;
+  }
+
+  .title {
+    font-size: 1.75rem !important;
+  }
+
+  .subtitle {
+    font-size: 1rem !important;
+  }
+
+  .highlightCard {
+    width: calc(50% - 6px);
+    flex-direction: column;
+    padding: 14px;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .companyName {
+    font-size: 1.375rem !important;
+  }
+
+  .quickLinkCard {
+    width: calc(50% - 6px);
+    flex-direction: column;
+    padding: 16px 12px;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .quickLinkIcon {
+    font-size: 24px;
+  }
+
+  .backHomeBtn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .iconRing,
+  .iconRing2 {
+    animation: none;
+  }
+}

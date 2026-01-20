@@ -1,0 +1,215 @@
+/* ============================================
+   SectionTitle Component Styles - Nambiar District 25 Phase 2
+   ============================================ */
+
+/* Container */
+.sectionTitle {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--space-10);
+}
+
+/* Alignment */
+.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.center {
+  align-items: center;
+  text-align: center;
+}
+
+.right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-2) var(--space-5);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-wide);
+  text-transform: uppercase;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.badgeDark {
+  background: var(--primary-dark);
+  color: var(--white);
+}
+
+.badgeGold {
+  background: var(--accent-gold);
+  color: var(--primary-dark);
+}
+
+.badgeOutline {
+  background: transparent;
+  color: var(--accent-gold);
+  border: 1px solid var(--accent-gold);
+}
+
+/* Title */
+.title {
+  font-family: var(--font-heading);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  color: var(--primary-dark);
+  line-height: var(--lh-tight);
+  margin: 0;
+}
+
+/* Highlight Text */
+.highlight {
+  color: var(--accent-gold);
+  background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Underline */
+.underline {
+  width: 60px;
+  height: 4px;
+  background: var(--accent-gold-gradient);
+  border-radius: var(--radius-full);
+  margin-top: var(--space-4);
+  transform-origin: center;
+}
+
+.left .underline {
+  transform-origin: left;
+}
+
+.right .underline {
+  transform-origin: right;
+}
+
+/* Subtitle */
+.subtitle {
+  font-size: var(--fs-md);
+  color: var(--text-gray);
+  line-height: var(--lh-relaxed);
+  margin: var(--space-4) 0 0;
+  max-width: 700px;
+}
+
+/* Dark Variant */
+.dark .title {
+  color: var(--white);
+}
+
+.dark .subtitle {
+  color: #FFFFFFCC !important;
+}
+
+.dark .highlight {
+  color: var(--accent-gold);
+  -webkit-text-fill-color: var(--accent-gold);
+  background: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .title {
+    font-size: var(--fs-3xl);
+  }
+
+  .subtitle {
+    font-size: var(--fs-base);
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    margin-bottom: var(--space-8);
+  }
+
+  .title {
+    font-size: var(--fs-2xl);
+  }
+
+  .badge {
+    padding: var(--space-1) var(--space-4);
+    font-size: var(--fs-xs);
+  }
+
+  .underline {
+    width: 50px;
+    height: 3px;
+    margin-top: var(--space-3);
+  }
+
+  .subtitle {
+    font-size: var(--fs-sm);
+    margin-top: var(--space-3);
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: var(--fs-xl);
+  }
+
+  .underline {
+    width: 40px;
+  }
+}
+
+/* Animation Classes */
+.sectionTitle.animated .badge {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+.sectionTitle.animated .title {
+  animation: fadeInUp 0.5s ease 0.1s forwards;
+  opacity: 0;
+}
+
+.sectionTitle.animated .underline {
+  animation: scaleIn 0.5s ease 0.2s forwards;
+  transform: scaleX(0);
+}
+
+.sectionTitle.animated .subtitle {
+  animation: fadeInUp 0.5s ease 0.3s forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Print */
+@media print {
+  .sectionTitle {
+    margin-bottom: var(--space-6);
+  }
+
+  .underline {
+    display: none;
+  }
+}

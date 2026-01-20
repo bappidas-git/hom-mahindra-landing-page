@@ -1,0 +1,885 @@
+/* ============================================
+   AmenitiesSection Styles - Nambiar District 25 Phase 2
+   Compact, innovative design with carousel
+   ============================================ */
+
+/* ========== Main Section ========== */
+.amenitiesSection {
+  position: relative;
+  padding: 3.5rem 0;
+  background-color: #0a1628;
+  overflow: hidden;
+}
+
+/* ========== Background Elements ========== */
+.bgOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #0a1628 0%, #0d1e36 50%, #0a1628 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bgPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle at 1px 1px,
+    rgba(201, 162, 39, 0.03) 1px,
+    transparent 0
+  );
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ========== Compact Section Header ========== */
+.sectionHeader {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.headerTop {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.amenitiesBadge {
+  margin-bottom: 0;
+}
+
+.sectionTitle {
+  position: relative;
+}
+
+.goldText {
+  color: #c9a227;
+  font-style: italic;
+}
+
+/* ========== Quick Stats Bar ========== */
+.statsBar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(201, 162, 39, 0.08) 0%,
+    rgba(201, 162, 39, 0.03) 100%
+  );
+  border-radius: 16px;
+  border: 1px solid rgba(201, 162, 39, 0.15);
+  overflow: hidden;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  flex: 1;
+  justify-content: center;
+  border-right: 1px solid rgba(201, 162, 39, 0.1);
+  transition: background 0.3s ease;
+}
+
+.statItem:last-child {
+  border-right: none;
+}
+
+.statItem:hover {
+  background: rgba(201, 162, 39, 0.08);
+}
+
+.statIconWrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #c9a227 0%, #e5c96e 100%);
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.statIcon {
+  font-size: 20px;
+  color: #0a1628;
+}
+
+.statContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.statValue {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.statLabel {
+  font-size: 0.6875rem;
+  color: #d9dce0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ========== Category Pills ========== */
+.categoryPills {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.categoryPill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  color: #d9dce0 !important;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.categoryPill:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.activePill {
+  background: linear-gradient(135deg, #c9a227 0%, #e5c96e 100%);
+  border-color: transparent;
+  color: #0a1628 !important;
+}
+
+.activePill:hover {
+  background: linear-gradient(135deg, #e5c96e 0%, #c9a227 100%);
+  color: #0a1628 !important;
+}
+
+.pillIcon {
+  font-size: 16px;
+}
+
+.pillLabel {
+  white-space: nowrap;
+}
+
+.pillCount {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 0.125rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.6875rem;
+  font-weight: 600;
+}
+
+.activePill .pillCount {
+  background: rgba(10, 22, 40, 0.2);
+}
+
+/* ========== Carousel ========== */
+.carouselWrapper {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 1.5rem;
+}
+
+.carouselContainer {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem 0.5rem;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+}
+
+.carouselContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/* ========== Amenity Card ========== */
+.amenityCard {
+  flex: 0 0 auto;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  scroll-snap-align: start;
+}
+
+.amenityCard:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(201, 162, 39, 0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.amenityIconWrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.amenityCard:hover .amenityIconWrapper {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.amenityIcon {
+  font-size: 24px;
+}
+
+.amenityName {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f2f3f4 !important;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+.amenityDescription {
+  font-size: 0.625rem;
+  color: #d9dce0 !important;
+  line-height: 1.4;
+  margin-top: 0.5rem;
+  overflow: hidden;
+}
+
+/* ========== More Card ========== */
+.moreCard {
+  flex: 0 0 auto;
+  width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.25rem 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(201, 162, 39, 0.15) 0%,
+    rgba(201, 162, 39, 0.05) 100%
+  );
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px dashed rgba(201, 162, 39, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.moreCard:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(201, 162, 39, 0.25) 0%,
+    rgba(201, 162, 39, 0.1) 100%
+  );
+  border-color: rgba(201, 162, 39, 0.6);
+}
+
+.moreIconWrapper {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(201, 162, 39, 0.2);
+  border-radius: 12px;
+  margin-bottom: 0.75rem;
+}
+
+.moreIcon {
+  font-size: 24px;
+  color: #c9a227;
+}
+
+.moreName {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #c9a227;
+  margin-bottom: 0.25rem;
+}
+
+.moreSubtext {
+  font-size: 0.625rem;
+  color: #c8cbcf;
+}
+
+/* ========== Scroll Indicator ========== */
+.scrollIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  font-size: 0.75rem;
+  color: #b8bcc2 !important;
+}
+
+.scrollIndicator svg {
+  font-size: 18px;
+}
+
+/* ========== Bottom Row ========== */
+.bottomRow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ========== Mini Categories ========== */
+.miniCategories {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.miniCategoryCard {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.miniCategoryCard:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(201, 162, 39, 0.3);
+}
+
+.activeCategory {
+  background: rgba(201, 162, 39, 0.15);
+  border-color: rgba(201, 162, 39, 0.4);
+}
+
+.miniCategoryIcon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #c9a227 0%, #e5c96e 100%);
+  border-radius: 8px;
+  color: #0a1628;
+  font-size: 18px;
+}
+
+.miniCategoryContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.miniCategoryTitle {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.miniCategoryCount {
+  font-size: 0.6875rem;
+  color: #c9a227;
+  font-weight: 500;
+}
+
+/* ========== CTA Section ========== */
+.ctaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ctaButton {
+  white-space: nowrap;
+}
+
+.ctaSubtext {
+  font-size: 0.6875rem;
+  color: #f5f5f5 !important;
+  text-align: center;
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .amenitiesSection {
+    padding: 4rem 0;
+  }
+
+  .statItem {
+    padding: 1.25rem 2rem;
+  }
+
+  .statIconWrapper {
+    width: 44px;
+    height: 44px;
+  }
+
+  .statIcon {
+    font-size: 22px;
+  }
+
+  .statValue {
+    font-size: 1.125rem;
+  }
+
+  .amenityCard {
+    width: 160px;
+    padding: 1.5rem 1.25rem;
+  }
+
+  .moreCard {
+    width: 160px;
+  }
+
+  .amenityIconWrapper {
+    width: 56px;
+    height: 56px;
+  }
+
+  .amenityIcon {
+    font-size: 28px;
+  }
+
+  .amenityName {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .amenitiesSection {
+    padding: 3rem 0;
+  }
+
+  .statsBar {
+    flex-wrap: wrap;
+  }
+
+  .statItem {
+    flex: 0 0 calc(50% - 0.5px);
+    border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+  }
+
+  .statItem:nth-child(2) {
+    border-right: none;
+  }
+
+  .statItem:nth-child(3),
+  .statItem:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .miniCategories {
+    justify-content: center;
+  }
+
+  .ctaWrapper {
+    width: 100%;
+    padding-top: 1rem;
+  }
+}
+
+/* Mobile (max-width: 767px) */
+@media (max-width: 767px) {
+  .amenitiesSection {
+    padding: 2.5rem 0;
+  }
+
+  .bgPattern {
+    background-size: 24px 24px;
+  }
+
+  .sectionHeader {
+    margin-bottom: 1.25rem;
+  }
+
+  .statsBar {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .statItem {
+    border-right: none;
+    border-bottom: 1px solid rgba(201, 162, 39, 0.1);
+    padding: 0.875rem 1rem;
+    justify-content: flex-start;
+  }
+
+  .statItem:last-child {
+    border-bottom: none;
+  }
+
+  .statIconWrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .statIcon {
+    font-size: 18px;
+  }
+
+  .statValue {
+    font-size: 0.9375rem;
+  }
+
+  .statLabel {
+    font-size: 0.625rem;
+  }
+
+  .categoryPills {
+    gap: 0.375rem;
+    margin-bottom: 1.25rem;
+    padding: 0 0.25rem;
+  }
+
+  .categoryPill {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.75rem;
+    gap: 0.375rem;
+  }
+
+  .pillIcon {
+    font-size: 14px;
+  }
+
+  .pillCount {
+    padding: 0.0625rem 0.375rem;
+    font-size: 0.625rem;
+  }
+
+  .carouselContainer {
+    gap: 0.75rem;
+    padding: 0.75rem 0.25rem;
+  }
+
+  .amenityCard {
+    width: 120px;
+    padding: 1rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  .moreCard {
+    width: 120px;
+    padding: 1rem 0.75rem;
+    border-radius: 12px;
+  }
+
+  .amenityIconWrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+  }
+
+  .amenityIcon {
+    font-size: 20px;
+  }
+
+  .amenityName {
+    font-size: 0.6875rem;
+  }
+
+  .moreIconWrapper {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+  }
+
+  .moreIcon {
+    font-size: 20px;
+  }
+
+  .moreName {
+    font-size: 0.75rem;
+  }
+
+  .scrollIndicator {
+    font-size: 0.6875rem;
+    gap: 0.375rem;
+  }
+
+  .scrollIndicator svg {
+    font-size: 16px;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .miniCategories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  .miniCategoryCard {
+    padding: 0.625rem 0.75rem;
+    gap: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .miniCategoryIcon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .miniCategoryTitle {
+    font-size: 0.6875rem;
+  }
+
+  .miniCategoryCount {
+    font-size: 0.5625rem;
+  }
+
+  .ctaWrapper {
+    width: 100%;
+    padding-top: 0.5rem;
+  }
+}
+
+/* Small Mobile (max-width: 374px) */
+@media (max-width: 374px) {
+  .amenitiesSection {
+    padding: 2rem 0;
+  }
+
+  .categoryPills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .categoryPills::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categoryPill {
+    flex-shrink: 0;
+  }
+
+  .amenityCard {
+    width: 110px;
+    padding: 0.875rem 0.5rem;
+  }
+
+  .moreCard {
+    width: 110px;
+    padding: 0.875rem 0.5rem;
+  }
+
+  .amenityIconWrapper {
+    width: 36px;
+    height: 36px;
+  }
+
+  .amenityIcon {
+    font-size: 18px;
+  }
+
+  .amenityName {
+    font-size: 0.625rem;
+  }
+
+  .miniCategories {
+    grid-template-columns: 1fr;
+  }
+
+  .miniCategoryCard {
+    justify-content: flex-start;
+  }
+}
+
+/* ========== Hover Effects (Pointer Devices) ========== */
+@media (hover: hover) {
+  .amenityCard:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+
+  .moreCard:hover {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+/* ========== Touch Devices ========== */
+@media (hover: none) {
+  .scrollIndicator {
+    display: flex;
+  }
+}
+
+@media (hover: hover) {
+  .scrollIndicator {
+    opacity: 0.6;
+  }
+}
+
+/* ========== Reduced Motion ========== */
+@media (prefers-reduced-motion: reduce) {
+  .amenityCard,
+  .moreCard,
+  .miniCategoryCard,
+  .amenityIconWrapper,
+  .categoryPill,
+  .statItem {
+    transition: none;
+  }
+
+  .amenityCard:hover,
+  .moreCard:hover {
+    transform: none;
+  }
+
+  .amenityCard:hover .amenityIconWrapper {
+    transform: none;
+  }
+
+  .carouselContainer {
+    scroll-behavior: auto;
+  }
+}
+
+/* ========== Focus Styles for Accessibility ========== */
+.categoryPill:focus-visible,
+.amenityCard:focus-visible,
+.moreCard:focus-visible,
+.miniCategoryCard:focus-visible,
+.ctaButton:focus-visible {
+  outline: 2px solid #c9a227;
+  outline-offset: 2px;
+}
+
+/* ========== Print Styles ========== */
+@media print {
+  .amenitiesSection {
+    padding: 2rem 0;
+    background: white;
+    color: black;
+  }
+
+  .bgOverlay,
+  .bgPattern {
+    display: none;
+  }
+
+  .statsBar {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+  }
+
+  .amenityCard,
+  .moreCard,
+  .miniCategoryCard {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+  }
+
+  .amenityName,
+  .miniCategoryTitle,
+  .goldText,
+  .sectionTitle,
+  .statValue {
+    color: #0a1628 !important;
+  }
+
+  .scrollIndicator {
+    display: none;
+  }
+
+  .carouselContainer {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+}
+
+/* ========== Custom Scrollbar (when visible) ========== */
+@media (min-width: 1024px) {
+  .carouselContainer {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(201, 162, 39, 0.3) transparent;
+  }
+
+  .carouselContainer::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .carouselContainer::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 3px;
+  }
+
+  .carouselContainer::-webkit-scrollbar-thumb {
+    background-color: rgba(201, 162, 39, 0.3);
+    border-radius: 3px;
+  }
+
+  .carouselContainer::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(201, 162, 39, 0.5);
+  }
+}
