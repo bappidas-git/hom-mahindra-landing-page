@@ -1,5 +1,5 @@
 /* ============================================
-   AnimatedCounter Component - Nambiar District 25 Phase 2
+   AnimatedCounter Component - Mahindra Blossom
    Animated number counter with scroll trigger
    ============================================ */
 

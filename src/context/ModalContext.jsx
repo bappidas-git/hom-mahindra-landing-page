@@ -1,5 +1,5 @@
 /* ============================================
-   Modal Context - Nambiar District 25 Phase 2
+   Modal Context - Mahindra Blossom
    Handles modal state management across the app
    ============================================ */
 

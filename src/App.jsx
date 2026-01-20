@@ -1,5 +1,5 @@
 /* ============================================
-   App Component - Nambiar District 25 Phase 2
+   App Component - Mahindra Blossom
    Main application component with providers,
    lazy loading, and performance optimizations
    ============================================ */

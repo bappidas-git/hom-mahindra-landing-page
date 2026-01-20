@@ -1,6 +1,6 @@
 /* ============================================
-   CTASection Component - Nambiar District 25 Phase 2
-   "Ready to Experience the SOHO Life?" call-to-action section
+   CTASection Component - Mahindra Blossom
+   "Home of Positive Energy" call-to-action section
    Desktop-optimized with innovative split layout
    ============================================ */
 
@@ -11,7 +11,8 @@ import { Icon } from "@iconify/react";
 import Button from "../../common/Button/Button";
 import { useModal } from "../../../context/ModalContext";
 import styles from "./CTASection.module.css";
-import clubImage from "../../../assets/images/club-image/club-image.jpg";
+
+const clubImage = "https://placehold.co/800x600/0A1628/C9A227?text=Mahindra+Blossom+800x600";
 
 const CTASection = () => {
   const { openLeadDrawer } = useModal();
@@ -148,7 +149,7 @@ const CTASection = () => {
               <div className={styles.imageCardGlow} />
               <img
                 src={clubImage}
-                alt="SOHO Living at Nambiar District 25"
+                alt="Mahindra Blossom - Home of Positive Energy"
                 className={styles.heroImage}
               />
               <div className={styles.imageOverlay}>
@@ -199,8 +200,8 @@ const CTASection = () => {
               className={styles.title}
               sx={{ marginBottom: "15px;", marginTop: "15px" }}
             >
-              Ready to Experience the{" "}
-              <span className={styles.highlight}>SOHO Life?</span>
+              Welcome to the{" "}
+              <span className={styles.highlight}>Home of Positive Energy</span>
             </Typography>
 
             <Typography
@@ -208,9 +209,9 @@ const CTASection = () => {
               className={styles.description}
               sx={{ color: "#0A1628CC !important", marginBottom: "15px;" }}
             >
-              Take the first step towards owning your dream home. Schedule a
+              Take the first step towards owning your dream home at HopeFarm Jn., Whitefield - Metro Adjacent. Schedule a
               site visit today and discover the perfect blend of luxury,
-              comfort, and convenience at Nambiar District 25 Phase 2.
+              comfort, and convenience at Mahindra Blossom.
             </Typography>
 
             {/* CTA Buttons */}
@@ -296,7 +297,7 @@ const CTASection = () => {
                     className={styles.trustSubtext}
                     style={{ color: "#0A162899" }}
                   >
-                    Trust Nambiar
+                    Trust Mahindra
                   </span>
                 </div>
               </motion.div>

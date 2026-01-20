@@ -1,5 +1,5 @@
 /* ============================================
-   FloorPlansSection Component - Nambiar District 25 Phase 2
+   FloorPlansSection Component - Mahindra Blossom
    Compact Showcase Layout - Floor plan selection
    ============================================ */
 

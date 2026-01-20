@@ -1,5 +1,5 @@
 /* ============================================
-   Header Component - Nambiar District 25 Phase 2
+   Header Component - Mahindra Blossom
    Fixed header with scroll behavior and navigation
    ============================================ */
 
@@ -9,10 +9,10 @@ import { Box, Container, IconButton, useMediaQuery, useTheme } from '@mui/materi
 import { Icon } from '@iconify/react';
 import styles from './Header.module.css';
 
-// Logo imports
-import whiteLogo from '../../../assets/images/logo/white-logo-hom.png';
-import darkLogo from '../../../assets/images/logo/logo-hom.png';
-import iconLogo from '../../../assets/images/logo/HOM-Icon.png';
+// Logo URLs
+const whiteLogo = 'https://placehold.co/150x50/FFFFFF/0A1628?text=Mahindra+Blossom+Logo';
+const darkLogo = 'https://placehold.co/150x50/0A1628/C9A227?text=Mahindra+Blossom+Logo';
+const iconLogo = 'https://placehold.co/50x50/0A1628/C9A227?text=MB';
 
 // Navigation items
 const navItems = [
@@ -159,7 +159,7 @@ const Header = ({ forceCloseMenu = false }) => {
             <div className={styles.logoWrapper}>
               <img
                 src={isScrolled ? darkLogo : whiteLogo}
-                alt="HOM - House of Memories"
+                alt="Mahindra Blossom"
                 className={styles.mainLogo}
               />
             </div>
@@ -217,7 +217,7 @@ const Header = ({ forceCloseMenu = false }) => {
           >
             <img
               src={iconLogo}
-              alt="HOM Icon"
+              alt="Mahindra Blossom Icon"
               className={styles.iconLogoImage}
             />
           </motion.div>

@@ -1,5 +1,5 @@
 /* ============================================
-   PricingSection Component - Nambiar District 25 Phase 2
+   PricingSection Component - Mahindra Blossom
    Redesigned with full-width config card & EMI popup modal
    ============================================ */
 

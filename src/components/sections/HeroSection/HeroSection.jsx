@@ -1,5 +1,5 @@
 /* ============================================
-   HeroSection Component - Nambiar District 25 Phase 2
+   HeroSection Component - Mahindra Blossom
    Premium real estate hero section with animations
    ============================================ */
 
@@ -14,9 +14,9 @@ import styles from './HeroSection.module.css';
 // Import lottie animations
 import buildingAnimation from '../../../assets/lottie/building-animation.json';
 
-// Import hero images
-import heroBuildingImg from '../../../assets/images/hero/hero-building.jpg';
-import heroMobileImg from '../../../assets/images/hero/hero-mobile.jpg';
+// Placeholder images for Mahindra Blossom
+const heroBuildingImg = 'https://placehold.co/1920x1080/0A1628/C9A227?text=Mahindra+Blossom+Hero+1920x1080';
+const heroMobileImg = 'https://placehold.co/800x1200/0A1628/C9A227?text=Mahindra+Blossom+Mobile+800x1200';
 
 // Animation variants
 const containerVariants = {
@@ -67,7 +67,7 @@ const cardVariants = {
   }),
 };
 
-// Hero info cards data
+// Hero info cards data - Mahindra Blossom
 const heroInfoCards = [
   {
     icon: 'mdi:office-building-outline',
@@ -77,40 +77,40 @@ const heroInfoCards = [
     bgColor: 'rgba(201, 162, 39, 0.15)',
   },
   {
-    icon: 'mdi:currency-inr',
-    value: '₹1.24 Cr*',
-    label: 'Starting Price',
+    icon: 'mdi:map-marker-radius',
+    value: '7.8 Acres',
+    label: 'Development Area',
     color: '#C9A227',
     bgColor: 'rgba(201, 162, 39, 0.15)',
   },
   {
     icon: 'mdi:view-grid-outline',
-    value: '7 Acre',
-    label: '74+ Amenities',
+    value: '97,000 sq.ft',
+    label: 'Amenities',
     color: '#2196F3',
     bgColor: 'rgba(33, 150, 243, 0.15)',
   },
   {
     icon: 'mdi:train',
-    value: '600m',
-    label: 'Upcoming Metro',
+    value: 'Metro Adjacent',
+    label: 'Hopefarm Station',
     color: '#C9A227',
     bgColor: 'rgba(201, 162, 39, 0.15)',
   },
 ];
 
-// Trust badges data
+// Trust badges data - Mahindra Blossom
 const trustBadges = [
   { icon: 'mdi:shield-check-outline', text: 'RERA Registered' },
-  { icon: 'mdi:account-group', text: '750+ Happy Families' },
-  { icon: 'mdi:trophy-outline', text: 'Award Winning' },
+  { icon: 'mdi:leaf-circle', text: 'IGBC Certified' },
+  { icon: 'mdi:recycle', text: 'Net Zero Waste' },
 ];
 
-// Quick features
+// Quick features - Mahindra Blossom
 const quickFeatures = [
-  { text: 'Ready to Move', icon: 'mdi:check-circle' },
-  { text: 'Bank Loan Available', icon: 'mdi:bank' },
-  { text: 'Premium Location', icon: 'mdi:map-marker' },
+  { text: 'Vaastu Compliant', icon: 'mdi:compass-outline' },
+  { text: 'IGBC Green Homes', icon: 'mdi:leaf' },
+  { text: 'IT Corridor Access', icon: 'mdi:office-building' },
 ];
 
 const HeroSection = () => {
@@ -123,7 +123,7 @@ const HeroSection = () => {
       <div className={styles.heroBg}>
         <img
           src={isMobile ? heroMobileImg : heroBuildingImg}
-          alt="District 25 Building"
+          alt="Mahindra Blossom - Home of Positive Energy"
           className={styles.heroImage}
           loading="eager"
         />
@@ -148,7 +148,7 @@ const HeroSection = () => {
               <motion.div variants={badgeVariants}>
                 <Chip
                   icon={<span className={styles.pulseDot} />}
-                  label="LAUNCHING PHASE 2"
+                  label="NEW LAUNCH IN WHITEFIELD"
                   className={styles.launchBadge}
                   sx={{
                     backgroundColor: '#C9A227',
@@ -178,8 +178,8 @@ const HeroSection = () => {
                     marginTop: '1.5rem',
                   }}
                 >
-                  THE SOHO LIFE
-                  <span className={styles.goldText}> RETURNS</span>
+                  POSITIVE ENERGY
+                  <span className={styles.goldText}> THAT MAKES YOU FALL IN LOVE</span>
                 </Typography>
               </motion.div>
 
@@ -196,7 +196,7 @@ const HeroSection = () => {
                     maxWidth: '500px',
                   }}
                 >
-                  Live The Soho Life at Bengaluru's Finest Integrated Township
+                  Launching 2, 3 & 4 BHK homes at HopeFarm Jn., Whitefield - Adjacent to Metro Station
                 </Typography>
               </motion.div>
 

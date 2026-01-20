@@ -1,5 +1,5 @@
 /* ============================================
-   Button Component - Nambiar District 25 Phase 2
+   Button Component - Mahindra Blossom
    Reusable button with multiple variants and animations
    ============================================ */
 

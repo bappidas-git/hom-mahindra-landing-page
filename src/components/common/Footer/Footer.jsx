@@ -1,5 +1,5 @@
 /* ============================================
-   Footer Component - Nambiar District 25 Phase 2
+   Footer Component - Mahindra Blossom
    Professional footer with disclaimer, RERA info,
    and legal modals
    ============================================ */
@@ -21,7 +21,7 @@ const PrivacyPolicyContent = () => (
         committed to protecting your personal data. This Privacy Policy explains
         how we collect, use, disclose, and safeguard your information when you
         visit our website or engage with our services as authorized marketing
-        partners for Nambiar Builders.
+        partners for Mahindra Lifespaces.
       </p>
     </section>
 
@@ -74,7 +74,7 @@ const PrivacyPolicyContent = () => (
       <p>We may share your information with:</p>
       <ul>
         <li>
-          <strong>Nambiar Builders:</strong> As authorized marketing partners,
+          <strong>Mahindra Lifespaces:</strong> As authorized marketing partners,
           we share inquiry details with the developer for processing your
           property interests.
         </li>
@@ -153,7 +153,7 @@ const PrivacyPolicyContent = () => (
       <p>
         <strong>H.O.M Advisory</strong>
         <br />
-        Email: sales@nambiardistrict25.com
+        Email: sales@mahindrablossomwhitefield.com
         <br />
         Phone: +91-9632367929
       </p>
@@ -180,9 +180,9 @@ const TermsConditionsContent = () => (
       <h3>About This Website</h3>
       <p>
         This website is operated by H.O.M Advisory, an authorized marketing
-        partner of Nambiar Builders. This is not the official website of Nambiar
-        Builders. We are engaged in marketing and selling activities for Nambiar
-        District 25 Phase 2 project.
+        partner of Mahindra Lifespaces. This is not the official website of Mahindra
+        Lifespaces. We are engaged in marketing and selling activities for Mahindra
+        Blossom project.
       </p>
     </section>
 
@@ -199,7 +199,7 @@ const TermsConditionsContent = () => (
         </li>
         <li>
           Prices mentioned are indicative and subject to revision at the
-          discretion of Nambiar Builders.
+          discretion of Mahindra Lifespaces.
         </li>
         <li>
           Images, renders, and visualizations are for representational purposes
@@ -220,7 +220,7 @@ const TermsConditionsContent = () => (
         solicitation of an offer to buy any property. No contractual
         relationship is created by your use of this website or by any inquiry
         submitted through it. Any purchase or transaction must be executed
-        through official documentation with Nambiar Builders.
+        through official documentation with Mahindra Lifespaces.
       </p>
     </section>
 
@@ -244,7 +244,7 @@ const TermsConditionsContent = () => (
           its systems
         </li>
         <li>
-          Verify all property details directly with Nambiar Builders before
+          Verify all property details directly with Mahindra Lifespaces before
           making any purchase decision
         </li>
       </ul>
@@ -255,7 +255,7 @@ const TermsConditionsContent = () => (
       <p>
         All content on this website, including but not limited to text,
         graphics, logos, images, and software, is the property of H.O.M Advisory
-        or Nambiar Builders and is protected by intellectual property laws. You
+        or Mahindra Lifespaces and is protected by intellectual property laws. You
         may not reproduce, distribute, or create derivative works without prior
         written consent.
       </p>
@@ -321,7 +321,7 @@ const TermsConditionsContent = () => (
       <p>
         <strong>H.O.M Advisory</strong>
         <br />
-        Email: sales@nambiardistrict25.com
+        Email: sales@mahindrablossomwhitefield.com
         <br />
         Phone: +91-9632367929
       </p>
@@ -409,14 +409,20 @@ const Footer = () => {
               </div>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', alignItems: 'center', fontSize: '12px' }}>
                 <span style={{ color: '#FFFFFFCC' }}>
-                  <strong style={{ color: '#C9A227' }}>Nambiar District 25 – Phase 2:</strong>{' '}
-                  <span style={{ color: '#FFFFFF99' }}>PRM/KA/RERA/1251/308/PR/200825/008011</span>
+                  <strong style={{ color: '#C9A227' }}>Mahindra Blossom:</strong>{' '}
+                  <span style={{ color: '#FFFFFF99' }}>PRM/KA/RERA/1251/446/PR/171225/008348</span>
                 </span>
                 <span style={{ color: '#FFFFFFCC' }}>
                   <strong style={{ color: '#C9A227' }}>H.O.M Advisory (Agent):</strong>{' '}
                   <span style={{ color: '#FFFFFF99' }}>PRM/KA/RERA/1251/310/AG/251018/006354</span>
                 </span>
               </div>
+            </div>
+
+            {/* Address */}
+            <div style={{ textAlign: 'center', marginTop: '12px', color: '#FFFFFFB3', fontSize: '13px' }}>
+              <Icon icon="mdi:map-marker" style={{ marginRight: '6px', color: '#C9A227' }} />
+              Next to Hopefarm Channasandra Metro Station, Whitefield, Bengaluru 560066
             </div>
 
             {/* Compact Disclaimer Bar */}
@@ -428,7 +434,7 @@ const Footer = () => {
                   style={{ color: '#FFFFFF66' }}
                 />
                 <span className={styles.disclaimerSummary} style={{ color: '#FFFFFF80' }}>
-                  This website is owned, operated, and maintained by <strong style={{ color: '#C9A227CC' }}>H.O.M Advisory</strong>, a RERA-registered real estate agent and an authorized channel partner of Nambiar Builders for the promotion of Nambiar District 25 – Phase 2.
+                  This website is owned, operated, and maintained by <strong style={{ color: '#C9A227CC' }}>H.O.M Advisory</strong>, a RERA-registered real estate agent and an authorized channel partner of Mahindra Lifespaces for the promotion of Mahindra Blossom.
                 </span>
                 <button
                   className={styles.disclaimerToggle}
@@ -462,7 +468,7 @@ const Footer = () => {
                     transition={{ duration: 0.25, ease: "easeInOut" }}
                   >
                     <p className={styles.disclaimerFullText} style={{ color: '#FFFFFF73' }}>
-                      This website is owned, operated, and maintained by <strong style={{ color: '#C9A227BF' }}>H.O.M Advisory</strong>, a RERA-registered real estate agent (Reg. No. PRM/KA/RERA/1251/310/AG/251018/006354) and an authorized channel partner of Nambiar Builders for the promotion of Nambiar District 25 – Phase 2. This is not the official website of Nambiar Builders. All prices, specifications, layouts, floor plans, amenities, and other details are indicative and subject to change without prior notice, subject to availability and approvals. Images and artistic impressions are for illustrative purposes only.
+                      This website is owned, operated, and maintained by <strong style={{ color: '#C9A227BF' }}>H.O.M Advisory</strong>, a RERA-registered real estate agent (Reg. No. PRM/KA/RERA/1251/310/AG/251018/006354) and an authorized channel partner of Mahindra Lifespaces for the promotion of Mahindra Blossom. This is not the official website of Mahindra Lifespaces. All prices, specifications, layouts, floor plans, amenities, and other details are indicative and subject to change without prior notice, subject to availability and approvals. Images and artistic impressions are for illustrative purposes only.
                     </p>
                   </motion.div>
                 )}

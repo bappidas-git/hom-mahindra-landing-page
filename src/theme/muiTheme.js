@@ -1,5 +1,5 @@
 /* ============================================
-   MUI Theme Configuration - Nambiar District 25 Phase 2
+   MUI Theme Configuration - Mahindra Blossom
    Real Estate Landing Page
    ============================================ */
 

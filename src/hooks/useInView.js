@@ -1,5 +1,5 @@
 /* ============================================
-   useInView Hook - Nambiar District 25 Phase 2
+   useInView Hook - Mahindra Blossom
    Custom hook for detecting element visibility
    ============================================ */
 

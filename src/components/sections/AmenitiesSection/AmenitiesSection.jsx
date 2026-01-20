@@ -1,5 +1,5 @@
 /* ============================================
-   AmenitiesSection Component - Nambiar District 25 Phase 2
+   AmenitiesSection Component - Mahindra Blossom
    Compact amenities showcase with carousel and CTA
    ============================================ */
 
@@ -90,19 +90,19 @@ const AmenitiesSection = () => {
     {
       icon: "mdi:home-city-outline",
       value: amenitiesStats.clubhouseSize,
-      label: "Clubhouse",
+      label: "Amenities",
     },
     {
       icon: "mdi:map-marker-radius-outline",
-      value: amenitiesStats.clubhouseAcres,
+      value: amenitiesStats.greenArea,
       label: "Green Space",
     },
     {
       icon: "mdi:view-grid-plus-outline",
       value: amenitiesStats.totalAmenities,
-      label: "Amenities",
+      label: "Total Amenities",
     },
-    { icon: "mdi:trophy-outline", value: "15+", label: "Sports" },
+    { icon: "mdi:trophy-outline", value: "10+", label: "Sports" },
   ];
 
   // Category pills with counts

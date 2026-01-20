@@ -193,10 +193,10 @@ const MobileDrawer = ({ open, onClose, onOpen, activeSection = "home" }) => {
           </Box>
           <Box className={styles.logoText}>
             <Typography variant="h6" className={styles.projectName}>
-              District 25
+              Mahindra Blossom
             </Typography>
             <Typography variant="caption" className={styles.projectSubtitle}>
-              Phase 2 Bangalore
+              Whitefield, Bengaluru
             </Typography>
           </Box>
         </Box>

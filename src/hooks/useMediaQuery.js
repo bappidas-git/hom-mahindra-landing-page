@@ -1,5 +1,5 @@
 /* ============================================
-   useMediaQuery Hook - Nambiar District 25 Phase 2
+   useMediaQuery Hook - Mahindra Blossom
    Custom hook for responsive design
    ============================================ */
 

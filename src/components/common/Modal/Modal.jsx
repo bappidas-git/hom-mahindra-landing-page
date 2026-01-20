@@ -1,5 +1,5 @@
 /* ============================================
-   Modal Component - Nambiar District 25 Phase 2
+   Modal Component - Mahindra Blossom
    Animated modal/dialog with multiple variants
    ============================================ */
 

@@ -1,6 +1,6 @@
 /* ============================================
    Web Vitals Performance Monitoring
-   Nambiar District 25 Phase 2
+   Mahindra Blossom
 
    Measures Core Web Vitals:
    - CLS (Cumulative Layout Shift)

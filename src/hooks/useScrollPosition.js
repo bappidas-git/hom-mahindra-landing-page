@@ -1,5 +1,5 @@
 /* ============================================
-   useScrollPosition Hook - Nambiar District 25 Phase 2
+   useScrollPosition Hook - Mahindra Blossom
    Custom hook for tracking scroll position
    ============================================ */
 

@@ -1,5 +1,5 @@
 /* ============================================
-   Theme Context - Nambiar District 25 Phase 2
+   Theme Context - Mahindra Blossom
    Handles theme preferences (light/dark mode)
    ============================================ */
 

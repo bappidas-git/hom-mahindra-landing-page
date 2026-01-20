@@ -1,5 +1,5 @@
 /* ============================================
-   OverviewSection Component - Nambiar District 25 Phase 2
+   OverviewSection Component - Mahindra Blossom
    Compact, innovative overview with bento grid layout
    ============================================ */
 
@@ -17,10 +17,10 @@ import { useModal } from "../../../context/ModalContext";
 import AnimatedCounter from "../../common/AnimatedCounter/AnimatedCounter";
 import styles from "./OverviewSection.module.css";
 
-// Import images
-import overviewImage1 from "../../../assets/images/overview/overview-image-1.jpg";
-import overviewImage2 from "../../../assets/images/overview/overview-image-2.jpg";
-import overviewImage3 from "../../../assets/images/overview/overview-image-3.jpg";
+// Placeholder image URLs
+const overviewImage1 = "https://placehold.co/800x600/0A1628/C9A227?text=Mahindra+Blossom+Living";
+const overviewImage2 = "https://placehold.co/800x600/0A1628/C9A227?text=Mahindra+Blossom+Amenities";
+const overviewImage3 = "https://placehold.co/800x600/0A1628/C9A227?text=Mahindra+Blossom+Lifestyle";
 
 // Animation variants
 const containerVariants = {
@@ -72,53 +72,53 @@ const imageVariants = {
   }),
 };
 
-// Consolidated data - no repetition
+// Consolidated data - Five Pillars of Mahindra Blossom
 const keyStats = [
   {
-    value: "100",
+    value: "7.8",
     unit: "Acres",
-    label: "Township",
-    icon: "mdi:city-variant-outline",
+    label: "Prime Location",
+    icon: "mdi:map-marker-radius",
     color: "#C9A227",
   },
   {
-    value: "2.5L",
+    value: "97K",
     unit: "Sq.Ft",
-    label: "Clubhouse",
+    label: "Amenities",
     icon: "mdi:home-city-outline",
     color: "#C9A227",
   },
   {
-    value: "4000+",
-    unit: "Trees",
-    label: "Green Living",
+    value: "4",
+    unit: "Acres",
+    label: "Expansive Greens",
     icon: "mdi:tree",
     color: "#4CAF50",
   },
   {
-    value: "80%",
-    unit: "Open",
-    label: "Space",
-    icon: "mdi:nature",
+    value: "IGBC",
+    unit: "Certified",
+    label: "Sustainable",
+    icon: "mdi:leaf",
     color: "#4CAF50",
   },
 ];
 
 const quickFeatures = [
-  { icon: "mdi:account-group-outline", text: "700+ Happy Families" },
-  { icon: "mdi:floor-plan", text: "4 Units/Floor" },
-  { icon: "mdi:elevator-passenger-outline", text: "4 Elevators/Tower" },
-  { icon: "mdi:panorama-horizontal-outline", text: "Panoramic Balconies" },
+  { icon: "mdi:train-variant", text: "Metro Adjacent" },
+  { icon: "mdi:floor-plan", text: "Best-in-Class Design" },
+  { icon: "mdi:account-group-outline", text: "Vibrant Community" },
+  { icon: "mdi:tree", text: "4 Acres Greens" },
+  { icon: "mdi:leaf", text: "IGBC Certified" },
+  { icon: "mdi:map-marker", text: "HopeFarm Jn., Whitefield" },
   { icon: "mdi:shield-check", text: "24/7 Security" },
-  { icon: "mdi:compass-outline", text: "100% Vaastu" },
-  { icon: "mdi:delete-outline", text: "Garbage Chute" },
-  { icon: "mdi:home-variant-outline", text: "7 Config Types" },
+  { icon: "mdi:home-variant-outline", text: "Premium Living" },
 ];
 
 const galleryImages = [
-  { src: overviewImage1, alt: "Nambiar District 25 - Modern Living" },
-  { src: overviewImage2, alt: "Nambiar District 25 - Premium Amenities" },
-  { src: overviewImage3, alt: "Nambiar District 25 - Luxury Lifestyle" },
+  { src: overviewImage1, alt: "Mahindra Blossom - Modern Living" },
+  { src: overviewImage2, alt: "Mahindra Blossom - Premium Amenities" },
+  { src: overviewImage3, alt: "Mahindra Blossom - Luxury Lifestyle" },
 ];
 
 const OverviewSection = () => {
@@ -163,7 +163,7 @@ const OverviewSection = () => {
         >
           {/* Section Header - Compact */}
           <motion.div variants={itemVariants} className={styles.sectionHeader}>
-            <span className={styles.badge}>PHASE 2 NOW LAUNCHING</span>
+            <span className={styles.badge}>HOME OF POSITIVE ENERGY</span>
             <Typography
               variant="h2"
               className={styles.sectionTitle}
@@ -174,8 +174,8 @@ const OverviewSection = () => {
                 color: "#0A1628",
               }}
             >
-              Where Quality Meets{" "}
-              <span className={styles.goldText}>Affordability</span>
+              Mahindra Blossom{" "}
+              <span className={styles.goldText}>HopeFarm Jn., Whitefield</span>
             </Typography>
           </motion.div>
 
@@ -226,7 +226,7 @@ const OverviewSection = () => {
                     ease: "easeInOut",
                   }}
                 >
-                  <span className={styles.badgeValue}>100</span>
+                  <span className={styles.badgeValue}>7.8</span>
                   <span
                     className={styles.badgeLabel}
                     style={{ color: "#FFFFFFE6" }}

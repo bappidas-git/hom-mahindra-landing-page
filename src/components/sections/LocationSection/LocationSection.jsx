@@ -1,5 +1,5 @@
 /* ============================================
-   LocationSection Component - Nambiar District 25 Phase 2
+   LocationSection Component - Mahindra Blossom
    Location advantages and map integration section
    ============================================ */
 
@@ -27,8 +27,10 @@ import {
   getLandmarksByCategory,
 } from "../../../data/locationData";
 import locationPinAnimation from "../../../assets/lottie/location-pin.json";
-import interactiveMapImage from "../../../assets/images/map/interactive-map.jpg";
 import styles from "./LocationSection.module.css";
+
+// Placeholder map image for Mahindra Blossom - HopeFarm Jn., Whitefield
+const mapPlaceholderUrl = "https://placehold.co/800x500/0A1628/C9A227?text=Mahindra+Blossom+Location+Map+800x500";
 
 const LocationSection = () => {
   const { openLeadDrawer } = useModal();
@@ -107,7 +109,7 @@ const LocationSection = () => {
           badge="LOCATION"
           title="Bangalore's Most"
           highlight="Promising Location"
-          subtitle="Strategically located in North Bangalore with excellent connectivity to IT hubs, schools, hospitals, and entertainment zones."
+          subtitle="Adjacent to Hopefarm Channasandra Metro Station in Whitefield with excellent connectivity to IT hubs, schools, hospitals, and entertainment zones."
           align="center"
           variant="dark"
           badgeVariant="gold"
@@ -128,8 +130,8 @@ const LocationSection = () => {
                   {/* Google Maps Embed Placeholder - Replace with actual embed */}
                   <div className={styles.mapPlaceholder}>
                     <img
-                      src={interactiveMapImage}
-                      alt="Nambiar District 25 Phase 2 Location Map"
+                      src={mapPlaceholderUrl}
+                      alt="Mahindra Blossom Location Map - HopeFarm Jn., Whitefield"
                       className={styles.mapImage}
                       loading="lazy"
                     />
@@ -364,19 +366,19 @@ const LocationSection = () => {
             {[
               {
                 icon: "mdi:train",
-                title: "500m from Metro",
-                desc: "Upcoming Metro Station",
+                title: "Adjacent to Metro",
+                desc: "Hopefarm Channasandra Metro Station",
                 color: "#FF9800",
               },
               {
                 icon: "mdi:office-building",
                 title: "IT Hub Proximity",
-                desc: "Near Wipro & RMZ Ecoworld",
+                desc: "ITPB & Google Office within 2 km",
                 color: "#2196F3",
               },
               {
                 icon: "mdi:airplane",
-                title: "1 hr 40 mins to Airport",
+                title: "50 mins to Airport",
                 desc: "Quick Airport Access",
                 color: "#9C27B0",
               },

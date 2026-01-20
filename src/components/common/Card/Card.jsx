@@ -1,5 +1,5 @@
 /* ============================================
-   Card Component - Nambiar District 25 Phase 2
+   Card Component - Mahindra Blossom
    Reusable card with multiple variants and animations
    ============================================ */
 

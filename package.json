@@ -1,7 +1,7 @@
 {
-  "name": "nambiar-district25-phase2",
+  "name": "mahindra-blossom-whitefield",
   "version": "1.0.0",
-  "description": "Nambiar District 25 Phase 2 - Premium Real Estate Landing Page",
+  "description": "Mahindra Blossom - Premium 2, 3 & 4 BHK Apartments in Whitefield, Bengaluru | Home of Positive Energy | RERA Registered | Near Hopefarm Metro Station",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -53,14 +53,18 @@
     ]
   },
   "homepage": ".",
-  "author": "Assam Digital",
+  "author": "Mahindra Lifespaces",
   "license": "UNLICENSED",
   "keywords": [
-    "nambiar",
-    "district25",
-    "real-estate",
-    "landing-page",
-    "bangalore",
-    "luxury-apartments"
+    "mahindra-blossom",
+    "mahindra-lifespaces",
+    "whitefield-apartments",
+    "hopefarm-junction",
+    "bengaluru-real-estate",
+    "luxury-apartments",
+    "2bhk-3bhk-4bhk",
+    "igbc-certified",
+    "net-zero-waste",
+    "metro-connectivity"
   ]
 }
