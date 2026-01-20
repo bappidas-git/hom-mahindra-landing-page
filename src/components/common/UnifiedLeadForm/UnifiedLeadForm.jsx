@@ -32,7 +32,7 @@ import {
 import styles from "./UnifiedLeadForm.module.css";
 
 // Local storage key for leads
-const LEADS_STORAGE_KEY = "nambiar_submitted_leads";
+const LEADS_STORAGE_KEY = "mahindra_blossom_submitted_leads";
 
 // Initial form state
 const initialFormState = {
@@ -69,7 +69,7 @@ const PrivacyPolicyContent = () => (
         committed to protecting your personal data. This Privacy Policy explains
         how we collect, use, disclose, and safeguard your information when you
         visit our website or engage with our services as authorized marketing
-        partners for Nambiar Builders.
+        partners for Mahindra Lifespaces.
       </p>
     </section>
 
@@ -206,7 +206,7 @@ const PrivacyPolicyContent = () => (
         }}
       >
         <li style={{ marginBottom: "6px" }}>
-          <strong>Nambiar Builders:</strong> As authorized marketing partners,
+          <strong>Mahindra Lifespaces:</strong> As authorized marketing partners,
           we share inquiry details with the developer for processing your
           property interests.
         </li>
@@ -322,7 +322,7 @@ const PrivacyPolicyContent = () => (
       >
         <strong>H.O.M Advisory</strong>
         <br />
-        Email: sales@nambiardistrict25.com
+        Email: sales@mahindrablossomwhitefield.com
         <br />
         Phone: +91-9632367929
       </p>
@@ -1060,7 +1060,7 @@ const UnifiedLeadForm = ({
               >
                 Privacy Policy
               </button>{" "}
-              and consent to receive communications about Nambiar District 25.
+              and consent to receive communications about Mahindra Blossom.
             </Typography>
           </motion.div>
         )}

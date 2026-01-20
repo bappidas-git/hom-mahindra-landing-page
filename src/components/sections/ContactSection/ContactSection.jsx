@@ -1,5 +1,5 @@
 /* ============================================
-   ContactSection Component - Nambiar District 25 Phase 2
+   ContactSection Component - Mahindra Blossom
    "A Rare Opportunity to Own Your Dream Home" contact section
    ============================================ */
 
@@ -55,7 +55,7 @@ const ContactSection = () => {
       icon: "mdi:map-marker-outline",
       title: "Visit Us",
       content:
-        "CD Road, Dommasandra, Off Sarjapur Road, Bengaluru, Karnataka 562125",
+        "Next to Hopefarm Channasandra Metro Station, Whitefield, Bengaluru 560066",
     },
     {
       icon: "mdi:phone-outline",
@@ -66,8 +66,8 @@ const ContactSection = () => {
     {
       icon: "mdi:email-outline",
       title: "Email Us",
-      content: "sales@nambiardistrict25.com",
-      href: "mailto:sales@nambiardistrict25.com",
+      content: "sales@mahindrablosssom.com",
+      href: "mailto:sales@mahindrablosssom.com",
     },
     {
       icon: "mdi:clock-outline",
@@ -108,7 +108,7 @@ const ContactSection = () => {
                   sx={{ marginBottom: "15px;", marginTop: "15px" }}
                 >
                   Experience luxury living at its finest. Get in touch with our
-                  team to learn more about Nambiar District 25 Phase 2 and
+                  team to learn more about Mahindra Blossom and
                   schedule your exclusive site visit today.
                 </Typography>
 

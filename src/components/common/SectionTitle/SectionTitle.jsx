@@ -1,5 +1,5 @@
 /* ============================================
-   SectionTitle Component - Nambiar District 25 Phase 2
+   SectionTitle Component - Mahindra Blossom
    Reusable section title with badge and animations
    ============================================ */
 

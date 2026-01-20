@@ -1,5 +1,5 @@
 /* ============================================
-   ConfigurationSelector Component - Nambiar District 25 Phase 2
+   ConfigurationSelector Component - Mahindra Blossom
    Full-width horizontal layout with innovative UX
    ============================================ */
 

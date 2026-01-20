@@ -1,5 +1,5 @@
 /* ============================================
-   ThankYou Page - Nambiar District 25 Phase 2
+   ThankYou Page - Mahindra Blossom
    Post lead submission confirmation page
    ============================================ */
 
@@ -25,8 +25,8 @@ const contactInfo = {
   designation: 'Authorized Marketing Partner',
   phone: '+91-9632367929',
   altPhone: '+91-9632367929',
-  email: 'sales@nambiardistrict25.com',
-  address: 'CD Road, Dommasandra, Off Sarjapur Road, Bengaluru, Karnataka 562125',
+  email: 'sales@mahindrablossom.com',
+  address: 'HopeFarm Jn., Whitefield, Bengaluru, Karnataka',
   workingHours: 'Mon - Sun: 9:00 AM - 8:00 PM',
 };
 
@@ -203,7 +203,7 @@ const ThankYou = () => {
                 Our sales expert will contact you within 24 hours
               </Typography>
               <Typography className={styles.noticeDesc} sx={{ color: '#FFFFFFA6 !important' }}>
-                We're excited to help you find your dream home at Nambiar District 25 Phase 2
+                We're excited to help you find your dream home at Mahindra Blossom
               </Typography>
             </div>
           </motion.div>

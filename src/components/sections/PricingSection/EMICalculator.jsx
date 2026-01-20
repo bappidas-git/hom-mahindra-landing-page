@@ -1,5 +1,5 @@
 /* ============================================
-   EMICalculator Component - Nambiar District 25 Phase 2
+   EMICalculator Component - Mahindra Blossom
    Compact interactive EMI calculator
    ============================================ */
 

@@ -1,5 +1,5 @@
 /* ============================================
-   ProjectHighlights Component - Nambiar District 25 Phase 2
+   ProjectHighlights Component - Mahindra Blossom
    Project highlights with expand/collapse functionality
    ============================================ */
 
@@ -142,7 +142,7 @@ const ProjectHighlights = () => {
                 <div className={styles.towerImageContainer}>
                   <img
                     src="https://placehold.co/600x800/1a1a1a/FFFFFF?text=Tower+B%26W+600x800"
-                    alt="Nambiar District 25 Tower"
+                    alt="Mahindra Blossom Tower"
                     className={styles.towerImage}
                     loading="lazy"
                   />
@@ -153,7 +153,7 @@ const ProjectHighlights = () => {
                     animate={isInView ? { opacity: 1, scale: 1 } : {}}
                     transition={{ delay: 0.5, duration: 0.4 }}
                   >
-                    <span className={styles.acresValue}>100</span>
+                    <span className={styles.acresValue}>7.8</span>
                     <span className={styles.acresLabel} style={{ color: '#FFFFFFE6' }}>Acres</span>
                   </motion.div>
                 </div>

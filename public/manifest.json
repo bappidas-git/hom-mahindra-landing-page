@@ -1,7 +1,7 @@
 {
-  "short_name": "District 25",
-  "name": "Nambiar District 25 Phase 2",
-  "description": "Premium 2, 3 & 4 BHK apartments in Bangalore's most promising location. 100 acres integrated township with world-class amenities.",
+  "short_name": "Mahindra Blossom",
+  "name": "Mahindra Blossom - Home of Positive Energy",
+  "description": "Premium 2, 3 & 4 BHK apartments in Whitefield, Bengaluru. 7.8 acres development with 97,000 sq.ft amenities. Adjacent to Hopefarm Metro Station. IGBC certified.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -26,7 +26,7 @@
   "orientation": "portrait-primary",
   "theme_color": "#0A1628",
   "background_color": "#FFFFFF",
-  "categories": ["real estate", "property", "lifestyle"],
+  "categories": ["real estate", "property", "lifestyle", "mahindra lifespaces"],
   "lang": "en-IN",
   "dir": "ltr",
   "scope": "/",

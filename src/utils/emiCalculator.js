@@ -1,5 +1,5 @@
 /* ============================================
-   EMI Calculator - Nambiar District 25 Phase 2
+   EMI Calculator - Mahindra Blossom
    Loan EMI calculation utilities
    ============================================ */
 
