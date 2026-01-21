@@ -12,7 +12,9 @@ import Button from "../../common/Button/Button";
 import { useModal } from "../../../context/ModalContext";
 import styles from "./CTASection.module.css";
 
-const clubImage = "https://placehold.co/800x600/0A1628/C9A227?text=Mahindra+Blossom+800x600";
+import ctaImage from "../../../assets/images/cta-section/cta-image.jpg";
+
+const clubImage = ctaImage;
 
 const CTASection = () => {
   const { openLeadDrawer } = useModal();
@@ -84,8 +86,8 @@ const CTASection = () => {
   // Stats data for desktop showcase
   const stats = [
     { value: "25+", label: "Years Excellence", icon: "mdi:trophy-award" },
-    { value: "750+", label: "Happy Families", icon: "mdi:home-heart" },
-    { value: "15+", label: "Projects Delivered", icon: "mdi:office-building" },
+    { value: "1100+", label: "Happy Families", icon: "mdi:home-heart" },
+    { value: "5th", label: "Project in Bengaluru", icon: "mdi:office-building" },
   ];
 
   return (
@@ -292,7 +294,7 @@ const CTASection = () => {
                   <Icon icon="mdi:account-group" className={styles.trustIcon} />
                 </div>
                 <div className={styles.trustContent}>
-                  <span className={styles.trustLabel}>750+ Families</span>
+                  <span className={styles.trustLabel}>1100+ Families</span>
                   <span
                     className={styles.trustSubtext}
                     style={{ color: "#0A162899" }}
@@ -326,7 +328,7 @@ const CTASection = () => {
                   icon="mdi:account-group"
                   className={styles.trustItemIcon}
                 />
-                <span>750+ Happy Families</span>
+                <span>1100+ Happy Families</span>
               </div>
             </motion.div>
           </motion.div>

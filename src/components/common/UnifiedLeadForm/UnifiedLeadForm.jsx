@@ -322,7 +322,7 @@ const PrivacyPolicyContent = () => (
       >
         <strong>H.O.M Advisory</strong>
         <br />
-        Email: sales@mahindrablossomwhitefield.com
+        Email: marketing@homadvisory.com
         <br />
         Phone: +91-9632367929
       </p>

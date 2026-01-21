@@ -153,7 +153,7 @@ const PrivacyPolicyContent = () => (
       <p>
         <strong>H.O.M Advisory</strong>
         <br />
-        Email: sales@mahindrablossomwhitefield.com
+        Email: marketing@homadvisory.com
         <br />
         Phone: +91-9632367929
       </p>
@@ -321,7 +321,7 @@ const TermsConditionsContent = () => (
       <p>
         <strong>H.O.M Advisory</strong>
         <br />
-        Email: sales@mahindrablossomwhitefield.com
+        Email: marketing@homadvisory.com
         <br />
         Phone: +91-9632367929
       </p>
@@ -420,9 +420,9 @@ const Footer = () => {
             </div>
 
             {/* Address */}
-            <div style={{ textAlign: 'center', marginTop: '12px', color: '#FFFFFFB3', fontSize: '13px' }}>
-              <Icon icon="mdi:map-marker" style={{ marginRight: '6px', color: '#C9A227' }} />
-              Next to Hopefarm Channasandra Metro Station, Whitefield, Bengaluru 560066
+            <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'center', marginTop: '12px', color: '#FFFFFFB3', fontSize: '13px', gap: '6px' }}>
+              <Icon icon="mdi:map-marker" style={{ color: '#C9A227', fontSize: '16px', flexShrink: 0, marginTop: '2px' }} />
+              <span style={{ textAlign: 'center' }}>Next to Hopefarm Channasandra Metro Station, Whitefield, Bengaluru 560066</span>
             </div>
 
             {/* Compact Disclaimer Bar */}
