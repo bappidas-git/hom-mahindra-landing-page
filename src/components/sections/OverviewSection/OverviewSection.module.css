@@ -68,9 +68,13 @@
   line-height: 1.2;
 }
 
+.sectionSubtitle {
+  margin: 0;
+  line-height: 1.4;
+}
+
 .goldText {
   color: #c9a227;
-  font-style: italic;
 }
 
 /* ========== Bento Grid ========== */
@@ -254,6 +258,16 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.statSublabel {
+  font-size: 0.5rem;
+  color: #6b7280;
+  font-weight: 500;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 2px;
 }
 
 /* ========== Features Card ========== */
