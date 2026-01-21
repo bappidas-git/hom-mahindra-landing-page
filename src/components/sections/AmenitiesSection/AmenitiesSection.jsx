@@ -266,30 +266,30 @@ const AmenitiesSection = () => {
                 ))}
 
                 {/* More Amenities Card in Carousel */}
-                <motion.div
-                  className={styles.moreCard}
-                  custom={filteredAmenities.length}
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate="visible"
-                  whileHover={{ y: -8, scale: 1.02 }}
-                >
-                  <div className={styles.moreIconWrapper}>
-                    <Icon
-                      icon="mdi:dots-horizontal-circle-outline"
-                      className={styles.moreIcon}
-                    />
-                  </div>
-                  <Typography className={styles.moreName}>
-                    +
-                    {parseInt(amenitiesStats.totalAmenities) -
-                      amenitiesData.length}{" "}
-                    More
-                  </Typography>
-                  <Typography className={styles.moreSubtext}>
-                    Explore all amenities
-                  </Typography>
-                </motion.div>
+                {/* More Amenities Card - only show if there are more amenities to explore */}
+                {amenitiesData.length - filteredAmenities.length > 0 && (
+                  <motion.div
+                    className={styles.moreCard}
+                    custom={filteredAmenities.length}
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    whileHover={{ y: -8, scale: 1.02 }}
+                  >
+                    <div className={styles.moreIconWrapper}>
+                      <Icon
+                        icon="mdi:dots-horizontal-circle-outline"
+                        className={styles.moreIcon}
+                      />
+                    </div>
+                    <Typography className={styles.moreName}>
+                      +{amenitiesData.length - filteredAmenities.length} More
+                    </Typography>
+                    <Typography className={styles.moreSubtext}>
+                      Explore all amenities
+                    </Typography>
+                  </motion.div>
+                )}
               </div>
 
               {/* Scroll Indicators */}
