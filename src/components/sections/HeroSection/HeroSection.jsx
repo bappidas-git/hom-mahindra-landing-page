@@ -14,9 +14,9 @@ import styles from './HeroSection.module.css';
 // Import lottie animations
 import buildingAnimation from '../../../assets/lottie/building-animation.json';
 
-// Placeholder images for Mahindra Blossom
-const heroBuildingImg = 'https://placehold.co/1920x1080/0A1628/C9A227?text=Mahindra+Blossom+Hero+1920x1080';
-const heroMobileImg = 'https://placehold.co/800x1200/0A1628/C9A227?text=Mahindra+Blossom+Mobile+800x1200';
+// Import hero images
+import heroBuildingImg from '../../../assets/images/hero/hero-desktop.jpg';
+import heroMobileImg from '../../../assets/images/hero/hero-mobile.jpg';
 
 // Animation variants
 const containerVariants = {
