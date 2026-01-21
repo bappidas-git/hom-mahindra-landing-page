@@ -3,6 +3,12 @@
    Floor plan layouts and specifications
    ============================================ */
 
+// Floor plan images
+import floorPlan2BHK from '../assets/images/floor-plans/2BHK.jpg';
+import floorPlan3BHK from '../assets/images/floor-plans/3BHK.jpg';
+import floorPlan35BHK from '../assets/images/floor-plans/3.5BHK.jpg';
+import floorPlan4BHK from '../assets/images/floor-plans/4BHK.jpg';
+
 // Floor plan features common to all units
 export const commonFeatures = [
   'Vaastu-compliant designs',
@@ -55,8 +61,8 @@ export const floorPlansData = [
     bathrooms: 2,
     balconies: 2,
     decks: 2,
-    image: 'https://placehold.co/800x600/0A1628/C9A227?text=2+BHK+Floor+Plan+(931+sqft)',
-    thumbnailImage: 'https://placehold.co/400x300/0A1628/C9A227?text=2+BHK+Thumbnail',
+    image: floorPlan2BHK,
+    thumbnailImage: floorPlan2BHK,
     description: 'Thoughtfully designed 2 BHK with cross ventilation and walk-in wardrobe',
     carpetArea: '837 sq.ft',
     balconyArea: '71 sq.ft',
@@ -102,8 +108,8 @@ export const floorPlansData = [
     bathrooms: 3,
     balconies: 2,
     decks: 2,
-    image: 'https://placehold.co/800x600/0A1628/C9A227?text=3+BHK+Floor+Plan+(1313+sqft)',
-    thumbnailImage: 'https://placehold.co/400x300/0A1628/C9A227?text=3+BHK+Thumbnail',
+    image: floorPlan3BHK,
+    thumbnailImage: floorPlan3BHK,
     description: 'Spacious 3 BHK with puja space and all bedrooms having attached bathrooms',
     carpetArea: '1136 sq.ft',
     balconyArea: '116 sq.ft',
@@ -153,8 +159,8 @@ export const floorPlansData = [
     balconies: 2,
     decks: 2,
     study: true,
-    image: 'https://placehold.co/800x600/0A1628/C9A227?text=3.5+BHK+Floor+Plan+(1515+sqft)',
-    thumbnailImage: 'https://placehold.co/400x300/0A1628/C9A227?text=3.5+BHK+Thumbnail',
+    image: floorPlan35BHK,
+    thumbnailImage: floorPlan35BHK,
     description: '3.5 BHK with dedicated study room and premium walk-in closet',
     carpetArea: '1316 sq.ft',
     balconyArea: '134 sq.ft',
@@ -205,8 +211,8 @@ export const floorPlansData = [
     balconies: 2,
     decks: 2,
     pujaSpace: true,
-    image: 'https://placehold.co/800x600/0A1628/C9A227?text=4+BHK+Floor+Plan+(1689+sqft)',
-    thumbnailImage: 'https://placehold.co/400x300/0A1628/C9A227?text=4+BHK+Thumbnail',
+    image: floorPlan4BHK,
+    thumbnailImage: floorPlan4BHK,
     description: 'Luxurious 4 BHK with grand living spaces, puja room and walk-in wardrobes',
     carpetArea: '1488 sq.ft',
     balconyArea: '137 sq.ft',
