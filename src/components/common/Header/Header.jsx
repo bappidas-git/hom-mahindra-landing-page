@@ -9,10 +9,10 @@ import { Box, Container, IconButton, useMediaQuery, useTheme } from '@mui/materi
 import { Icon } from '@iconify/react';
 import styles from './Header.module.css';
 
-// Logo URLs
-const whiteLogo = 'https://placehold.co/150x50/FFFFFF/0A1628?text=Mahindra+Blossom+Logo';
-const darkLogo = 'https://placehold.co/150x50/0A1628/C9A227?text=Mahindra+Blossom+Logo';
-const iconLogo = 'https://placehold.co/50x50/0A1628/C9A227?text=MB';
+// Logo imports
+import whiteLogo from '../../../assets/images/logo/logo-white.png';
+import darkLogo from '../../../assets/images/logo/logo.png';
+import iconLogo from '../../../assets/images/logo/HOM-Icon.png';
 
 // Navigation items
 const navItems = [
