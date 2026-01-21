@@ -17,10 +17,12 @@ import { useModal } from "../../../context/ModalContext";
 import AnimatedCounter from "../../common/AnimatedCounter/AnimatedCounter";
 import styles from "./OverviewSection.module.css";
 
-// Placeholder image URLs
-const overviewImage1 = "https://placehold.co/800x600/0A1628/C9A227?text=Mahindra+Blossom+Living";
-const overviewImage2 = "https://placehold.co/800x600/0A1628/C9A227?text=Mahindra+Blossom+Amenities";
-const overviewImage3 = "https://placehold.co/800x600/0A1628/C9A227?text=Mahindra+Blossom+Lifestyle";
+// Import actual overview images
+import overviewImage1 from "../../../assets/images/overview/overview-image-1.jpg";
+import overviewImage2 from "../../../assets/images/overview/overview-image-2.jpg";
+import overviewImage3 from "../../../assets/images/overview/overview-image-3.jpg";
+import overviewImage4 from "../../../assets/images/overview/overview-image-4.jpg";
+import overviewImage5 from "../../../assets/images/overview/overview-image-5.jpg";
 
 // Animation variants
 const containerVariants = {
@@ -96,11 +98,12 @@ const keyStats = [
     color: "#4CAF50",
   },
   {
-    value: "IGBC",
-    unit: "Certified",
-    label: "Sustainable",
-    icon: "mdi:leaf",
-    color: "#4CAF50",
+    value: "0",
+    unit: "km",
+    label: "Hopefarm Metro",
+    sublabel: "Adjacent • Walk",
+    icon: "mdi:train-variant",
+    color: "#C9A227",
   },
 ];
 
@@ -119,6 +122,8 @@ const galleryImages = [
   { src: overviewImage1, alt: "Mahindra Blossom - Modern Living" },
   { src: overviewImage2, alt: "Mahindra Blossom - Premium Amenities" },
   { src: overviewImage3, alt: "Mahindra Blossom - Luxury Lifestyle" },
+  { src: overviewImage4, alt: "Mahindra Blossom - Exterior View" },
+  { src: overviewImage5, alt: "Mahindra Blossom - Community Living" },
 ];
 
 const OverviewSection = () => {
@@ -161,7 +166,7 @@ const OverviewSection = () => {
           animate={isInView ? "visible" : "hidden"}
           className={styles.mainWrapper}
         >
-          {/* Section Header - Compact */}
+          {/* Section Header - Professional Design */}
           <motion.div variants={itemVariants} className={styles.sectionHeader}>
             <span className={styles.badge}>HOME OF POSITIVE ENERGY</span>
             <Typography
@@ -170,12 +175,30 @@ const OverviewSection = () => {
               sx={{
                 fontFamily: "'Playfair Display', serif",
                 fontWeight: 700,
-                fontSize: { xs: "1.75rem", sm: "2rem", md: "2.5rem" },
+                fontSize: { xs: "1.75rem", sm: "2rem", md: "2.75rem" },
                 color: "#0A1628",
+                letterSpacing: "-0.01em",
               }}
             >
-              Mahindra Blossom{" "}
-              <span className={styles.goldText}>HopeFarm Jn., Whitefield</span>
+              Mahindra Blossom
+            </Typography>
+            <Typography
+              variant="h3"
+              className={styles.sectionSubtitle}
+              sx={{
+                fontFamily: "'Inter', sans-serif",
+                fontWeight: 500,
+                fontSize: { xs: "1rem", sm: "1.125rem", md: "1.25rem" },
+                color: "#6b7280",
+                marginTop: "0.5rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                gap: "0.5rem",
+              }}
+            >
+              <Icon icon="mdi:map-marker" style={{ color: "#C9A227" }} />
+              HopeFarm Junction, Whitefield
             </Typography>
           </motion.div>
 
@@ -266,6 +289,9 @@ const OverviewSection = () => {
                         <span className={styles.statUnit}>{stat.unit}</span>
                       </div>
                       <span className={styles.statLabel}>{stat.label}</span>
+                      {stat.sublabel && (
+                        <span className={styles.statSublabel}>{stat.sublabel}</span>
+                      )}
                     </div>
                   </motion.div>
                 ))}
