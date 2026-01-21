@@ -27,10 +27,8 @@ import {
   getLandmarksByCategory,
 } from "../../../data/locationData";
 import locationPinAnimation from "../../../assets/lottie/location-pin.json";
+import interactiveMapImage from "../../../assets/images/map/interactive-map.png";
 import styles from "./LocationSection.module.css";
-
-// Placeholder map image for Mahindra Blossom - HopeFarm Jn., Whitefield
-const mapPlaceholderUrl = "https://placehold.co/800x500/0A1628/C9A227?text=Mahindra+Blossom+Location+Map+800x500";
 
 const LocationSection = () => {
   const { openLeadDrawer } = useModal();
@@ -130,7 +128,7 @@ const LocationSection = () => {
                   {/* Google Maps Embed Placeholder - Replace with actual embed */}
                   <div className={styles.mapPlaceholder}>
                     <img
-                      src={mapPlaceholderUrl}
+                      src={interactiveMapImage}
                       alt="Mahindra Blossom Location Map - HopeFarm Jn., Whitefield"
                       className={styles.mapImage}
                       loading="lazy"
