@@ -16,7 +16,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'aaxwdrhhjw');
 define('DB_USER', 'aaxwdrhhjw');
-define('DB_PASS', 'CfEdfthSj3');
+define('DB_PASS', '***************');
 define('DB_CHARSET', 'utf8mb4');
 
 /**

@@ -21,7 +21,7 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_PORT', 587);
 define('SMTP_USER', 'mythikona@gmail.com');
-define('SMTP_PASS', 'euyaavuesxhuxzhv');
+define('SMTP_PASS', '16_DIGIT_APP_PASSWORD');
 define('SMTP_SECURE', 'tls'); // Use 'tls' for port 587, 'ssl' for port 465
 
 // Email Recipients
@@ -31,7 +31,7 @@ define('EMAIL_TO', 'prasoon@homadvisory.com');
 define('EMAIL_TO_NAME', 'H.O.M Advisory');
 
 // Optional: CC Recipients (comma-separated)
-define('EMAIL_CC', 'assamdigital@gmail.com');
+define('EMAIL_CC', 'assamdigital@gmail.com,susmit@assamdigital.com');
 
 // Email Settings
 define('EMAIL_SUBJECT_PREFIX', '[New Lead] Mahindra Blossom');
