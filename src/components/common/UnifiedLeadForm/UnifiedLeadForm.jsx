@@ -640,10 +640,80 @@ const UnifiedLeadForm = ({
     setIsSubmitting(true);
 
     try {
-      // Simulate API call - replace with actual API endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Submit to PHP backend
+      const apiUrl = process.env.REACT_APP_API_BASE_URL || '';
+      const endpoint = `${apiUrl}/api/lead-handler.php`;
 
-      // Save lead to localStorage
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          mobile: formData.mobile,
+          message: formData.message || '',
+          source: 'website',
+        }),
+      });
+
+      // Check if response has content before parsing JSON
+      const responseText = await response.text();
+      let data = {};
+
+      if (responseText) {
+        try {
+          data = JSON.parse(responseText);
+        } catch (parseError) {
+          console.error('JSON parse error:', parseError);
+          throw new Error('Invalid server response');
+        }
+      }
+
+      // Handle duplicate lead (409 Conflict)
+      if (response.status === 409 || data.data?.duplicate) {
+        // Close drawer first if it exists
+        if (onClose) {
+          onClose();
+        }
+
+        await Swal.fire({
+          icon: "info",
+          title: "Already Registered!",
+          html: `
+            <p style="margin-bottom: 12px;">You have already submitted an enquiry with this email or mobile number.</p>
+            <p style="color: #666; font-size: 14px;">Our team will contact you soon. For immediate assistance, please call us.</p>
+          `,
+          confirmButtonColor: "#C9A227",
+          confirmButtonText: "Got it!",
+          showCancelButton: true,
+          cancelButtonText: "Call Now",
+          cancelButtonColor: "#0A1628",
+          customClass: {
+            popup: styles.swalPopup,
+          },
+        }).then((result) => {
+          if (!result.isConfirmed && result.dismiss === "cancel") {
+            window.location.href = "tel:+919632367929";
+          }
+        });
+        return;
+      }
+
+      // Handle validation errors
+      if (response.status === 422 && data.data?.errors) {
+        setErrors(data.data.errors);
+        throw new Error('Validation failed');
+      }
+
+      // Handle other errors
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || 'Something went wrong');
+      }
+
+      // Success - save lead to localStorage for duplicate checking
       saveLeadToStorage(formData);
 
       // Set lead submitted flag for thank you page access
@@ -686,22 +756,26 @@ const UnifiedLeadForm = ({
       // Navigate to thank you page
       navigate("/thank-you");
     } catch (error) {
+      console.error('Form submission error:', error);
+
       // Close drawer first if it exists
       if (onClose) {
         onClose();
       }
 
-      // Show error message with SweetAlert2
-      await Swal.fire({
-        icon: "error",
-        title: "Oops!",
-        text: "Something went wrong. Please try again.",
-        confirmButtonColor: "#C9A227",
-        confirmButtonText: "Try Again",
-        customClass: {
-          popup: styles.swalPopup,
-        },
-      });
+      // Show error message with SweetAlert2 (skip if validation error as errors are shown inline)
+      if (error.message !== 'Validation failed') {
+        await Swal.fire({
+          icon: "error",
+          title: "Oops!",
+          text: error.message || "Something went wrong. Please try again.",
+          confirmButtonColor: "#C9A227",
+          confirmButtonText: "Try Again",
+          customClass: {
+            popup: styles.swalPopup,
+          },
+        });
+      }
     } finally {
       setIsSubmitting(false);
     }
