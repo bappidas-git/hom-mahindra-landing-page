@@ -176,8 +176,69 @@ const LeadForm = ({
     setSubmitStatus(null);
 
     try {
-      // Simulate API call - replace with actual API endpoint
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Submit to PHP backend
+      const apiUrl = process.env.REACT_APP_API_BASE_URL || '';
+      const endpoint = `${apiUrl}/api/lead-handler.php`;
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          mobile: formData.mobile,
+          message: formData.message || '',
+          source: 'website',
+        }),
+      });
+
+      // Check if response has content before parsing JSON
+      const responseText = await response.text();
+      let data = {};
+
+      if (responseText) {
+        try {
+          data = JSON.parse(responseText);
+        } catch (parseError) {
+          console.error('JSON parse error:', parseError);
+          throw new Error('Invalid server response');
+        }
+      }
+
+      // Handle duplicate lead (409 Conflict)
+      if (response.status === 409 || data.data?.duplicate) {
+        Swal.fire({
+          icon: 'info',
+          title: 'Already Registered!',
+          html: `
+            <p style="margin-bottom: 12px;">You have already submitted an enquiry with this email or mobile number.</p>
+            <p style="color: #666; font-size: 14px;">Our team will contact you soon.</p>
+          `,
+          confirmButtonColor: '#C9A227',
+          confirmButtonText: 'Got it!',
+          customClass: {
+            popup: styles.swalPopup,
+            title: styles.swalTitle,
+            content: styles.swalContent,
+            confirmButton: styles.swalButton,
+          },
+        });
+        return;
+      }
+
+      // Handle validation errors
+      if (response.status === 422 && data.data?.errors) {
+        setErrors(data.data.errors);
+        throw new Error('Validation failed');
+      }
+
+      // Handle other errors
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || 'Something went wrong');
+      }
 
       // Success handling
       setSubmitStatus('success');
@@ -206,22 +267,25 @@ const LeadForm = ({
         onSubmitSuccess(formData);
       }
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus('error');
 
-      // Show error message with SweetAlert2
-      Swal.fire({
-        icon: 'error',
-        title: 'Oops!',
-        text: 'Something went wrong. Please try again.',
-        confirmButtonColor: '#C9A227',
-        confirmButtonText: 'Try Again',
-        customClass: {
-          popup: styles.swalPopup,
-          title: styles.swalTitle,
-          content: styles.swalContent,
-          confirmButton: styles.swalButton,
-        },
-      });
+      // Show error message with SweetAlert2 (skip if validation error)
+      if (error.message !== 'Validation failed') {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops!',
+          text: error.message || 'Something went wrong. Please try again.',
+          confirmButtonColor: '#C9A227',
+          confirmButtonText: 'Try Again',
+          customClass: {
+            popup: styles.swalPopup,
+            title: styles.swalTitle,
+            content: styles.swalContent,
+            confirmButton: styles.swalButton,
+          },
+        });
+      }
 
       // Callback for parent component
       if (onSubmitError) {
