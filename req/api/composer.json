@@ -1,0 +1,17 @@
+{
+    "name": "nambiar/lead-api",
+    "description": "Lead form submission API for Nambiar District 25",
+    "type": "project",
+    "require": {
+        "php": ">=7.4",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}

@@ -16,9 +16,9 @@ if (basename($_SERVER['PHP_SELF']) === basename(__FILE__)) {
 // Database Configuration
 // ============================================
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'mahindra_blossom');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_NAME', 'aaxwdrhhjw');
+define('DB_USER', 'aaxwdrhhjw');
+define('DB_PASS', 'CfEdfthSj3');
 define('DB_CHARSET', 'utf8mb4');
 
 // ============================================
@@ -30,26 +30,26 @@ define('DB_CHARSET', 'utf8mb4');
 // 3. Use the App Password below (not your regular Gmail password)
 define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_PORT', 587);
-define('SMTP_USERNAME', 'your-email@gmail.com');  // Your Gmail address
-define('SMTP_PASSWORD', 'your-app-password');      // Gmail App Password (16 characters)
-define('SMTP_FROM_EMAIL', 'your-email@gmail.com'); // From email address
+define('SMTP_USERNAME', 'mythikona@gmail.com');  // Your Gmail address
+define('SMTP_PASSWORD', 'euyaavuesxhuxzhv');      // Gmail App Password (16 characters)
+define('SMTP_FROM_EMAIL', 'mythikona@gmail.com'); // From email address
 define('SMTP_FROM_NAME', 'Mahindra Blossom - H.O.M Advisory');
 
 // Email recipients (comma-separated for multiple)
-define('NOTIFICATION_EMAILS', 'marketing@homadvisory.com');
+define('NOTIFICATION_EMAILS', 'prasoon@homadvisory.com,assamdigital@gmail.com');
 
 // ============================================
 // Application Settings
 // ============================================
 define('SITE_NAME', 'Mahindra Blossom');
-define('SITE_URL', 'https://mahindrablossom.com');
-define('ADMIN_EMAIL', 'marketing@homadvisory.com');
+define('SITE_URL', 'https://www.mahindralifespaces-hopefarm.com');
+define('ADMIN_EMAIL', 'assamdigital@gmail.com');
 
 // ============================================
 // Security Settings
 // ============================================
 // Allowed origins for CORS (comma-separated)
-define('ALLOWED_ORIGINS', 'http://localhost:3000,http://localhost:5000,https://mahindrablossom.com');
+define('ALLOWED_ORIGINS', 'http://localhost:3000,http://localhost:5000,https://www.mahindralifespaces-hopefarm.com');
 
 // Enable/disable features
 define('ENABLE_EMAIL_NOTIFICATIONS', true);
