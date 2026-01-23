@@ -642,7 +642,7 @@ const UnifiedLeadForm = ({
     try {
       // Submit to PHP backend
       const apiUrl = process.env.REACT_APP_API_BASE_URL || '';
-      const endpoint = `${apiUrl}/api/lead-handler.php`;
+      const endpoint = `${apiUrl}/api/save-lead.php`;
 
       const response = await fetch(endpoint, {
         method: 'POST',

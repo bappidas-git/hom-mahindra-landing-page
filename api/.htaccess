@@ -23,8 +23,20 @@
     php_value error_reporting E_ALL
 </IfModule>
 
-# Protect config file from direct access
-<Files "config.php">
+# Protect config folder from direct access
+<Files "config/*">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Block access to composer files
+<FilesMatch "(composer\.json|composer\.lock)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Block access to .gitignore
+<Files ".gitignore">
     Order allow,deny
     Deny from all
 </Files>

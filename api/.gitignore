@@ -1,0 +1,25 @@
+# Dependencies
+/vendor/
+
+# Composer lock (optional - can include if you want consistent installs)
+# composer.lock
+
+# Environment and configuration with credentials
+.env
+.env.local
+.env.*.local
+
+# IDE
+.idea/
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Runtime data
+*.cache
