@@ -5,7 +5,7 @@
    ============================================ */
 
 import React, { Suspense, lazy, useEffect, useState, memo } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { CircularProgress, useMediaQuery, useTheme, Skeleton, Box } from '@mui/material';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -366,11 +366,51 @@ const HomePageContent = () => {
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const { openLeadDrawer } = useModal();
+  const location = useLocation();
 
   const handleMenuClick = () => setIsMobileDrawerOpen(true);
   const handleMobileDrawerClose = () => setIsMobileDrawerOpen(false);
   const handleMobileDrawerOpen = () => setIsMobileDrawerOpen(true);
   const handleEnquiryClick = () => openLeadDrawer('default');
+
+  // Handle hash-based scroll to section (e.g., /#overview, /#floor-plans)
+  // Sections are lazy-loaded, so we poll until the target element appears in the DOM
+  useEffect(() => {
+    const hash = location.hash;
+    if (!hash) return;
+
+    const targetId = hash.substring(1);
+    const headerOffset = 80;
+    let cancelled = false;
+
+    const scrollToTarget = () => {
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        const elementPosition = targetElement.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        });
+        return true;
+      }
+      return false;
+    };
+
+    // Try immediately, then retry with increasing delays to wait for lazy sections
+    if (!scrollToTarget()) {
+      const retryDelays = [100, 300, 600, 1000, 2000];
+      const timers = retryDelays.map((delay) =>
+        setTimeout(() => {
+          if (!cancelled) scrollToTarget();
+        }, delay)
+      );
+      return () => {
+        cancelled = true;
+        timers.forEach(clearTimeout);
+      };
+    }
+  }, [location.hash]);
 
   return (
     <>
@@ -477,7 +517,10 @@ const App = () => {
     if ('scrollRestoration' in window.history) {
       window.history.scrollRestoration = 'manual';
     }
-    window.scrollTo(0, 0);
+    // Only scroll to top if there's no hash in the URL
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
   }, []);
 
   // Register service worker for offline capability (if available)
